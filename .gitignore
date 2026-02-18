@@ -60,3 +60,30 @@ Temporary Items
 
 # GMRT build directory
 Build
+
+# GameMaker Studio 2/2024+ Ignore List
+
+
+# Ignore thge 'local' folder
+/local
+
+# Ignore Windows/macOS specific hidden files
+.DS_Store
+Thumbs/db
+
+# Ignore build exports (so you don't upload the actual .exe or .zip)
+*.zip
+*.exe
+*.msi
+*.apk
+*.dmg
+
+# Ignore GameMaker's temporary cache and data folders
+/datafiles_yy
+/cache
+
+# Ignore the 'options/main/inherited' folder
+/options/main/inherited
+
+/burger-world-2
+/Github Platfomer code
