@@ -1,7 +1,5 @@
 //Get inputs
-rightKey = keyboard_check( vk_right );
-leftKey = keyboard_check( vk_left );
-jumpKeyPressed = keyboard_check_pressed( vk_space )
+getControls();
 
 //x movement
 //Direction
@@ -33,29 +31,78 @@ x += xspd;
 	//gravity
 	yspd += grav;
 	
-	//jump
-	if jumpKeyPressed && place_meeting( x, y+1, oWall)
+	//reset / prepare jumping variable
+	if onGround
 	{
-		yspd = jspd
+		jumpCount = 0;
+		jumpHoldTimer = 0;
+	} else {
+		// if the player is in the air, make sure they cant do an extra jump
+		if jumpCount == 0 { jumpCount = 1; };
 	}
 	
-	//Y collision
-	var _subPixel = .5;
-	if place_meeting( x, y +yspd, oWall)
+	// iniate jump
+	if jumpKeyBufferd && jumpCount < jumpMax
 	{
-		//scoot up to the wall precisely
-		var _pixelCheck = _subPixel * sign(yspd);
-		while !place_meeting( x, y + _pixelCheck, oWall)
+		//reset the buffer
+		jumpKeyBufferd = false;
+		jumpKeyBufferTimer = 0;
+		//increase the number of prefomred jumps
+		jumpCount++;
+		// set the jump hold timer
+		jumpHoldTimer = jumpHoldFrames[jumpCount-1];
+	}
+	//Cut off the jump by releasing the jump button
+	if !jumpkey
+	{
+	jumpHoldTimer = 0;
+	}
+	
+	
+	//jump based on the timer/ holding the button
+	if jumpHoldTimer > 0
+	{
+		//consatntly set yspd to be jspd
+		yspd = jspd[jumpCount-1];
+		//count down the jump timer
+		jumpHoldTimer--;
+	}
+	
+	//Y collision and movement
+		//cap our falling speed
+		if yspd > termVel { yspd = termVel; };
+	
+		//colisiom
+		var _subPixel = .5;
+		if place_meeting( x, y +yspd, oWall)
 		{
-				y += _pixelCheck;
+			//scoot up to the wall precisely
+			var _pixelCheck = _subPixel * sign(yspd);
+			while !place_meeting( x, y + _pixelCheck, oWall)
+			{
+					y += _pixelCheck;
+			}
+			
+			//bonkcode (optional)
+			if yspd < 0
+			{
+				jumpHoldTimer = 0;
+			}
+			
+			//Set yspd to 0 to collide
+			yspd = 0;
 		}
-		//Set yspd to 0 to collide
-		yspd = 0;
-	}
+		
+		//set if im on the ground
+		if yspd >= 0 && place_meeting( x, y+1, oWall)
+		{
+			onGround = true;
+		} else {
+			onGround = false;
+		}
+		
+		
+		//move
+		y += yspd
 	
-	//move
-	y += yspd
 	
-	
-	//lol
-	//YEAH
