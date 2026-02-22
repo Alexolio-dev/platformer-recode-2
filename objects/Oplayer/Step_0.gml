@@ -27,20 +27,44 @@ if place_meeting( x + xspd, y, oWall )
 x += xspd;
 
 
+
+
+
+
+
+
 //y movement
 	//gravity
-	yspd += grav;
+	if coyoteHangTimer > 0
+	{
+		//count timer down
+		coyoteHangTimer--;
+	}else{
+		//apply gravity to player
+		yspd += grav;
+		//we are not on ground anymore
+		setOnGround(false)
+	}
+	
+
+	
+	
+	
+	
+	
 	
 	//reset / prepare jumping variable
 	if onGround
 	{
 		jumpCount = 0;
-		jumpHoldTimer = 0;
+		coyoteJumpTimer = coyoteJumpFrames;
 	} else {
 		// if the player is in the air, make sure they cant do an extra jump
-		if jumpCount == 0 { jumpCount = 1; };
+		coyoteJumpTimer--;
+		if jumpCount == 0 && coyoteJumpTimer <= 0 { jumpCount = 1; };
 	}
-	
+
+
 	// iniate jump
 	if jumpKeyBufferd && jumpCount < jumpMax
 	{
@@ -51,6 +75,8 @@ x += xspd;
 		jumpCount++;
 		// set the jump hold timer
 		jumpHoldTimer = jumpHoldFrames[jumpCount-1];
+		//tell ourselvs whe are no longer on the ground
+		setOnGround(false)
 	}
 	//Cut off the jump by releasing the jump button
 	if !jumpkey
@@ -68,10 +94,16 @@ x += xspd;
 		jumpHoldTimer--;
 	}
 	
+	
+	
+	
+	
+	
+	
+	
 	//Y collision and movement
 		//cap our falling speed
 		if yspd > termVel { yspd = termVel; };
-	
 		//colisiom
 		var _subPixel = .5;
 		if place_meeting( x, y +yspd, oWall)
@@ -96,10 +128,8 @@ x += xspd;
 		//set if im on the ground
 		if yspd >= 0 && place_meeting( x, y+1, oWall)
 		{
-			onGround = true;
-		} else {
-			onGround = false;
-		}
+			setOnGround(true)
+		} 
 		
 		
 		//move

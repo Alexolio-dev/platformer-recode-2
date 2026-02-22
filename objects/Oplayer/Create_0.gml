@@ -1,3 +1,16 @@
+//custom functions for player
+function setOnGround(_val = true)
+{
+	if _val == true
+	{
+		onGround = true;
+		coyoteHangTimer = coyoteHangFrames;
+	}else{	
+		onGround = false;
+		coyoteHangTimer = 0;
+	}
+}
+
 //controls setup
 ControlsSetup();
 
@@ -14,9 +27,19 @@ onGround = true;
 jumpMax = 1;
 jumpCount = 0;
 jumpHoldTimer = 0;
-	//jump calues for each succesive jump
-	jumpHoldFrames[0] = 18;
-	jumpHoldFrames[1] = 10;
-	jspd[0] = -3.15;
-	jspd[1] = -2.85;
+
+//jump calues for each succesive jump
+jumpHoldFrames[0] = 18;
+jumpHoldFrames[1] = 10;
+jspd[0] = -3.15;
+jspd[1] = -2.85;
 	
+	
+//coyote time
+//hang time
+coyoteHangFrames = 2;
+coyoteHangTimer = 0;
+// Jump Buffer time
+coyoteJumpFrames = 4;
+coyoteJumpTimer = 0;
+
