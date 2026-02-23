@@ -17,8 +17,8 @@
   ],
   "name":"innit",
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -131,8 +131,11 @@ x += xspd;
 			setOnGround(true)
 		} 
 		
-		
 		//move
 		y += yspd
 	
 	
+//sprite control
+
+
+

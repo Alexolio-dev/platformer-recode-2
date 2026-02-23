@@ -19,6 +19,7 @@ moveDir = 0;
 moveSpd = 2;
 xspd  =0;
 yspd = 0;
+face = 1;
 
 //jumping
 grav = 0.275;
@@ -43,3 +44,8 @@ coyoteHangTimer = 0;
 coyoteJumpFrames = 4;
 coyoteJumpTimer = 0;
 
+//sprites
+idleSpr = sPlayerIdle;
+runSpr = sPlayerRun;
+walkSpr = sPlayer;
+jumpSpr = sPlayerJump;
