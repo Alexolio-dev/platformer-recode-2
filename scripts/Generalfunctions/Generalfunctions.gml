@@ -22,6 +22,10 @@ function getControls()
 	jumpkey = keyboard_check( vk_space );
 		jumpkey = clamp( jumpkey, 0, 1 );
 		
+		runKey = keyboard_check( vk_shift );
+		runKey = clamp( runKey , 0, 1);
+		
+		
 	//jumpKey buffering
 	if jumpKeyPressed
 	{

@@ -16,7 +16,9 @@ ControlsSetup();
 
 //moving
 moveDir = 0;
-moveSpd = 2;
+runType = 0;
+moveSpd[0] = 2;
+moveSpd[1] = 4;
 xspd  =0;
 yspd = 0;
 face = 1;
@@ -45,7 +47,9 @@ coyoteJumpFrames = 4;
 coyoteJumpTimer = 0;
 
 //sprites
+maskSpr = sPlayerIdle;
 idleSpr = sPlayerIdle;
 runSpr = sPlayerRun;
 walkSpr = sPlayer;
 jumpSpr = sPlayerJump;
+

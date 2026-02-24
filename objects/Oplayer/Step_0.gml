@@ -1,12 +1,24 @@
 //Get inputs
 getControls();
 
+
+
+
 //x movement
 //Direction
 moveDir = rightKey - leftKey
+//get my face
+if moveDir != 0 {face = moveDir; };
 
+//Get xspd
+runType = runKey;
 // Get xspd
-xspd = moveDir * moveSpd;
+xspd = moveDir * moveSpd[runType];
+
+
+
+
+
 
 //X collision
 var _subPixel = .5;
@@ -136,6 +148,17 @@ x += xspd;
 	
 	
 //sprite control
+//walking
+if abs(xspd) > 0 { sprite_index = walkSpr; };
+//running
+if abs(xspd) >= moveSpd[1] { sprite_index = runSpr; };
+//standing still
+if xspd == 0 { sprite_index = idleSpr; };
+//in the air
+if !onGround { sprite_index = jumpSpr; };
+
+	//set the collsion mask
+	mask_index = maskSpr;
 
 
 
