@@ -24,15 +24,26 @@ xspd = moveDir * moveSpd[runType];
 var _subPixel = .5;
 if place_meeting( x + xspd, y, oWall )
 {
-	//scoot up to wall precisely
-	var _pixelCheck = _subPixel * sign(xspd)
-	while !place_meeting( x + _pixelCheck, y, oWall)
+	//first check if there is a slope to go up
+	if !place_meeting( x + xspd, y -abs(xspd)-1, oWall)
 	{
-		x += _pixelCheck;
+		
+		while place_meeting( x + xspd, y, oWall) { y -= _subPixel; };
+		
 	}
+	// if there is no slope regular collision
+	else
+	{
+		//scoot up to wall precisely
+		var _pixelCheck = _subPixel * sign(xspd);
+		while !place_meeting( x + _pixelCheck, y, oWall)
+		{
+			x += _pixelCheck;
+		}
 	
-	//set xspd to zero to collide
-	xspd = 0;
+		//set xspd to zero to collide
+		xspd = 0;
+	}
 }
 
 //move
