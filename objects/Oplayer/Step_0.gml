@@ -31,31 +31,47 @@ if place_meeting( x + xspd, y, oWall )
 		while place_meeting( x + xspd, y, oWall) { y -= _subPixel; };
 		
 	}
-	// if there is no slope regular collision
+	// Next check for ceiling slopes, otherwise, check for regular collision
 	else
 	{
-		//scoot up to wall precisely
-		var _pixelCheck = _subPixel * sign(xspd);
-		while !place_meeting( x + _pixelCheck, y, oWall)
+		//ceilling slopes
+		if !place_meeting( x+ xspd, y + abs(xspd*2) + 1, oWall)
 		{
-			x += _pixelCheck;
+			while place_meeting( x + xspd, y, oWall) {y += _subPixel}
 		}
+		//normal collision
+		else
+		{
+			//scoot up to wall precisely
+			var _pixelCheck = _subPixel * sign(xspd);
+			while !place_meeting( x + _pixelCheck, y, oWall){ x += _pixelCheck; };
 	
-		//set xspd to zero to collide
-		xspd = 0;
+			//set xspd to zero to collide
+			xspd = 0;
+		}
 	}
 }
 
+
+
+
+//go down slopes 
+if yspd >= 0 && !place_meeting( x + xspd, y + 1, oWall) && place_meeting( x + xspd, y + abs(xspd) + 1, oWall)
+{
+	while !place_meeting( x+ xspd, y + _subPixel, oWall) { y += _subPixel; };
+}
+
+
+
+
+
+
+
+
+
+
 //move
 x += xspd;
-
-
-
-
-
-
-
-
 //y movement
 	//gravity
 	if coyoteHangTimer > 0
@@ -127,8 +143,51 @@ x += xspd;
 	//Y collision and movement
 		//cap our falling speed
 		if yspd > termVel { yspd = termVel; };
-		//colisiom
+		//Y collision
 		var _subPixel = .5;
+	
+		
+		// upwards Y colission (with ceilling slopes)
+		if yspd < 0 && place_meeting( x, y + yspd, oWall)
+		{
+			//jump into sloped ceillings
+			var _slopeSlide = false;
+			
+			//Slide upleft slope
+			if moveDir == 0 && !place_meeting( x - abs(yspd) - 1, y + yspd, oWall)
+			{
+				while place_meeting( x, y + yspd, oWall) { x -= 1; };
+				_slopeSlide = true;
+			}
+			
+			//slide upright slope
+			if moveDir == 0 && !place_meeting( x + abs(yspd) + 1, y + yspd, oWall)
+			{
+				while place_meeting( x, y + yspd, oWall) { x += 1; };
+				_slopeSlide = true;
+			}
+			
+			// normal y colission
+			if !_slopeSlide
+			{
+				//scoot up to the wall precisely
+				var _pixelCheck = _subPixel * sign(yspd);
+				while !place_meeting( x, y + _pixelCheck, oWall)
+				{
+						y += _pixelCheck;
+				}
+			
+				//bonkcode (optional)
+				//if yspd < 0 { jumpHoldTimer = 0; };
+			
+				//Set yspd to 0 to collide
+				yspd = 0;
+			}
+		}
+		
+		//downwards y colision
+		if yspd >= 0
+		{
 		if place_meeting( x, y +yspd, oWall)
 		{
 			//scoot up to the wall precisely
@@ -137,23 +196,16 @@ x += xspd;
 			{
 					y += _pixelCheck;
 			}
-			
-			//bonkcode (optional)
-			if yspd < 0
-			{
-				jumpHoldTimer = 0;
-			}
-			
 			//Set yspd to 0 to collide
 			yspd = 0;
 		}
 		
 		//set if im on the ground
-		if yspd >= 0 && place_meeting( x, y+1, oWall)
+		if place_meeting( x, y+1, oWall)
 		{
 			setOnGround(true)
 		} 
-		
+	}
 		//move
 		y += yspd
 	
