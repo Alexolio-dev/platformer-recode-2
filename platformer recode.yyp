@@ -41,6 +41,8 @@
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},},
     {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},},
     {"id":{"name":"sPlayerRun","path":"sprites/sPlayerRun/sPlayerRun.yy",},},
+    {"id":{"name":"sSemiSolidMovePlat","path":"sprites/sSemiSolidMovePlat/sSemiSolidMovePlat.yy",},},
+    {"id":{"name":"sSemiSolidWall","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},},
     {"id":{"name":"sSlope0","path":"sprites/sSlope0/sSlope0.yy",},},
     {"id":{"name":"sSlope1","path":"sprites/sSlope1/sSlope1.yy",},},
     {"id":{"name":"sSlope2","path":"sprites/sSlope2/sSlope2.yy",},},
