@@ -185,27 +185,37 @@ x += xspd;
 			}
 		}
 		
-		//downwards y colision
-		if yspd >= 0
+		
+		
+		
+		
+		
+		
+		//Floor y colision
+		
+		//check for solid and semisolid platforms under me
+		var _clampYspd = max( 0, yspd);
+		var _list = ds_list_create(); //create a ds list to store all the objects we run into
+		var _array = array_create(0);
+		array_push( _array, oWall, oSemiSolidWall );
+		
+		// do the actual check and objects to list
+		var _listSize = instance_place_list( x, y+1 + _clampYspd + moveplatMaxYspd, _array, _list, false );
+		
+		//loop through the colliding isnatnces and only reutrn if its top is bellow the player
+		for( var i = 0; i < _listSize; i++)
 		{
-		if place_meeting( x, y +yspd, oWall)
-		{
-			//scoot up to the wall precisely
-			var _pixelCheck = _subPixel * sign(yspd);
-			while !place_meeting( x, y + _pixelCheck, oWall)
-			{
-					y += _pixelCheck;
-			}
-			//Set yspd to 0 to collide
-			yspd = 0;
+			//get instance of o wall or osemisolid wall form the list
+			var _listInst = _list[| i];
+			
 		}
 		
-		//set if im on the ground
-		if place_meeting( x, y+1, oWall)
-		{
-			setOnGround(true)
-		} 
-	}
+		
+		
+
+
+
+
 		//move
 		y += yspd
 	

@@ -53,3 +53,7 @@ runSpr = sPlayerRun;
 walkSpr = sPlayer;
 jumpSpr = sPlayerJump;
 
+//moving platforms
+myFloorPlat = noone;
+moveplatXspd = 0;
+moveplatMaxYspd = termVel; //How fast can the player follow a downwards moving platform
