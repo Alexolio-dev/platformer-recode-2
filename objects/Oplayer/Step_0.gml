@@ -208,14 +208,58 @@ x += xspd;
 			//get instance of o wall or osemisolid wall form the list
 			var _listInst = _list[| i];
 			
+			//avoid magnetizm
+			
+			{
+				//return a solid wall or any semisolid walls that are below the player
+				if _listInst.object_index == oWall
+				|| object_is_ancestor(_listInst.object_index, oWall )
+				|| floor(bbox_bottom) <= ceil( _listInst.bbox_top - _listInst.yspd )
+				{
+					//return the 'highest' wall object
+					if !instance_exists(myFloorPlat)
+					|| _listInst.bbox_top + _listInst.yspd <= myFloorPlat.bbox_top + myFloorPlat.yspd
+					|| _listInst.bbox_top + _listInst.yspd <= bbox_bottom
+					{
+						myFloorPlat = _listInst
+					}
+				}
+			}
+		}
+		//destory the dslist to avoid memory leak
+		ds_list_destroy(_list);
+		
+		// one last check to make sure the floor platform is actually below us
+		if instance_exists(myFloorPlat) && !place_meeting( x, y + moveplatMaxYspd, myFloorPlat)
+		{
+			myFloorPlat = noone;
+		}
+		
+		// land on the ground platform if there is one.
+		if instance_exists(myFloorPlat)
+		{
+			//scoot up to our wall pricesly
+			var _subPixel = 0.5;
+			while !place_meeting( x, y + _subPixel, myFloorPlat) && !place_meeting( x, y, oWall) { y += _subPixel }
+			//make sure we dont end up below the top of our semisolid
+			if myFloorPlat.object_index == oSemiSolidWall || object_is_ancestor(myFloorPlat.object_index, oSemiSolidWall)
+			{
+				while place_meeting( x, y, myFloorPlat ) { y -= _subPixel };
+			}
+			//floor the y variable
+			y = floor(y);
+			
+			//collide with the ground
+			yspd = 0;
+			setOnGround(true);
 		}
 		
 		
 		
-
-
-
-
+		
+		
+		
+		
 		//move
 		y += yspd
 	

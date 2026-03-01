@@ -7,6 +7,7 @@ function setOnGround(_val = true)
 		coyoteHangTimer = coyoteHangFrames;
 	}else{	
 		onGround = false;
+		myFloorPlat = noone;
 		coyoteHangTimer = 0;
 	}
 }
