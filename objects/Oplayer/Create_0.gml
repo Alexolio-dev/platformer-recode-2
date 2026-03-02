@@ -12,6 +12,7 @@ function setOnGround(_val = true)
 	}
 }
 
+depth = -30;
 //controls setup
 ControlsSetup();
 

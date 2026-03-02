@@ -190,7 +190,7 @@ x += xspd;
 		
 		
 		
-		
+		//(to test if everyhting the same: vid 7: 54.40}
 		//Floor y colision
 		
 		//check for solid and semisolid platforms under me
@@ -209,7 +209,8 @@ x += xspd;
 			var _listInst = _list[| i];
 			
 			//avoid magnetizm
-			
+			if ( _listInst.yspd <= yspd || instance_exists(myFloorPlat) )
+			&& ( _listInst.yspd > 0 || place_meeting( x, y+1 + _clampYspd, _listInst ) )
 			{
 				//return a solid wall or any semisolid walls that are below the player
 				if _listInst.object_index == oWall
@@ -262,6 +263,53 @@ x += xspd;
 		
 		//move
 		y += yspd
+		
+		
+//final moving paltofrm colissions and movement
+	//X - movemplat xspd and colision
+
+
+
+
+
+
+
+
+
+	// Y - snap myself to myFloorPlat if its moving vertically
+	if instance_exists(myFloorPlat) 
+	&& (myFloorPlat.yspd != 0
+	|| myFloorPlat.object_index == oSemiSolidMovePlat
+	|| object_is_ancestor( myFloorPlat.object_index, oSemiSolidMovePlat) )
+	{
+		//snap to the top of the floor paltofrm ( un-floor our y variable so its not choppy)
+		if !place_meeting( x, myFloorPlat.bbox_top, oWall )
+		&& myFloorPlat.bbox_top >= bbox_bottom-moveplatMaxYspd
+		{
+			y = myFloorPlat.bbox_top;
+		}
+		
+		//going up into a solid wall while on a semi-solid platform
+		if myFloorPlat.yspd < 0 && place_meeting( x, y + myFloorPlat.yspd, oWall)
+		{
+			//get pushed down trought he semi-solid floor paltofrm
+			if myFloorPlat.object_index == oSemiSolidMovePlat || object_is_ancestor( myFloorPlat.object_index, oSemiSolidWall)
+			{
+				//get pushed down trough the semi-solid
+				var _subPixel = 0.25;
+				while place_meeting( x, y + myFloorPlat.yspd, oWall) { y += _subPixel; };
+				//if we get pushed into a semi-solid wall while going downward, push ourselves back out
+				while place_meeting( x, y, oWall) { y -= _subPixel; };
+				y = round(y);
+			}
+			
+			//cancel the myfloorplat variable
+			setOnGround(false);
+		}
+	}
+	
+	
+	
 	
 	
 //sprite control
