@@ -55,11 +55,18 @@ if place_meeting( x + xspd, y, oWall )
 
 
 
-//go down slopes 
-if yspd >= 0 && !place_meeting( x + xspd, y + 1, oWall) && place_meeting( x + xspd, y + abs(xspd) + 1, oWall)
-{
-	while !place_meeting( x+ xspd, y + _subPixel, oWall) { y += _subPixel; };
-}
+	//go down slopes 
+	downSlopeSemiSolid = noone;
+	if yspd >= 0 && !place_meeting( x + xspd, y + 1, oWall) && place_meeting( x + xspd, y + abs(xspd) + 1, oWall)
+	{
+		//check for a semisolid in the way
+		downSlopeSemiSolid = checkForSemisolidPlatform( x + xspd, y + abs(xspd)+1  );
+		//precisly mode down slope if there isnt a semisolid in the way
+		if !instance_exists(downSlopeSemiSolid)
+		{
+		while !place_meeting( x + xspd, y + _subPixel, oWall) { y += _subPixel; };
+		}
+	}
 
 
 
@@ -230,6 +237,9 @@ x += xspd;
 		//destory the dslist to avoid memory leak
 		ds_list_destroy(_list);
 		
+		//Downslope semisolid for making sure we dont miss semisoluds while going down slopes
+		if instance_exists(downSlopeSemiSolid) { myFloorPlat = downSlopeSemiSolid; };
+		
 		// one last check to make sure the floor platform is actually below us
 		if instance_exists(myFloorPlat) && !place_meeting( x, y + moveplatMaxYspd, myFloorPlat)
 		{
@@ -267,15 +277,34 @@ x += xspd;
 		
 //final moving paltofrm colissions and movement
 	//X - movemplat xspd and colision
-
-
-
-
-
-
-
-
-
+	//get the moveplat xspd
+	moveplatXspd = 0;
+	if instance_exists(myFloorPlat) { moveplatXspd = myFloorPlat.xspd; }; 
+	
+	//move with moveplatxspd
+	if place_meeting( x + moveplatXspd, y, oWall )
+	{
+		//scoot up to the wall pricesly
+		var _subPixel = 0.5;
+		var _pixelCheck = _subPixel * sign(moveplatXspd);
+		while !place_meeting( x + _pixelCheck, y, oWall)
+		{
+			x += _pixelCheck;
+		}
+		//set movepaltxspd to finish collision
+		moveplatXspd = 0;
+	}
+		//move
+		x += moveplatXspd;
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// Y - snap myself to myFloorPlat if its moving vertically
 	if instance_exists(myFloorPlat) 
 	&& (myFloorPlat.yspd != 0

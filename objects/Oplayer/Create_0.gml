@@ -12,6 +12,38 @@ function setOnGround(_val = true)
 	}
 }
 
+function checkForSemisolidPlatform( _x, _y)
+{
+	//create a return variable
+	var _rtrn = noone;
+	
+	//we must not be moving upwards and then we check for a normal collision
+	if yspd >= 0 && place_meeting(_x, _y, oSemiSolidWall)
+	{
+		//create a ds list to store all colliding instances of oSemiSolidWall
+		var _list = ds_list_create();
+		var _listSize = instance_place_list(_x, _y, oSemiSolidWall, _list, false);
+		
+		//loop trough te colliding instances and only return one if its top is below the player
+		for( var i = 0; i < _listSize; i++)
+		{
+			var _listInst = _list[| i];
+			if floor(bbox_bottom) <= ceil( _listInst.bbox_top - _listInst.yspd )
+			{
+				//return the idd of a semiSolid platform
+				_rtrn = _listInst;
+				//exit the loop early
+				i = _listSize;
+			}
+		}
+		//destroy the ds list to free memory
+		ds_list_destroy(_list);
+	}
+	//return our virable
+	return _rtrn;
+}
+
+
 depth = -30;
 //controls setup
 ControlsSetup();
@@ -57,5 +89,6 @@ jumpSpr = sPlayerJump;
 
 //moving platforms
 myFloorPlat = noone;
+downSlopeSemiSolid= noone;
 moveplatXspd = 0;
 moveplatMaxYspd = termVel; //How fast can the player follow a downwards moving platform
