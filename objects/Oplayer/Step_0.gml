@@ -112,7 +112,14 @@ x += xspd;
 
 
 	// iniate jump
-	if jumpKeyBufferd && jumpCount < jumpMax
+	var _floorIsSolid = false;
+	if instance_exists(myFloorPlat)
+	&& ( myFloorPlat.object_index == oWall || object_is_ancestor(myFloorPlat.object_index, oWall) )
+	{
+		_floorIsSolid = true;
+	}
+	
+	if jumpKeyBufferd && jumpCount < jumpMax && (!downKey || _floorIsSolid)
 	{
 		//reset the buffer
 		jumpKeyBufferd = false;
@@ -209,15 +216,24 @@ x += xspd;
 		// do the actual check and objects to list
 		var _listSize = instance_place_list( x, y+1 + _clampYspd + moveplatMaxYspd, _array, _list, false );
 		
-		//loop through the colliding isnatnces and only reutrn if its top is bellow the player
+			/////////(FIX FOR HIGH RESOLUTION/HIGH SPEED PROJECTILES - same prncipal as how i fixed the downwards slope issue) Check for a semisolid palt below me
+			var _yCheck = y+1 + _clampYspd;
+			if instance_exists(myFloorPlat) { _yCheck += max(0, myFloorPlat.yspd) ; };
+			var _semiSolid = checkForSemisolidPlatform(x, _yCheck );
+			
+			
+			
+		//loop through the colliding instances and only reutrn if its top is bellow the player
 		for( var i = 0; i < _listSize; i++)
 		{
 			//get instance of o wall or osemisolid wall form the list
 			var _listInst = _list[| i];
 			
 			//avoid magnetizm
-			if ( _listInst.yspd <= yspd || instance_exists(myFloorPlat) )
+			if _listInst != forgetSemiSolid
+			&& ( _listInst.yspd <= yspd || instance_exists(myFloorPlat) )
 			&& ( _listInst.yspd > 0 || place_meeting( x, y+1 + _clampYspd, _listInst ) )
+			|| (_listInst == _semiSolid)////////(HIGH SPEED FIX)
 			{
 				//return a solid wall or any semisolid walls that are below the player
 				if _listInst.object_index == oWall
@@ -270,9 +286,39 @@ x += xspd;
 		
 		
 		
-		
+		//manually fall through a semisolid platform
+		if downKey && jumpKeyPressed
+		{
+			//make sure we have a floor platform that is a semisolid
+			if instance_exists(myFloorPlat)
+			&& ( myFloorPlat.object_index == oSemiSolidWall || object_is_ancestor(myFloorPlat.object_index, oSemiSolidWall) )
+			{
+				//check if we can go below the semisolid
+				var _yCheck = max( 1, myFloorPlat.yspd + 1);
+				if !place_meeting( x, y + _yCheck, oWall )
+				{
+					//move below the platform
+					y += 1;
+					
+					//inherit any downward speed from my floorplatform so it doesnt catch me
+					yspd = _yCheck-1;
+					
+					//forget this platform for a brief time so we dont get caught again
+					forgetSemiSolid = myFloorPlat;
+					
+					//no more floor platform
+					setOnGround(false);
+				}
+			}
+		}
 		//move
 		y += yspd
+		
+		//reset forgetsemisolid variable
+		if instance_exists(forgetSemiSolid) && !place_meeting(x, y,forgetSemiSolid)
+		{
+			forgetSemiSolid = noone;
+		}
 		
 		
 //final moving paltofrm colissions and movement

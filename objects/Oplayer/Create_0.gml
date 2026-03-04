@@ -28,7 +28,7 @@ function checkForSemisolidPlatform( _x, _y)
 		for( var i = 0; i < _listSize; i++)
 		{
 			var _listInst = _list[| i];
-			if floor(bbox_bottom) <= ceil( _listInst.bbox_top - _listInst.yspd )
+			if _listInst != forgetSemiSolid && floor(bbox_bottom) <= ceil( _listInst.bbox_top - _listInst.yspd )
 			{
 				//return the idd of a semiSolid platform
 				_rtrn = _listInst;
@@ -90,5 +90,6 @@ jumpSpr = sPlayerJump;
 //moving platforms
 myFloorPlat = noone;
 downSlopeSemiSolid= noone;
+forgetSemiSolid = noone;
 moveplatXspd = 0;
 moveplatMaxYspd = termVel; //How fast can the player follow a downwards moving platform
