@@ -1,11 +1,38 @@
 //Get inputs
 getControls();
 
+
+
+
 //get out of solid moveplats that have positioned themselves into player in the begin step
+	var _rightwall = noone;
+	var _list = ds_list_create();
+	var _listSize = instance_place_list( x, y, oMovePlat, _list, false);
 
+//loop trough all colliding moveplats
+	for( var i = 0; i < _listSize; i++)
+	{
+		var _listInst = _list[| i];
+	
+		// if there are wall to the right of me, get the closest one
+		if _listInst.bbox_left - _listInst.xspd >= bbox_right-1
+		{
+			if !instance_exists(_rightwall) || _listInst.bbox_left < _rightwall.bbox_left
+			{
+				_rightwall = _listInst;
+			}
+		}
+	}
 
-
-
+	//destroy ds list to free memory
+	ds_list_destroy(_list);
+	
+	//get out of the walls
+	if instance_exists(_rightwall)
+	{
+		var _rightDist = bbox_right - x;
+		x = _rightwall.bbox_left - _rightDist;
+	}
 
 
 //x movement
@@ -374,7 +401,7 @@ x += xspd;
 	if instance_exists(myFloorPlat) 
 	&& (myFloorPlat.yspd != 0
 	|| myFloorPlat.object_index == oMovePlat
-	|| object_is_ancestor(myFloorPlat.object_index, oMovePlat)
+	|| object_is_ancestor( myFloorPlat.object_index, oMovePlat)
 	|| myFloorPlat.object_index == oSemiSolidMovePlat
 	|| object_is_ancestor( myFloorPlat.object_index, oSemiSolidMovePlat) )
 	{
