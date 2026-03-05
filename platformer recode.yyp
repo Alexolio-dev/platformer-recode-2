@@ -25,6 +25,7 @@
   "name":"platformer recode",
   "resources":[
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
+    {"id":{"name":"oMovePlat","path":"objects/oMovePlat/oMovePlat.yy",},},
     {"id":{"name":"Oplayer","path":"objects/Oplayer/Oplayer.yy",},},
     {"id":{"name":"oSemiSolidMovePlat","path":"objects/oSemiSolidMovePlat/oSemiSolidMovePlat.yy",},},
     {"id":{"name":"oSemiSolidWall","path":"objects/oSemiSolidWall/oSemiSolidWall.yy",},},
@@ -36,6 +37,7 @@
     {"id":{"name":"innit","path":"rooms/innit/innit.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Generalfunctions","path":"scripts/Generalfunctions/Generalfunctions.yy",},},
+    {"id":{"name":"sMovePlat","path":"sprites/sMovePlat/sMovePlat.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sPlayerCrouch","path":"sprites/sPlayerCrouch/sPlayerCrouch.yy",},},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},},

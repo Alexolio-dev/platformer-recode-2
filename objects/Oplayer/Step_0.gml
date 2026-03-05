@@ -1,6 +1,10 @@
 //Get inputs
 getControls();
 
+//get out of solid moveplats that have positioned themselves into player in the begin step
+
+
+
 
 
 
@@ -138,15 +142,30 @@ x += xspd;
 	}
 	
 	
+	
+	
+	
+	
+	
+	//ga video 2 kijken om te bug checken bij dit stuk specifiek :)
+	
 	//jump based on the timer/ holding the button
 	if jumpHoldTimer > 0
 	{
+		
 		//consatntly set yspd to be jspd
 		yspd = jspd[jumpCount-1];
+		
 		//count down the jump timer
 		jumpHoldTimer--;
 	}
-	
+	////////// watch out touchy ssytem ai code, DO NOT MAKE THIS MISTAKE AGAIN
+	else
+	{
+		//no jumps but timer still active, kill timer
+		jumpHoldTimer = 0;
+	}
+	////////// watch out touchy ssytem ai code, DO NOT MAKE THIS MISTAKE AGAIN
 	
 	
 	
@@ -354,6 +373,8 @@ x += xspd;
 	// Y - snap myself to myFloorPlat if its moving vertically
 	if instance_exists(myFloorPlat) 
 	&& (myFloorPlat.yspd != 0
+	|| myFloorPlat.object_index == oMovePlat
+	|| object_is_ancestor(myFloorPlat.object_index, oMovePlat)
 	|| myFloorPlat.object_index == oSemiSolidMovePlat
 	|| object_is_ancestor( myFloorPlat.object_index, oSemiSolidMovePlat) )
 	{
