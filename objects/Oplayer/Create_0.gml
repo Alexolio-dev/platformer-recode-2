@@ -81,7 +81,7 @@ coyoteJumpFrames = 4;
 coyoteJumpTimer = 0;
 
 //sprites
-maskSpr = sPlayerIdle;
+maskSpr = sPlayer;
 idleSpr = sPlayerIdle;
 runSpr = sPlayerRun;
 walkSpr = sPlayer;

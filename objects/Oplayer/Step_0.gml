@@ -32,6 +32,7 @@ getControls();
 	{
 		var _rightDist = bbox_right - x;
 		x = _rightwall.bbox_left - _rightDist;
+		
 	}
 
 
@@ -317,7 +318,7 @@ x += xspd;
 			//make sure we dont end up below the top of our semisolid
 			if myFloorPlat.object_index == oSemiSolidWall || object_is_ancestor(myFloorPlat.object_index, oSemiSolidWall)
 			{
-				while place_meeting( x, y, myFloorPlat ) { y -= _subPixel };
+				while place_meeting( x, y, myFloorPlat ) { y -= _subPixel; };
 			}
 			//floor the y variable
 			y = floor(y);
@@ -388,6 +389,7 @@ x += xspd;
 	}
 		//move
 		x += moveplatXspd;
+		
 	
 	
 	
