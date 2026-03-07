@@ -81,7 +81,7 @@ coyoteJumpFrames = 4;
 coyoteJumpTimer = 0;
 
 //sprites
-maskSpr = sPlayer;
+maskSpr = sPlayerIdle;
 idleSpr = sPlayerIdle;
 runSpr = sPlayerRun;
 walkSpr = sPlayer;
@@ -89,7 +89,12 @@ jumpSpr = sPlayerJump;
 
 //moving platforms
 myFloorPlat = noone;
+earlyMovePlatXspd = false;
 downSlopeSemiSolid= noone;
 forgetSemiSolid = noone;
 moveplatXspd = 0;
 moveplatMaxYspd = termVel; //How fast can the player follow a downwards moving platform
+
+//crush code timer
+crushDeathTimer = 0;
+crushDeathTime = 3;
