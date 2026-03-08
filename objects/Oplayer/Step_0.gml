@@ -112,10 +112,35 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspd != 0 && !place_meeting( x, y
 }
 
 
-		
-		
-		
 
+		
+//crouching
+		//transition to crouch
+		//manual
+		if downKey && instance_exists(myFloorPlat)
+		{
+			crouching = true;
+		}
+	
+		//change colission mask
+		if crouching { mask_index = crouchSpr; };
+	//transtition out of crouching
+	//manual
+	if crouching && !downKey 
+	{
+		//check if i can uncrouch
+		mask_index = maskSpr;
+		//uncrouch if no solid wallis in the way
+		if !place_meeting( x, y, oWall)
+		{
+			crouching = false;
+		}
+		//go back to crouhcing mask index if we cant uncrouch
+		else
+		{
+			mask_index = crouchSpr;
+		}
+	}
 
 //x movement
 //Direction
@@ -585,9 +610,12 @@ if abs(xspd) >= moveSpd[1] { sprite_index = runSpr; };
 if xspd == 0 { sprite_index = idleSpr; };
 //in the air
 if !onGround { sprite_index = jumpSpr; };
+//crouching
+if crouching { sprite_index = crouchSpr; };
 
 	//set the collsion mask
 	mask_index = maskSpr;
+	if crouching { mask_index = crouchSpr; };
 
 
 

@@ -65,6 +65,10 @@ jumpMax = 1;
 jumpCount = 0;
 jumpHoldTimer = 0;
 
+//state variables
+crouching = false;
+
+
 //jump calues for each succesive jump
 jumpHoldFrames[0] = 18;
 jumpHoldFrames[1] = 10;
@@ -86,6 +90,7 @@ idleSpr = sPlayerIdle;
 runSpr = sPlayerRun;
 walkSpr = sPlayer;
 jumpSpr = sPlayerJump;
+crouchSpr = sPlayerCrouch;
 
 //moving platforms
 myFloorPlat = noone;
