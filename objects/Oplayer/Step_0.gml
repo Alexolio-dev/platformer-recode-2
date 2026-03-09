@@ -277,16 +277,10 @@ x += xspd;
 		//tell ourselvs whe are no longer on the ground
 		setOnGround(false)
 	}
-	//Cut off the jump by releasing the jump button
-	if !jumpkey
-	{
-	jumpHoldTimer = 0;
-	}
+
 	
 	
-	
-	
-	
+
 	
 	
 	//ga video 2 kijken om te bug checken bij dit stuk specifiek :)
@@ -303,6 +297,11 @@ x += xspd;
 	}
 
 	
+	//Cut off the jump by releasing the jump button
+	if !jumpkey
+	{
+	jumpHoldTimer = 0;
+	}
 	
 	
 	
