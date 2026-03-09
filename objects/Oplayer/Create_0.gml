@@ -67,7 +67,7 @@ jumpHoldTimer = 0;
 
 //state variables
 crouching = false;
-
+crouchMoveSpd = .5;
 
 //jump calues for each succesive jump
 jumpHoldFrames[0] = 18;

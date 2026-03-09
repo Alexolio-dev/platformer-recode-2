@@ -116,17 +116,16 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspd != 0 && !place_meeting( x, y
 		
 //crouching
 		//transition to crouch
-		//manual
-		if downKey && instance_exists(myFloorPlat)
+		//manual =downkey | automatic = wall collision
+		if onGround && (downKey || place_meeting( x, y, oWall))
 		{
 			crouching = true;
 		}
-	
 		//change colission mask
 		if crouching { mask_index = crouchSpr; };
-	//transtition out of crouching
-	//manual
-	if crouching && !downKey 
+//transition out of crouching
+	//manual = !downkey | Automatic = !on
+	if crouching && (!downKey || !onGround)
 	{
 		//check if i can uncrouch
 		mask_index = maskSpr;
@@ -142,6 +141,12 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspd != 0 && !place_meeting( x, y
 		}
 	}
 
+
+
+
+
+
+
 //x movement
 //Direction
 moveDir = rightKey - leftKey
@@ -152,6 +157,8 @@ if moveDir != 0 {face = moveDir; };
 runType = runKey;
 // Get xspd
 xspd = moveDir * moveSpd[runType];
+//slow xspd if crouching
+if crouching { xspd = moveDir * crouchMoveSpd; };
 
 
 
@@ -340,7 +347,7 @@ x += xspd;
 				}
 			
 				//bonkcode (optional)
-				//if yspd < 0 { jumpHoldTimer = 0; };
+				if yspd < 0 { jumpHoldTimer = 0; };
 			
 				//Set yspd to 0 to collide
 				yspd = 0;
