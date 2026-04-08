@@ -20,7 +20,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"platformer recode",
   "resources":[
@@ -35,6 +35,7 @@
     {"id":{"name":"oSlope3","path":"objects/oSlope3/oSlope3.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"innit","path":"rooms/innit/innit.yy",},},
+    {"id":{"name":"The_Forest","path":"rooms/The_Forest/The_Forest.yy",},},
     {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"id":{"name":"Generalfunctions","path":"scripts/Generalfunctions/Generalfunctions.yy",},},
     {"id":{"name":"sMovePlat","path":"sprites/sMovePlat/sMovePlat.yy",},},
@@ -56,6 +57,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"innit","path":"rooms/innit/innit.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
+    {"roomId":{"name":"The_Forest","path":"rooms/The_Forest/The_Forest.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
