@@ -24,6 +24,7 @@
   },
   "name":"platformer recode",
   "resources":[
+    {"id":{"name":"ObjSave","path":"objects/ObjSave/ObjSave.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oMovePlat","path":"objects/oMovePlat/oMovePlat.yy",},},
     {"id":{"name":"Oplayer","path":"objects/Oplayer/Oplayer.yy",},},
