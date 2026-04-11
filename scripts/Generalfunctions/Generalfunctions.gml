@@ -49,9 +49,40 @@ function getControls()
 //https://www.youtube.com/watch?v=i6aEyrRIzTY
 function save_game()
 {
+	
+	//4:36
+	
+	
+	
+	
+	
+	
+	
+	var _struct = 
+	{
+		hunger: global.hunger,
+		x: obj_cheese.x,
+		y: obj_cheese.y,
+		image_index: obj_cheese.image_index
+		
+		
+		
+		
+		
+	};
+	
+	var _string = json_stringify( _struct);
+	
+	
+	
+	
+	
+	
+	
 	var _file = file_text_open_write( "save.txt" );
 	
-	file_text_write_real( _file, global.hunger);
+	//file_text_write_real( _file, global.hunger);
+	file_text_write_string( _file, _string);
 	
 	file_text_close( _file);
 }
@@ -62,7 +93,18 @@ function load_game()
 	{
 		var _file = file_text_open_read("save.txt");
 		
-		global.hunger = file_text_read_real( _file);
+		//global.hunger = file_text_read_real( _file);
+		var _json = file_text_read_string( _file);
+		
+		var _struct = json_parse( _json);
+		global.hunger = _struct.hunger;
+		obj_cheese.x = _struct.x;
+		obj_cheese.y = _struct.y;
+		obj_cheese.image_index = _struct.image_index;
+		
+		
+		
+		
 		
 		file_text_close( _file);
 	}
