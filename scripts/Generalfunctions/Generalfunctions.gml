@@ -45,47 +45,62 @@ function getControls()
 
 
 
+global.game_data =
+{
+	hunger: 100,
+	room_data: {}
+};
+
+function save_room()
+{
+	
+	
+	var _array = [];
+	
+	with (obj_cheese)
+	{
+		
+		var _struct =
+		{
+			
+			object: object_get_name( object_index),
+			x: x,
+			y:y,
+			image_index: image_index
+
+		
+	};
+	
+	array_push( _array, _struct);
+	
+	//can double this and change the object to do it do not forget the last one so u can change color
+	
+	}
+	
+	struct_set( global.game_data.room_data, room_get_name( room), _array);
+	
+}
+
 //Saving
 //https://www.youtube.com/watch?v=i6aEyrRIzTY
 function save_game()
 {
 	
-	//4:36
+	save_room();
 	
 	
 	
+	var _string = json_stringify( global.game_data);
 	
 	
-	
-	
-	var _struct = 
-	{
-		hunger: global.hunger,
-		x: obj_cheese.x,
-		y: obj_cheese.y,
-		image_index: obj_cheese.image_index
-		
-		
-		
-		
-		
-	};
-	
-	var _string = json_stringify( _struct);
-	
-	
-	
-	
-	
-	
-	
-	var _file = file_text_open_write( "save.txt" );
-	
-	//file_text_write_real( _file, global.hunger);
-	file_text_write_string( _file, _string);
-	
-	file_text_close( _file);
 }
+
+
+
+
+
+
+
 
 function load_game()
 {
@@ -96,21 +111,44 @@ function load_game()
 		//global.hunger = file_text_read_real( _file);
 		var _json = file_text_read_string( _file);
 		
-		var _struct = json_parse( _json);
-		global.hunger = _struct.hunger;
-		obj_cheese.x = _struct.x;
-		obj_cheese.y = _struct.y;
-		obj_cheese.image_index = _struct.image_index;
+		var global.game_date = json_parse( _json);
 		
 		
-		
-		
+		}
+
 		
 		file_text_close( _file);
 	}
 	
 	
+
+
+function load_room()
+{
+	
+	var _array = struct_get ( global.game_data.room_data, room_get_name( room));
+	
+	if(array != undefined)
+	{
+		
+		
+		instance_destroy( obj_cheese);
+				instance_destroy( obj_whateverdafuckelse);
+				
+		for( var i= 0;i < array_length( _array); i += 1)
+		{
+			var _struct = _array[ i];
+			
+			instance_create_layer( _struct.x, _struct.y, "instances", asset_get_index( _struct.object), _struct);
+		
+		
+		}
+		
+		
+	}
 	
 }
 
 
+//Saving
+//https://www.youtube.com/watch?v=i6aEyrRIzTY
