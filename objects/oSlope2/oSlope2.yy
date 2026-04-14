@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"slope objects",
-    "path":"folders/slope objects.yy",
+    "path":"folders/objects/slope objects.yy",
   },
   "parentObjectId":{
     "name":"oSlope",

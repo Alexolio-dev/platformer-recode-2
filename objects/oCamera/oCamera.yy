@@ -9,8 +9,8 @@
   "name":"oCamera",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"Other",
+    "path":"folders/Other.yy",
   },
   "parentObjectId":null,
   "persistent":true,

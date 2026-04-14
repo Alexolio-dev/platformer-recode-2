@@ -585,7 +585,7 @@ x += xspd;
 	
 	
 	
-/*/crushed death code
+//crushed death code
 if place_meeting( x, y, oWall)
 {
 	crushDeathTimer++;
@@ -596,7 +596,24 @@ if place_meeting( x, y, oWall)
 } else {
 	crushDeathTimer = 0;
 }
-/*/
+
+
+
+//send the player back to the savespot
+if crushDeathTimer = 3 || place_meeting( x, y, oDeathpit)
+{
+	var near = instance_nearest( x, y, oSaveSpot)
+	Oplayer.x = near.x;
+	Oplayer.y = near.y;
+}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	image_blend = c_white
 	

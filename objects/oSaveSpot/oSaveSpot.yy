@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oSlope1",
+  "%Name":"oSaveSpot",
   "eventList":[],
   "managed":true,
-  "name":"oSlope1",
+  "name":"oSaveSpot",
   "overriddenProperties":[],
   "parent":{
-    "name":"slope objects",
-    "path":"folders/objects/slope objects.yy",
+    "name":"platformer recode",
+    "path":"platformer recode.yyp",
   },
-  "parentObjectId":{
-    "name":"oSlope",
-    "path":"objects/oSlope/oSlope.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sSlope1",
-    "path":"sprites/sSlope1/sSlope1.yy",
+    "name":"sSavespot",
+    "path":"sprites/sSavespot/sSavespot.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

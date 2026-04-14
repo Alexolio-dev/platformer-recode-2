@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"platformsprites",
+    "path":"folders/sprites/platformsprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

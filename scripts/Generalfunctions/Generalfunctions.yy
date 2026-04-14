@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Generalfunctions",
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"Other",
+    "path":"folders/Other.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

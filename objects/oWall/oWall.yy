@@ -8,8 +8,8 @@
   "name":"oWall",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"platformObjects",
+    "path":"folders/objects/platformObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

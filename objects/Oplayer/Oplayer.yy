@@ -10,8 +10,8 @@
   "name":"Oplayer",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"Entities",
+    "path":"folders/objects/Entities.yy",
   },
   "parentObjectId":null,
   "persistent":false,
