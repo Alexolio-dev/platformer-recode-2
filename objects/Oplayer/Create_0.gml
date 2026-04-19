@@ -109,3 +109,6 @@ crushDeathTime = 3;
 
 //https://forum.gamemaker.io/index.php?threads/return-player-to-nearest-solid-after-death.85726/
 //https://www.youtube.com/watch?v=Jn_9vInZVkU
+
+
+//https://www.youtube.com/watch?v=Jn_9vInZVkU&t=1s
