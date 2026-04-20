@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"deathMechanics",
+    "path":"folders/objects/deathMechanics.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

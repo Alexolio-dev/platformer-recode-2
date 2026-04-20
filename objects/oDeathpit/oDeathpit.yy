@@ -8,8 +8,8 @@
   "name":"oDeathpit",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"deathMechanics",
+    "path":"folders/objects/deathMechanics.yy",
   },
   "parentObjectId":null,
   "persistent":false,

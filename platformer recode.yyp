@@ -11,11 +11,12 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"deathMechanics","folderPath":"folders/objects/deathMechanics.yy","name":"deathMechanics","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Entities","folderPath":"folders/objects/Entities.yy","name":"Entities","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"platformObjects","folderPath":"folders/objects/platformObjects.yy","name":"platformObjects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"slope objects","folderPath":"folders/objects/slope objects.yy","name":"slope objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Other","folderPath":"folders/Other.yy","name":"Other","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"deathMechanics","folderPath":"folders/Other/deathMechanics.yy","name":"deathMechanics","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"managerial functions","folderPath":"folders/Other/managerial functions.yy","name":"managerial functions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"sprites","folderPath":"folders/sprites.yy","name":"sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"otherSprites","folderPath":"folders/sprites/otherSprites.yy","name":"otherSprites","resourceType":"GMFolder","resourceVersion":"2.0",},

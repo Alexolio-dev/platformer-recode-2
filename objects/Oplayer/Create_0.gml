@@ -105,10 +105,17 @@ crushDeathTimer = 0;
 crushDeathTime = 3;
 
 
+if (global.checkpointR == room)
+{
+	x = global.checkpointx;
+	y = global.checkpointy;
+}
+
 
 
 //https://forum.gamemaker.io/index.php?threads/return-player-to-nearest-solid-after-death.85726/
 //https://www.youtube.com/watch?v=Jn_9vInZVkU
 
+//https://www.youtube.com/watch?v=eqDpIVi1QCs gm 11 y old
 
-//https://www.youtube.com/watch?v=Jn_9vInZVkU&t=1s
+//https://www.youtube.com/watch?v=Jn_9vInZVkU&t=1s gm 3 y old

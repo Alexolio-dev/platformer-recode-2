@@ -585,7 +585,9 @@ x += xspd;
 	
 	
 	
-//crushed death code
+	
+	
+/*/crushed death code
 if place_meeting( x, y, oWall)
 {
 	crushDeathTimer++;
@@ -596,25 +598,18 @@ if place_meeting( x, y, oWall)
 } else {
 	crushDeathTimer = 0;
 }
+/*/
 
 
 
-/*/if you touch checkpoint, teleport to checkpoint
-if place_meeting( x, y, oSaveSpot)
-{
-	var _newSaveSpot = place_meeting( x, y, oSaveSpot)
-	oSaveSpot.x = _newSaveSpot.x
-	oSaveSpot.y = _newSaveSpot.y
-}
+
 
 //send the player back to the savespot
 if crushDeathTimer = 3 || place_meeting( x, y, oDeathpit)
 {
-	var near = oSaveSpot //instance_nearest( x, y, oSaveSpot)
-	Oplayer.x = near.x;
-	Oplayer.y = near.y;
-}
-	/*/
+	death()
+} 
+	
 	
 	
 	
