@@ -155,6 +155,7 @@
     {"name":"inst_F4EF9C0","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_652DFC02","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_1A00FCC2","path":"rooms/Tutorial/Tutorial.yy",},
+    {"name":"inst_C332078","path":"rooms/Tutorial/Tutorial.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -309,6 +310,7 @@
         {"$GMRInstance":"v4","%Name":"inst_F4EF9C0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_F4EF9C0","objectId":{"name":"oDeathpit","path":"objects/oDeathpit/oDeathpit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":2.0,"x":432.0,"y":272.0,},
         {"$GMRInstance":"v4","%Name":"inst_652DFC02","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_652DFC02","objectId":{"name":"oSaveSpot","path":"objects/oSaveSpot/oSaveSpot.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":592.0,"y":176.0,},
         {"$GMRInstance":"v4","%Name":"inst_1A00FCC2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1A00FCC2","objectId":{"name":"oSaveSpot","path":"objects/oSaveSpot/oSaveSpot.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":48.0,"y":160.0,},
+        {"$GMRInstance":"v4","%Name":"inst_C332078","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_C332078","objectId":{"name":"oMovePlat","path":"objects/oMovePlat/oMovePlat.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.0,"scaleY":1.0,"x":112.0,"y":160.0,},
       ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":2.0,"animationSpeedType":0,"colour":4294967062,"depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

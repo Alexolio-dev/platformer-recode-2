@@ -102,8 +102,7 @@ moveplatMaxYspd = termVel; //How fast can the player follow a downwards moving p
 
 //crush code timer
 crushDeathTimer = 0;
-crushDeathTime = 3;
-
+crushDeathTime = 2;
 
 if (global.checkpointR == room)
 {
@@ -113,9 +112,3 @@ if (global.checkpointR == room)
 
 
 
-//https://forum.gamemaker.io/index.php?threads/return-player-to-nearest-solid-after-death.85726/
-//https://www.youtube.com/watch?v=Jn_9vInZVkU
-
-//https://www.youtube.com/watch?v=eqDpIVi1QCs gm 11 y old
-
-//https://www.youtube.com/watch?v=Jn_9vInZVkU&t=1s gm 3 y old

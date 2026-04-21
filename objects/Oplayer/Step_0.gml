@@ -587,28 +587,30 @@ x += xspd;
 	
 	
 	
-/*/crushed death code
+//crushed death code
 if place_meeting( x, y, oWall)
 {
 	crushDeathTimer++;
 	if crushDeathTimer > crushDeathTime
 	{
-		instance_destroy();
+		death()
 	}
 } else {
 	crushDeathTimer = 0;
 }
-/*/
+
 
 
 
 
 
 //send the player back to the savespot
-if crushDeathTimer = 3 || place_meeting( x, y, oDeathpit)
+if crushDeathTimer == 2 || place_meeting( x, y, oDeathpit)
 {
 	death()
 } 
+
+
 	
 	
 	
@@ -617,13 +619,6 @@ if crushDeathTimer = 3 || place_meeting( x, y, oDeathpit)
 	
 	
 	
-	
-	image_blend = c_white
-	
-	if place_meeting( x, y, oWall)
-	{
-		image_blend = c_blue
-	}
 
 	
 	
