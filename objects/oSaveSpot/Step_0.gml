@@ -1,4 +1,4 @@
-if place_meeting( x, y, Oplayer)
+oif place_meeting( x, y, Oplayer)
 {
 	global.checkpoint = id;
 	global.checkpointx = x;
