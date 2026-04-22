@@ -1,5 +1,11 @@
 //if playa dead game stop
-if (playerDead) exit;
+if (playerDead)
+{
+	yspd += grav;
+	x += xspd;
+	y += yspd;
+	exit;
+}
 
 
 
@@ -615,12 +621,14 @@ if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oD
 	playerDead = true;
 	
 	// do the sprite shenenagians with setting it to frame 0  and making it silde 1 sprite per second
+	
 	sprite_index = sPlayerDeath;
 	image_index = 0;
 	image_speed = 1;
+	yspd += -10;
 	
 	//trigger the alarm to go off
-	alarm[0] = room_speed;
+	alarm[0] = room_speed * 2.5;
 } 
 
 
