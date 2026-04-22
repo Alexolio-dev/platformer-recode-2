@@ -1,5 +1,12 @@
+//if playa dead game stop
+if (playerDead) exit;
+
+
+
 //Get inputs
 getControls();
+
+
 
 //vid 8 18 min
 
@@ -591,10 +598,7 @@ x += xspd;
 if place_meeting( x, y, oWall)
 {
 	crushDeathTimer++;
-	if crushDeathTimer > crushDeathTime
-	{
-		death()
-	}
+
 } else {
 	crushDeathTimer = 0;
 }
@@ -605,9 +609,18 @@ if place_meeting( x, y, oWall)
 
 
 //send the player back to the savespot
-if crushDeathTimer == 2 || place_meeting( x, y, oDeathpit)
+if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oDeathpit)))
 {
-	death()
+	//player is dead
+	playerDead = true;
+	
+	// do the sprite shenenagians with setting it to frame 0  and making it silde 1 sprite per second
+	sprite_index = sPlayerDeath;
+	image_index = 0;
+	image_speed = 1;
+	
+	//trigger the alarm to go off
+	alarm[0] = room_speed;
 } 
 
 
@@ -621,7 +634,9 @@ if crushDeathTimer == 2 || place_meeting( x, y, oDeathpit)
 	
 
 	
-	
+//if player dead this don matter
+if !playerDead
+{
 //sprite control
 //walking
 if abs(xspd) > 0 { sprite_index = walkSpr; };
@@ -633,7 +648,7 @@ if xspd == 0 { sprite_index = idleSpr; };
 if !onGround { sprite_index = jumpSpr; };
 //crouching
 if crouching { sprite_index = crouchSpr; };
-
+}
 	//set the collsion mask
 	mask_index = maskSpr;
 	if crouching { mask_index = crouchSpr; };
