@@ -2,7 +2,6 @@
 if (playerDead)
 {
 	yspd += grav;
-	x += xspd;
 	y += yspd;
 	exit;
 }

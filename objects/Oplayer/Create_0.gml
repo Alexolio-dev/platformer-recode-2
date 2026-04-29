@@ -116,3 +116,5 @@ if (global.checkpointR == room)
 
 
 
+//   https://forum.gamemaker.io/index.php?threads/super-mario-world-style-map-revisited.36641/
+// https://www.youtube.com/watch?v=TrHnqMexTbs

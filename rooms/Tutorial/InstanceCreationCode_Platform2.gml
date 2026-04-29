@@ -1,4 +1,4 @@
-
 radius = 96;
 rotSpd = 1;
-xspd = 0;
+dir = 1;
+moveType = "horizontal"
