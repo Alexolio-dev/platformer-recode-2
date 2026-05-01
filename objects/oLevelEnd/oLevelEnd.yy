@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oWorldMap",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oLevelEnd",
+  "eventList":[],
   "managed":true,
-  "name":"oWorldMap",
+  "name":"oLevelEnd",
   "overriddenProperties":[],
   "parent":{
     "name":"other",
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sWorldMap",
-    "path":"sprites/sWorldMap/sWorldMap.yy",
+    "name":"sLevelEnd",
+    "path":"sprites/sLevelEnd/sLevelEnd.yy",
   },
   "spriteMaskId":null,
   "visible":true,

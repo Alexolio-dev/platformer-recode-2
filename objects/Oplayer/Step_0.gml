@@ -630,7 +630,10 @@ if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oD
 	alarm[0] = room_speed * 2.5;
 } 
 
-
+if place_meeting( x, y, oLevelEnd)
+{
+	room_goto(WorldMap)
+}
 	
 	
 	
