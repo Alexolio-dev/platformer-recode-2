@@ -107,14 +107,15 @@ crushDeathTime = 3;
 //death
 playerDead = false;
 
-
 if (global.checkpointR == room)
 {
 	x = global.checkpointx;
 	y = global.checkpointy;
 }
 
-
+//GameMaker path_start tutorial"
+//"GameMaker world map system nodes"
+//"GameMaker path vs grid movement"
 
 //   https://forum.gamemaker.io/index.php?threads/super-mario-world-style-map-revisited.36641/
 // https://www.youtube.com/watch?v=TrHnqMexTbs
