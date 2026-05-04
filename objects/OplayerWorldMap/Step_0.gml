@@ -10,20 +10,20 @@ switch (path) {
 
     //path_1 is a path I created that generally goes up and down
     //path_1's end point is the start point of path_2
-    case path_1:
+    case PathWorldMap1:
   
         if (path_position == 0) { //if you're at the starting position
-            if (up) {  //and you push up
+            if (right) {  //and you push right
                 path_start(path, spd, 0, true); //move along the path
                 path_started = true;}} //note that you started moving along the path
           
         if (path_position == 1) { //if you're at the end position
-            if (down) { //if you push down
+            if (left) { //if you push left
                 path_start(path, -spd, 0, true); //go backwards along the path - note negative speed
                 path_started = true;} //note that you started moving along the path
       
-            if (right) { //if you push right
-                path = path_2; //switch to another path
+            if (up) { //if you push right
+                path = PathWorldmap2; //switch to another path
                 path_start(path, spd, 0, true); //start moving along that path
                 path_started = true;}} //note that you started moving along the path
   
@@ -32,15 +32,15 @@ switch (path) {
     //path_2 is a path I created that goes towards the right
     //path_2's start point is path_1's end point
     //path_2's end point is path_3's start point
-    case path_2:
+    case PathWorldmap2:
 
         if (path_position == 0) {
-            if (right) {
+            if (up) {
                 path_start(path, spd, 0, true);
                 path_started = true;}
           
-            if (down) {
-                path = path_1;
+            if (left) {
+                path = PathWorldMap1;
                 path_start(path, -spd, 0, true);
                 path_started = true;}}
           
@@ -49,8 +49,8 @@ switch (path) {
                 path_start(path, -spd, 0, true);
                 path_started = true;}
           
-            if (up) {
-                path = path_3;
+            if (down) {
+                path = PathWorldMap3;
                 path_start(path, spd, 0, true);
                 path_started = true;}}
  
@@ -58,25 +58,55 @@ switch (path) {
   
     //path_3 is a path that generally goes up
     //path_3's start point is path_2's end point
-    case path_3:
+    case PathWorldMap3:
 
         if (path_position == 0) {
-            if (up) {
+            if (down) {
                 path_start(path, spd, 0, true);
                 path_started = true;}
           
             if (left) {
-                path = path_2;
+                path = PathWorldmap2;
                 path_start(path, -spd, 0, true);
                 path_started = true;}}
           
         if (path_position == 1) {
             if (down) {
                 path_start(path, -spd, 0, true);
+                path_started = true;}
+			
+			 if (up) {
+                path = PathWorldMap4;
+                path_start(path, spd, 0, true);
+                path_started = true;}}
+				
+        break;
+
+  //path_3 is a path that generally goes up
+    //path_3's start point is path_2's end point
+    case PathWorldMap4:
+
+        if (path_position == 0) {
+            if (up) {
+                path_start(path, spd, 0, true);
+                path_started = true;}
+          
+            if (down) {
+                path = PathWorldMap3;
+                path_start(path, -spd, 0, true);
+                path_started = true;}}
+          
+        if (path_position == 1) {
+            if (down) {
+                path_start(path, -spd, 0, true);
+                path_started = true;}
+          
+            if (up) {
+                path = PathWorldMap5;
+                path_start(path, spd, 0, true);
                 path_started = true;}}
  
-        break;}
-
+        break; }
 
 
 if (path_started == true) { //if you're moving
@@ -113,23 +143,10 @@ if (path_started == true) { //if you're moving
 
 	
 //if player dead this don matter
-if !playerDead
-{
 //sprite control
-//walking
-if abs(xspd) > 0 { sprite_index = walkSpr; };
-//running
-if abs(xspd) >= moveSpd[1] { sprite_index = runSpr; };
 //standing still
-if xspd == 0 { sprite_index = idleSpr; };
-//in the air
-if !onGround { sprite_index = jumpSpr; };
-//crouching
-if crouching { sprite_index = crouchSpr; };
-}
-	//set the collsion mask
-	mask_index = maskSpr;
-	if crouching { mask_index = crouchSpr; };
-
+if path_started == false { sprite_index = sPlayerIdle; };
+//walking
+if path_started == true { sprite_index = sPlayer; };
 
 

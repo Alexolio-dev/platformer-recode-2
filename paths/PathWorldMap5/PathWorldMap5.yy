@@ -1,0 +1,23 @@
+{
+  "$GMPath":"",
+  "%Name":"PathWorldMap5",
+  "closed":false,
+  "kind":0,
+  "name":"PathWorldMap5",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":381.5653,"y":166.0,},
+    {"speed":100.0,"x":372.86963,"y":146.73914,},
+    {"speed":100.0,"x":379.82617,"y":123.26088,},
+    {"speed":100.0,"x":370.26093,"y":105.739136,},
+    {"speed":100.0,"x":371.1305,"y":78.04349,},
+    {"speed":100.0,"x":382.5653,"y":69.347824,},
+    {"speed":100.0,"x":398.47833,"y":59.17392,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

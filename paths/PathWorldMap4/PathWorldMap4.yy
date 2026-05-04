@@ -1,0 +1,24 @@
+{
+  "$GMPath":"",
+  "%Name":"PathWorldMap4",
+  "closed":false,
+  "kind":0,
+  "name":"PathWorldMap4",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":433.7392,"y":283.26086,},
+    {"speed":100.0,"x":416.3479,"y":265.86957,},
+    {"speed":100.0,"x":389.39136,"y":260.6522,},
+    {"speed":100.0,"x":384.174,"y":243.13043,},
+    {"speed":100.0,"x":375.47833,"y":224.26086,},
+    {"speed":100.0,"x":375.47833,"y":202.3913,},
+    {"speed":100.0,"x":373.7392,"y":179.78261,},
+    {"speed":100.0,"x":381.82617,"y":165.52174,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
