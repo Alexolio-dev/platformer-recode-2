@@ -6,7 +6,7 @@
   "name":"Generalfunctions",
   "parent":{
     "name":"Other",
-    "path":"folders/Other.yy",
+    "path":"folders/Paths/Other.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -632,7 +632,8 @@ if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oD
 
 if place_meeting( x, y, oLevelEnd)
 {
-	room_goto(WorldMap)
+	room_goto(WorldMap);
+	global.checkpointR = noone;
 }
 	
 	

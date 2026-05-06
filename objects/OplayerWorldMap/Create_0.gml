@@ -7,7 +7,7 @@ path_started = false; //a variable we'll use later
 
 face = 1;
 
-
+levelBeaten = false;
 
 
 /*/
