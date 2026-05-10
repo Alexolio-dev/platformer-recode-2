@@ -16,13 +16,11 @@ switch (path) {
   //enter level
 	if (path_started ==false && path_position < 0.05 && (space)) 
 	{ room_goto(Tutorial)}
-	
- if (space) { show_debug_message("pressed")}
   
-        if (path_position == 0) { //if you're at the starting position
+        if (path_position == 0) & global.level_unlocked[1] = true{ //if you're at the starting position
             if (right) {  //and you push right
                 path_start(path, spd, 0, true); //move along the path
-                path_started = true;}} //note that you started moving along the path
+                path_started = true;}}//note that you started moving along the path
           
 		  //https://www.youtube.com/watch?v=yE-atp2z74I
 		  // https://www.reddit.com/r/gamemaker/comments/2l8rfk/what_is_a_more_efficient_way_to_have_locked_rooms/
@@ -48,7 +46,7 @@ switch (path) {
     //path_2's end point is path_3's start point
     case PathWorldmap2:
 
-        if (path_position == 0) {
+        if (path_position == 0) & global.level_unlocked[2] = true {
             if (up) {
                 path_start(path, spd, 0, true);
                 path_started = true;}
@@ -58,7 +56,7 @@ switch (path) {
                 path_start(path, -spd, 0, true);
                 path_started = true;}}
           
-        if (path_position == 1) {
+        if (path_position == 1){
             if (left) {
                 path_start(path, -spd, 0, true);
                 path_started = true;}
@@ -164,7 +162,7 @@ if (path_started == true) { //if you're moving
 	
 	
 	
-	
+
 	
 	
 	

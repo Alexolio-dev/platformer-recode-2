@@ -5,9 +5,19 @@ x = path_get_point_x(path, 0); //set the object's x and y to the assigned path's
 y = path_get_point_y(path, 0);
 path_started = false; //a variable we'll use later
 
-face = 1;
 
-levelBeaten = false;
+
+//level unlcok systeem
+if (!variable_global_exists("level_unlocked"))
+{
+	//maak array voor de 5 unlockable level (mis 6-7)
+	global.level_unlocked = array_create(5, false);
+	
+	//eerste level unlocked
+	global.level_unlocked[0] = true;
+}
+
+
 
 
 /*/

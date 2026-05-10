@@ -112,8 +112,3 @@ if (global.checkpointR == room)
 	x = global.checkpointx;
 	y = global.checkpointy;
 }
-
-
-//https://www.youtube.com/watch?v=TrHnqMexTbs
-
-// https://www.youtube.com/watch?v=_oKYg3VWgOo could be helpful to wtach
