@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"WorldMap",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/WorldMap/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,

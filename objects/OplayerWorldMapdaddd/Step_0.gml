@@ -4,6 +4,14 @@ var down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 var left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 var right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 var space = keyboard_check_pressed( vk_space)
+
+//make sure that path started is false when player be standing still
+if path_position <= 0.05 || path_position >= 0.995
+{
+	path_started = false
+}
+
+
 //the path switch statement needs a case for each path
 //each case needs to be the name of the path itself
 switch (path) {
@@ -13,11 +21,11 @@ switch (path) {
     case PathWorldMap1:
   
   
-  //enter level
-	if (path_started ==false && path_position < 0.05 && (space)) 
+  //enter level if you arent on a path and you are close to the position plus space you go to tutorial
+	if (!path_started && path_position <= 0.05 && (space)) 
 	{ room_goto(Tutorial)}
   
-        if (path_position == 0) & global.level_unlocked[1] = true{ //if you're at the starting position
+        if (path_position == 0 && global.level_unlocked[1]) { //if you're at the starting position and level 1 is unlocked
             if (right) {  //and you push right
                 path_start(path, spd, 0, true); //move along the path
                 path_started = true;}}//note that you started moving along the path
@@ -31,22 +39,31 @@ switch (path) {
                 path_start(path, -spd, 0, true); //go backwards along the path - note negative speed
                 path_started = true;} //note that you started moving along the path
       
-            if (up) { //if you push right
+            if (up && global.level_unlocked[2]) { //if you push right and level 2 is unlocked
                 path = PathWorldmap2; //switch to another path
                 path_start(path, spd, 0, true); //start moving along that path
                 path_started = true;}} //note that you started moving along the path
-		
-		
-		
-		
+				
+				
+				
+			 if ( path_started == false && path_position >= 0.995 && (space) && global.level_unlocked[1])
+				{room_goto(The_Forest)}
+				
+				
         break;
+  
+ 
   
     //path_2 is a path I created that goes towards the right
     //path_2's start point is path_1's end point
     //path_2's end point is path_3's start point
     case PathWorldmap2:
 
-        if (path_position == 0) & global.level_unlocked[2] = true {
+		
+
+
+
+        if (path_position == 0){
             if (up) {
                 path_start(path, spd, 0, true);
                 path_started = true;}
@@ -67,6 +84,9 @@ switch (path) {
                 path_started = true;}}
  
         break;
+  
+  
+  
   
     //path_3 is a path that generally goes up
     //path_3's start point is path_2's end point
@@ -94,6 +114,10 @@ switch (path) {
 				
         break;
 
+
+
+
+
     //dit is pad 4 van de agme
     case PathWorldMap4:
 
@@ -119,6 +143,10 @@ switch (path) {
  
         break; 
 		
+		
+		
+		
+		
 	//path 5
 	case PathWorldMap5:
 
@@ -138,6 +166,9 @@ switch (path) {
                 path_started = true;}}
  
         break; }
+
+
+
 
 
 if (path_started == true) { //if you're moving
