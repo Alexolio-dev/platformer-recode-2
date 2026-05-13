@@ -23,16 +23,20 @@ switch (path) {
   
   //enter level if you arent on a path and you are close to the position plus space you go to tutorial
 	if (!path_started && path_position <= 0.05 && (space)) 
-	{ room_goto(Tutorial)}
+		{ 
+			global.returnPath = path;
+			global.returnPathPos = path_position;
+			
+			
+			room_goto(Tutorial);
+		}
   
         if (path_position == 0 && global.level_unlocked[1]) { //if you're at the starting position and level 1 is unlocked
             if (right) {  //and you push right
                 path_start(path, spd, 0, true); //move along the path
                 path_started = true;}}//note that you started moving along the path
           
-		  //https://www.youtube.com/watch?v=yE-atp2z74I
-		  // https://www.reddit.com/r/gamemaker/comments/2l8rfk/what_is_a_more_efficient_way_to_have_locked_rooms/
-		  //   
+
 			  
         if (path_position == 1) { //if you're at the end position
             if (left) { //if you push left
@@ -47,7 +51,13 @@ switch (path) {
 				
 				
 			 if ( path_started == false && path_position >= 0.995 && (space) && global.level_unlocked[1])
-				{room_goto(The_Forest)}
+				{
+					global.returnPath = path;
+					global.returnPathPos = path_position;
+					
+					
+					 room_goto(The_Forest);
+				}
 				
 				
         break;
@@ -206,9 +216,9 @@ if (path_started == true) { //if you're moving
 	
 //if player dead this don matter
 //sprite control
-//standing still
-if path_started == false { sprite_index = sPlayerIdle; };
 //walking
-if path_started == true { sprite_index = sPlayer; };
+if !path_position == 1 || !path_position == 0 { sprite_index = sPlayer; }
+//standing still
+if path_position == 1 || path_position == 0 { sprite_index = sPlayerIdle; };
 
 

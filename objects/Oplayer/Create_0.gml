@@ -107,8 +107,13 @@ crushDeathTime = 3;
 //death
 playerDead = false;
 
+//checkpoint code
 if (global.checkpointR == room)
 {
 	x = global.checkpointx;
 	y = global.checkpointy;
 }
+
+
+
+

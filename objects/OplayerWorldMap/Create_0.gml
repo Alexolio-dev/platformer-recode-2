@@ -1,9 +1,25 @@
-//path stuff
+//path stuff at spawn
 spd = 4; //this will be the speed along the path
 path = PathWorldMap1; //path is the variable that we use to track the assigned path
-x = path_get_point_x(path, 0); //set the object's x and y to the assigned path's x and y
-y = path_get_point_y(path, 0);
+path_position = 0;
 path_started = false; //a variable we'll use later
+
+
+//watch out a tad bit of ai code
+//restore previous location when you exit
+if (variable_global_exists("returnPath"))
+	{
+		path = global.returnPath;
+		path_position = global.returnPathPos;
+	}		
+
+//set position
+var point_count = path_get_number(path) -1;
+var point_index = round(point_count * path_position);
+
+x = path_get_point_x(path, point_index); //set the object's x and y to the assigned path's x and y
+y = path_get_point_y(path, point_index);
+//
 
 
 

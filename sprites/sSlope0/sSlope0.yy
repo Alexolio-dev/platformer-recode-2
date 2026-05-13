@@ -45,7 +45,7 @@
   "origin":0,
   "parent":{
     "name":"slope sprites",
-    "path":"folders/sprites/slope sprites.yy",
+    "path":"folders/objects/slope objects/slope sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
