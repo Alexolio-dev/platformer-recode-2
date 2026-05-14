@@ -1,0 +1,1 @@
+global.level_unlocked[2] = true;

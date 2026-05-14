@@ -38,10 +38,17 @@ y = path_get_point_y(path, point_index);
 if (!variable_global_exists("level_unlocked"))
 {
 	//maak array voor de 5 unlockable level (mis 6-7)
-	global.level_unlocked = array_create(5, false);
+	global.level_unlocked = array_create(10, false);
 	
 	//eerste level unlocked
 	global.level_unlocked[0] = true;
+	//
+	global.level_unlocked[1] = true;
+	global.level_unlocked[2] = true;
+	global.level_unlocked[3]= true;
+	global.level_unlocked[4] = true;
+	global.level_unlocked[5] = true;
+	//
 }
 
 

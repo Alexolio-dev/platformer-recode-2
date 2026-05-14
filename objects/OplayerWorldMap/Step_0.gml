@@ -32,6 +32,8 @@ switch (path) {
 		}
 		
 		
+		
+		
   
         if (path_position <= 0.01 && global.level_unlocked[1]) { //if you're at the starting position and level 1 is unlocked
             if (right) {  //and you push right
@@ -49,6 +51,9 @@ switch (path) {
                 path = PathWorldmap2; //switch to another path
                 path_start(path, spd, 0, true); //start moving along that path
                 path_started = true;}} //note that you started moving along the path
+				
+				
+				
 				
 				
 				
@@ -73,19 +78,24 @@ switch (path) {
     //path_2's end point is path_3's start point
     case PathWorldmap2:
 		
-		if ( path_started == false && path_position >= 0.995 && (space) && global.level_unlocked[1])
+		if (!path_started && path_position <= 0.01 && (space)) 
 		{ 
+			//return to path when we are back
 			global.returnPath = path;
 			global.returnPathPos = path_position;
 			
+			//delete all movements of paths and shit
 			path_end();
 			path_started = false;
 			
+			
+			//go to the right room
 			room_goto(The_Forest);
 		}
 		
 		
-
+		
+		
 
 
         if (path_position <= 0.01){
@@ -112,7 +122,7 @@ switch (path) {
 				
 				
 				
-			if (!path_started && path_position <= 0.99 && (space))  && global.level_unlocked[2]
+			if (!path_started && path_position >= 0.99 && (space))  && global.level_unlocked[2]
 				{ 
 					global.returnPath = path;
 					global.returnPathPos = path_position;
@@ -172,7 +182,7 @@ switch (path) {
 				
 				
 				
-				if (!path_started && path_position <= 0.99 && (space))  && global.level_unlocked[3]
+				if (!path_started && path_position >= 0.99 && (space))  && global.level_unlocked[3]
 				{ 
 					global.returnPath = path;
 					global.returnPathPos = path_position;
@@ -192,7 +202,7 @@ switch (path) {
     //dit is pad 4 van de agme
     case PathWorldMap4:
 
-		if ( path_started == false && path_position >= 0.995 && (space) && global.level_unlocked[3])
+		if ( path_started == false && path_position <= 0.05 && (space) && global.level_unlocked[3])
 				{ 
 					global.returnPath = path;
 					global.returnPathPos = path_position;
@@ -222,13 +232,27 @@ switch (path) {
                 path_start(path, -spd, 0, true);
                 path_started = true;}
           
-            if (up) {
+            if (up && global.level_unlocked[5]) {
                 path = PathWorldMap5;
                 path_start(path, spd, 0, true);
                 path_started = true;}}
  
  
  
+ 
+ 
+ 
+			 if (!path_started && path_position >= 0.99 && (space)  && global.level_unlocked[4])
+					{ 
+						global.returnPath = path;
+						global.returnPathPos = path_position;
+				
+						path_end();
+						path_started = false;
+			
+						room_goto(TopIce);
+					}
+				
  
  
  
@@ -240,6 +264,23 @@ switch (path) {
 		
 	//path 5
 	case PathWorldMap5:
+
+
+		if ( path_started == false && path_position <= 0.05 && (space) && global.level_unlocked[4])
+				{ 
+					global.returnPath = path;
+					global.returnPathPos = path_position;
+			
+					path_end();
+					path_started = false;
+			
+					room_goto(TopIce);
+				}
+		
+		
+		
+		
+
 
 		 if (path_position == 0) {
 			 if (up) {
@@ -255,6 +296,24 @@ switch (path) {
             if (down) {
                 path_start(path, -spd, 0, true);
                 path_started = true;}}
+ 
+ 
+ 
+ 
+ 
+			 if (!path_started && path_position >= 0.99 && (space)  && global.level_unlocked[5])
+					{ 
+						global.returnPath = path;
+						global.returnPathPos = path_position;
+				
+						path_end();
+						path_started = false;
+			
+						room_goto(LavaTip);
+					}
+ 
+ 
+ 
  
         break; }
 
