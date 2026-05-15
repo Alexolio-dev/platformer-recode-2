@@ -172,6 +172,12 @@ switch (path) {
             if (down) {
                 path_start(path, -spd, 0, true);
                 path_started = true;}
+				
+			if (left && global.level_unlocked[6]){
+				path = SecretPath;
+				path_start(path, spd, 0, true);
+				path_started = true;}
+			
 			
 			 if (up && global.level_unlocked[4]) {
                 path = PathWorldMap4;
@@ -221,7 +227,12 @@ switch (path) {
             if (up) {
                 path_start(path, spd, 0, true);
                 path_started = true;}
-          
+				
+			if (global.level_unlocked[6] && (left)){
+				path = SecretPath;
+				path_start(path, spd, 0, true);
+				path_started = true;}
+			
             if (down) {
                 path = PathWorldMap3;
                 path_start(path, -spd, 0, true);
@@ -301,7 +312,7 @@ switch (path) {
  
  
  
-			 if (!path_started && path_position >= 0.99 && (space)  && global.level_unlocked[5])
+			 if (!path_started && path_position >= 0.99 && (space)  && global.level_unlocked[5] && !global.player_did_the_secret_thing == true)
 					{ 
 						global.returnPath = path;
 						global.returnPathPos = path_position;
@@ -310,14 +321,54 @@ switch (path) {
 						path_started = false;
 			
 						room_goto(LavaTip);
+					} else {
+						//do the secret boss ending thing idk
 					}
  
  
  
  
-        break; }
+        break;
 
-
+		case SecretPath:
+		
+			 if (path_position == 0) {
+			 if (left) {
+                path_start(path, spd, 0, true);
+                path_started = true;}
+          
+			if (up) {
+				path = PathWorldMap4;
+				path_start( path, spd, 0, true);
+				path_started = true;
+			}
+		  
+            if (down) {
+			    path = PathWorldMap3;
+                path_start(path, -spd, 0, true);
+                path_started = true;}}
+				
+          
+		  if (path_position == 1) {
+            if (left) {
+                path_start(path, -spd, 0, true);
+                path_started = true;}}
+				
+			 if (!path_started && path_position >= 0.99 && (space)  && global.level_unlocked[6] == true)
+				{ 
+					global.returnPath = path;
+					global.returnPathPos = path_position;
+				
+					path_end();
+					path_started = false;
+		
+					room_goto(Secret_Level);
+				}
+ 
+ 
+		
+		
+		break; }
 
 
 

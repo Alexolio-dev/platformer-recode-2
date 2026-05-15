@@ -1,0 +1,1 @@
+global.player_did_the_secret_thing[0] = true;

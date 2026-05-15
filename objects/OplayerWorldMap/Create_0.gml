@@ -1,5 +1,5 @@
 //path stuff at spawn
-spd = 4; //this will be the speed along the path
+spd = 8; //this will be the speed along the path
 path = PathWorldMap1; //path is the variable that we use to track the assigned path
 path_started = false; //a variable we'll use later
 
@@ -30,24 +30,28 @@ y = path_get_point_y(path, point_index);
 
 
 
-
-
-
+if (!variable_global_exists("player_did_the_secret_thing"))
+{
+	
+	global.player_did_the_secret_thing = array_create(1, false)
+	
+}
 
 //level unlcok systeem
 if (!variable_global_exists("level_unlocked"))
 {
-	//maak array voor de 5 unlockable level (mis 6-7)
+	//maak array voor de 5 unlockable level  (10)
 	global.level_unlocked = array_create(10, false);
 	
 	//eerste level unlocked
 	global.level_unlocked[0] = true;
 	//
-	global.level_unlocked[1] = true;
-	global.level_unlocked[2] = true;
-	global.level_unlocked[3]= true;
-	global.level_unlocked[4] = true;
-	global.level_unlocked[5] = true;
+	global.level_unlocked[1] = true; //The tutorial level
+	global.level_unlocked[2] = true; //The forest leve
+	global.level_unlocked[3] = true; //The desert level
+	global.level_unlocked[4] = true; //The middle of the icy volcano level
+	global.level_unlocked[5] = true; //The tip of the icy volcano level
+	//global.level_unlocked[6] = true; //The secret level for the secret ending
 	//
 }
 
