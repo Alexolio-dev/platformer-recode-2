@@ -158,7 +158,7 @@ switch (path) {
 			
 			
 			
-        if (path_position <= 0.01) {
+        if (path_position == 0) {
             if (down) {
                 path_start(path, spd, 0, true);
                 path_started = true;}
@@ -168,12 +168,12 @@ switch (path) {
                 path_start(path, -spd, 0, true);
                 path_started = true;}}
           
-        if (path_position >= 0.99) {
+        if (path_position == 1) {
             if (down) {
                 path_start(path, -spd, 0, true);
                 path_started = true;}
 				
-			if (left && global.level_unlocked[6]){
+			if (left && global.level_unlocked[6] && path == PathWorldMap3){
 				path = SecretPath;
 				path_start(path, spd, 0, true);
 				path_started = true;}

@@ -4,7 +4,7 @@ event_inherited();
 //variables for movement
 dir = 0;
 rotSpd = 360/(180);//(2)
-radius = 32;
+radius = 60;
 
 //speed yk type shit frfr
 xspd = 0;

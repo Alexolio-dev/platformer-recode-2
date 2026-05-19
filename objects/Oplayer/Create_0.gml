@@ -52,7 +52,7 @@ ControlsSetup();
 moveDir = 0;
 runType = 0;
 moveSpd[0] = 2;
-moveSpd[1] = 4;
+moveSpd[1] = 3;
 xspd  =0;
 yspd = 0;
 face = 1;
@@ -72,7 +72,7 @@ crouchMoveSpd = .5;
 //jump calues for each succesive jump
 jumpHoldFrames[0] = 18;
 jumpHoldFrames[1] = 10;
-jspd[0] = -3.15;
+jspd[0] = -3.5;
 jspd[1] = -2.85;
 	
 	

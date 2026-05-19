@@ -15,7 +15,7 @@ if (variable_global_exists("returnPath"))
 		
 	}		
 
-
+//    https://www.youtube.com/watch?v=ne3cp8pA56I
 
 //set position
 var point_count = path_get_number(path) -1;
