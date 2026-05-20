@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"deathMechanics",
-    "path":"folders/objects/deathMechanics.yy",
+    "name":"spritesForLevelObjectsw",
+    "path":"folders/sprites/spritesForLevelObjectsw.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -115,6 +115,4 @@ if (global.checkpointR == room)
 }
 
 
-//try this with subnautica
-
-//https://www.google.com/search?client=firefox-b-d&q=what+does+this+mean+DirectX+12+is+not+supported+on+your+system.+Try+running+without+the+-dx12+or+-d3d12+command+line+argument.#fpstate=ive&vld=cid:79a0edfe,vid:rgsh4MrpMSM,st:169
+//mabe trees carry moving platforms
