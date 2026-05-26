@@ -635,11 +635,16 @@ if place_meeting( x, y, oLevelEnd)
 	room_goto(WorldMap);
 	global.checkpointR = noone;
 }
-	
-	
 
-
-
+/*/	
+if instance_exists(myFloorPlat)
+{
+if !place_meeting( x, y, myFloorPlat) && jumpKeyPressed
+{
+	myFloorPlat.x = Oplayer.x;
+}
+}
+/*/
 
 
 	

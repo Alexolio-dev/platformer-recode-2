@@ -58,8 +58,8 @@ yspd = 0;
 face = 1;
 
 //jumping
-grav = 0.275;
-termVel = 4;
+grav = 0.2;
+termVel = 8;
 onGround = true;
 jumpMax = 1;
 jumpCount = 0;
