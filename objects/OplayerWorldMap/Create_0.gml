@@ -51,7 +51,7 @@ if (!variable_global_exists("level_unlocked"))
 	global.level_unlocked[3] = true; //The desert level
 	global.level_unlocked[4] = true; //The middle of the icy volcano level
 	global.level_unlocked[5] = true; //The tip of the icy volcano level
-	//global.level_unlocked[6] = true; //The secret level for the secret ending
+	global.level_unlocked[6] = true; //The secret level for the secret ending
 	//
 }
 

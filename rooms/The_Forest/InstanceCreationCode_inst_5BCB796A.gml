@@ -1,0 +1,1 @@
+//room_goto(The_goon_rooms)
