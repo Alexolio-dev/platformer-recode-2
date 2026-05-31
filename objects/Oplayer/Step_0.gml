@@ -112,14 +112,14 @@ getControls();
 		
 	
 //dont get left behind by my move plat
-earlyMovePlatXspd = false;
+
 if instance_exists(myFloorPlat) && myFloorPlat.xspd != 0 && !place_meeting( x, y + moveplatMaxYspd+1, myFloorPlat)
 {
 	//go ahead and move ourselves back onto that platform if there is no wall in the way
 	if !place_meeting( x + myFloorPlat.xspd, y, oWall)
 	{
 		x += myFloorPlat.xspd;
-		earlyMovePlatXspd = true;
+		
 	}
 }
 
@@ -234,8 +234,24 @@ if place_meeting( x + xspd, y, oWall )
 
 
 
+//calculate final horizontal speed
+var _finalXspd = xspd;
+
+if !onGround
+{
+    _finalXspd += jumpMomentumX;
+}
+
 //move
-x += xspd;
+x += _finalXspd;
+
+
+
+
+
+
+
+
 //y movement
 	//gravity
 	if coyoteHangTimer > 0
@@ -279,6 +295,16 @@ x += xspd;
 	
 	if jumpKeyBufferd && jumpCount < jumpMax && (!downKey || _floorIsSolid)
 	{
+		//store platform momentum
+		if instance_exists(myFloorPlat)
+		{
+			jumpMomentumX = myFloorPlat.xspd;
+		}
+		else
+		{
+			jumpMomentumX = 0;
+		}
+		
 		//reset the buffer
 		jumpKeyBufferd = false;
 		jumpKeyBufferTimer = 0;
@@ -452,6 +478,8 @@ x += xspd;
 		}
 		
 		
+
+
 		
 		
 		
@@ -498,7 +526,27 @@ x += xspd;
 	//X - movemplat xspd and colision
 	//get the moveplat xspd
 	moveplatXspd = 0;
-	if instance_exists(myFloorPlat) { moveplatXspd = myFloorPlat.xspd; }; 
+	if instance_exists(myFloorPlat) { 	moveplatXspd = myFloorPlat.xspd;}
+			
+	 
+	 
+	 
+	 
+	 
+	 if instance_exists(myFloorPlat)
+{
+    jumpMomentumX = myFloorPlat.xspd;
+
+    show_debug_message(
+        "Stored momentum: " + string(jumpMomentumX)
+    );
+}
+	 
+	 
+	 
+	 
+	 
+	 
 	
 	//move with moveplatxspd
 	if !earlyMovePlatXspd
@@ -519,7 +567,7 @@ x += xspd;
 		x += moveplatXspd;
 	}
 	
-	
+
 	
 	
 	
@@ -636,17 +684,34 @@ if place_meeting( x, y, oLevelEnd)
 	global.checkpointR = noone;
 }
 
-/*/	
-if instance_exists(myFloorPlat)
-{
-if !place_meeting( x, y, myFloorPlat) && jumpKeyPressed
-{
-	myFloorPlat.x = Oplayer.x;
-}
-}
-/*/
 
 
+
+
+
+
+//last section for slowing palyer down wtih momentum when falling
+if !onGround
+{
+	
+	jumpMomentumX -= 0.05 * sign(jumpMomentumX);
+	
+	if abs(jumpMomentumX) < 0.02
+	{
+		jumpMomentumX = 0;
+	}
+	
+}
+else
+{
+	jumpMomentumX = 0;
+}
+	
+	
+	
+	
+	
+	
 	
 
 	
@@ -668,6 +733,7 @@ if crouching { sprite_index = crouchSpr; };
 	//set the collsion mask
 	mask_index = maskSpr;
 	if crouching { mask_index = crouchSpr; };
+
 
 
 

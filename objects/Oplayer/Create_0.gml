@@ -102,10 +102,13 @@ moveplatMaxYspd = termVel; //How fast can the player follow a downwards moving p
 
 //crush code timer
 crushDeathTimer = 0;
-crushDeathTime = 3;
+crushDeathTime = 7;
 
 //death
 playerDead = false;
+
+//jumping mvong
+jumpMomentumX = 0;
 
 //checkpoint code
 if (global.checkpointR == room)
