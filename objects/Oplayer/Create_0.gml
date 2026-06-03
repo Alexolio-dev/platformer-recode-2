@@ -119,3 +119,11 @@ if (global.checkpointR == room)
 
 
 //mabe trees carry moving platforms
+
+/*/
+im working on a level system but it alwasy sends me back to the smae level. for example i want to go to the level icy middle, but it always sends me back to the worldmap. her is my playerobject code when it collides with the olevelend: room_goto(other.NextMap);
+
+NextMap = WorldMap; here is my code in my olevelend: NextMap = WorldMap; and here is my creation code that only send me to worldmap: global.level_unlocked[2] = true;
+global.level_unlocked[3] = true;
+NextMap = Icy_middle;
+/*/

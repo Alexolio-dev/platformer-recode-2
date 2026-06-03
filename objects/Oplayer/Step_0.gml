@@ -532,15 +532,7 @@ x += _finalXspd;
 	 
 	 
 	 
-	 
-	 if instance_exists(myFloorPlat)
-{
-    jumpMomentumX = myFloorPlat.xspd;
 
-    show_debug_message(
-        "Stored momentum: " + string(jumpMomentumX)
-    );
-}
 	 
 	 
 	 
