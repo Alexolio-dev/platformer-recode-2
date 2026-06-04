@@ -701,10 +701,16 @@ else
 	
 	
 	
+var _exit = instance_place( x, y, oLevelEnd)
+
+if _exit != noone
+{
+	room_goto(_exit.NextMap)
 	
-	
-	
-	
+}
+
+
+
 
 	
 //if player dead this don matter

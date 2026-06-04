@@ -1,2 +1,1 @@
-NextMap = noone;
-
+NextMap = WorldMap;
