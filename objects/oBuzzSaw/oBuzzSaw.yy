@@ -11,7 +11,10 @@
     "name":"levelObjects",
     "path":"folders/objects/levelObjects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oDeathpit",
+    "path":"objects/oDeathpit/oDeathpit.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

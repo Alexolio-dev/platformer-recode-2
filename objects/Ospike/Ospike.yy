@@ -3,6 +3,7 @@
   "%Name":"Ospike",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Oplayer","path":"objects/Oplayer/Oplayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"Ospike",
@@ -11,7 +12,10 @@
     "name":"levelObjects",
     "path":"folders/objects/levelObjects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oDeathpit",
+    "path":"objects/oDeathpit/oDeathpit.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

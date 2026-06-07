@@ -372,6 +372,9 @@ switch (path) {
 
 
 
+
+
+
 if (path_started == true) { //if you're moving
     if (path_speed > 0) { //and you're moving towards the end of the path
         if (path_position > .98) { //once you're almost there

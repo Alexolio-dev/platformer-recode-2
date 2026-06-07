@@ -156,6 +156,30 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspd != 0 && !place_meeting( x, y
 
 
 
+if  room == Desert
+{
+	DesertWind = true;
+}
+
+
+//the wind for the desert
+if DesertWind == true && (random(360) < 80) 
+{
+	DesertWind = 1;
+} else{
+	
+	DesertWind = 0;
+}
+
+
+//the wind for the desert
+if DesertWind == true && (random(360) >280)
+{
+	DesertWind = -1;
+} else{
+	
+	DesertWind = 0;
+}
 
 
 
@@ -168,7 +192,7 @@ if moveDir != 0 {face = moveDir; };
 //Get xspd
 runType = runKey;
 // Get xspd
-xspd = moveDir * moveSpd[runType];
+xspd = moveDir * moveSpd[runType] + DesertWind;
 //slow xspd if crouching
 if crouching { xspd = moveDir * crouchMoveSpd; };
 
@@ -664,7 +688,7 @@ if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oD
 	sprite_index = sPlayerDeath;
 	image_index = 0;
 	image_speed = 1;
-	yspd += -10;
+	yspd = -10;
 	
 	//trigger the alarm to go off
 	alarm[0] = room_speed * 2.5;
@@ -698,6 +722,18 @@ else
 {
 	jumpMomentumX = 0;
 }
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
 	
 	
 	

@@ -27,6 +27,7 @@ function getControls()
 		runKey = keyboard_check( vk_shift );
 		runKey = clamp( runKey , 0, 1);
 		
+
 		
 	//jumpKey buffering
 	if jumpKeyPressed
