@@ -111,7 +111,16 @@ playerDead = false;
 jumpMomentumX = 0;
 
 //wind in the desert
-DesertWind = false;
+DesertWind = 0;
+//the code that makes it so desert wind gets triggeresd when you are in the desert
+//if room desert
+if (room == Desert)
+{
+	//trigger the alarm
+    alarm[1] = game_get_speed(gamespeed_fps) * 10;
+}
+
+
 
 
 //checkpoint code
@@ -122,3 +131,7 @@ if (global.checkpointR == room)
 }
 
 
+
+//alarms to keep track off
+//alarm 1 = death;
+//alarm 2 = wind mechanic (desert);
