@@ -23,5 +23,5 @@ if (room == Desert)
 	show_debug_message("Wind = " + string(DesertWind));
 	
     //restart timer so it can happen again (about 10 seccond)
-    alarm[1] = game_get_speed(gamespeed_fps) * 3;
+    alarm[1] = game_get_speed(gamespeed_fps) * 10;
 }
