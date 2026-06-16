@@ -6,12 +6,12 @@ if (room == Desert)
 	//if it is smaller tan 120 make wind blow this way
     if r < 120
     {
-        DesertWind = -1; // wind left
+        DesertWind = -0.5; // wind left
     }
 	//if its bigger than 240 make wind blow that way
     else if r > 240
     {
-        DesertWind = 1; // wind right
+        DesertWind = 0.5; // wind right
     }
 	//otherwise nothing moves
     else

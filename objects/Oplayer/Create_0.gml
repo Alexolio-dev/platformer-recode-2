@@ -135,3 +135,12 @@ if (global.checkpointR == room)
 //alarms to keep track off
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);
+
+//depth for thingies
+//https://www.youtube.com/watch?v=ulnEUdYg8yM
+
+//pause menu
+//https://www.youtube.com/watch?v=dNiLIX8jNOM
+
+//fake walls for secret areas
+//https://www.youtube.com/watch?v=cI_EWfYJvd4 
