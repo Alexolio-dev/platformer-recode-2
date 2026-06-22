@@ -67,7 +67,7 @@ jumpHoldTimer = 0;
 
 //state variables
 crouching = false;
-crouchMoveSpd = .5;
+crouchMoveSpd = 0.75;
 
 //jump calues for each succesive jump
 jumpHoldFrames[0] = 18;
@@ -78,10 +78,10 @@ jspd[1] = -2.85;
 	
 //coyote time
 //hang time
-coyoteHangFrames = 2;
+coyoteHangFrames = 6;
 coyoteHangTimer = 0;
 // Jump Buffer time
-coyoteJumpFrames = 4;
+coyoteJumpFrames = 6;
 coyoteJumpTimer = 0;
 
 //sprites
@@ -117,7 +117,7 @@ DesertWind = 0;
 if (room == Desert)
 {
 	//trigger the alarm
-    alarm[1] = game_get_speed(gamespeed_fps) * 10;
+    alarm[1] = game_get_speed(gamespeed_fps) * 2;
 }
 
 
@@ -136,10 +136,27 @@ if (global.checkpointR == room)
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);
 
+//signs
+//???
+
+//WALL GLITCH MET WIND FIXEN + platform refinment
+
 //pause menu
 //https://www.youtube.com/watch?v=dNiLIX8jNOM
-//other one
-//https://www.youtube.com/watch?v=ASKtlsAhfLw
+
+//other one (deze nog proberen)
+//https://www.youtube.com/watch?v=8OeSMgBSau4
+
 
 //fake walls for secret areas
 //https://www.youtube.com/watch?v=cI_EWfYJvd4 
+
+/*/############################################################################################
+ERROR in action number 1
+of Alarm Event for alarm 0 for object Oplayer:
+room_goto argument 1 invalid reference to (room) - requested -4 max is 9
+ at gml_Script_death (line 52) -               room_goto(global.checkpointR);
+############################################################################################
+gml_Script_death (line 52)
+gml_Object_Oplayer_Alarm_0 (line 2) - death();
+//
