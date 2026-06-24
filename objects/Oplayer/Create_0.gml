@@ -139,12 +139,10 @@ if (global.checkpointR == room)
 //signs
 //???
 
-//WALL GLITCH MET WIND FIXEN + platform refinment
+//platform refinment
 
-//pause menu
-//https://www.youtube.com/watch?v=dNiLIX8jNOM
 
-//other one (deze nog proberen)
+//other one (deze nog proberen) vanaf 12:47 min 
 //https://www.youtube.com/watch?v=8OeSMgBSau4
 
 
