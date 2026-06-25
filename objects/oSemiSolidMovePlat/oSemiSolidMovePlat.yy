@@ -38,5 +38,8 @@
     "path":"sprites/sSemiSolidMovePlat/sSemiSolidMovePlat.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

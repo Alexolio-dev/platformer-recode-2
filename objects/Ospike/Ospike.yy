@@ -38,5 +38,8 @@
     "path":"sprites/Sspike/Sspike.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

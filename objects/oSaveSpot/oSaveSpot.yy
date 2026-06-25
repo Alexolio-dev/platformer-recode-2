@@ -35,5 +35,8 @@
     "path":"sprites/sSavespot/sSavespot.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

@@ -37,5 +37,8 @@
     "path":"sprites/sBuzzSaw/sBuzzSaw.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

@@ -34,5 +34,8 @@
     "path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

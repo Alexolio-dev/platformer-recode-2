@@ -1,8 +1,8 @@
 if (keyboard_check_pressed(vk_escape)){
 	isPaused = !isPaused;
 	if(isPaused){
-		oPauseManager.pauseObject(Oplayer);
+		oPauseManager.pauseTag("pausable");
 	}else{
-		oPauseManager.unPauseObject(Oplayer);
+		oPauseManager.unPauseTag("pausable");
 	}
 }

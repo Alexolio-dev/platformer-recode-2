@@ -38,5 +38,8 @@
     "path":"sprites/sMovePlat/sMovePlat.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

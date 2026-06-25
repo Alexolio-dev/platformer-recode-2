@@ -141,9 +141,12 @@ if (global.checkpointR == room)
 
 //platform refinment
 
+//particle system
+//
 
-//other one (deze nog proberen) vanaf 12:47 min 
-//https://www.youtube.com/watch?v=8OeSMgBSau4
+
+//deze voor wanneer de particle system werkt
+//https://www.youtube.com/watch?v=8AcyZaNWjJk
 
 
 //fake walls for secret areas
