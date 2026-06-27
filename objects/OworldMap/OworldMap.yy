@@ -8,8 +8,8 @@
   "name":"oWorldMap",
   "overriddenProperties":[],
   "parent":{
-    "name":"other",
-    "path":"folders/objects/other.yy",
+    "name":"help for levels",
+    "path":"folders/objects/other/managerial functions/help for levels.yy",
   },
   "parentObjectId":null,
   "persistent":false,

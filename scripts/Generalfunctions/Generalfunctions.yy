@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Generalfunctions",
   "parent":{
-    "name":"other",
-    "path":"folders/objects/other.yy",
+    "name":"Important",
+    "path":"folders/objects/other/managerial functions/Important.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

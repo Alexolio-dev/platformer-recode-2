@@ -3,6 +3,7 @@ if (playerDead)
 {
 	yspd += grav;
 	y += yspd;
+	
 	exit;
 }
 
@@ -680,7 +681,6 @@ if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oD
 if place_meeting( x, y, oLevelEnd)
 {
 	room_goto(WorldMap);
-	global.checkpointR = noone;
 }
 
 

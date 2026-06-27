@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oLevelEnd",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oSecretCheckpoint",
+  "eventList":[],
   "managed":true,
-  "name":"oLevelEnd",
+  "name":"oSecretCheckpoint",
   "overriddenProperties":[],
   "parent":{
-    "name":"help for levels",
-    "path":"folders/objects/other/managerial functions/help for levels.yy",
+    "name":"deathMechanics",
+    "path":"folders/objects/deathMechanics.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oSaveSpot",
+    "path":"objects/oSaveSpot/oSaveSpot.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,12 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sLevelEnd",
-    "path":"sprites/sLevelEnd/sLevelEnd.yy",
+    "name":"sSecretCheckpoint",
+    "path":"sprites/sSecretCheckpoint/sSecretCheckpoint.yy",
   },
   "spriteMaskId":null,
-  "tags":[
-    "pausable",
-  ],
-  "visible":true,
+  "visible":false,
 }

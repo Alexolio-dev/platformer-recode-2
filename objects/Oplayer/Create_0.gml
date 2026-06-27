@@ -142,7 +142,6 @@ if (global.checkpointR == room)
 //platform refinment
 
 //particle system
-//
 
 
 //deze voor wanneer de particle system werkt
@@ -152,12 +151,7 @@ if (global.checkpointR == room)
 //fake walls for secret areas
 //https://www.youtube.com/watch?v=cI_EWfYJvd4 
 
-/*/############################################################################################
-ERROR in action number 1
-of Alarm Event for alarm 0 for object Oplayer:
-room_goto argument 1 invalid reference to (room) - requested -4 max is 9
- at gml_Script_death (line 52) -               room_goto(global.checkpointR);
-############################################################################################
-gml_Script_death (line 52)
-gml_Object_Oplayer_Alarm_0 (line 2) - death();
-//
+
+//tilelayers (for the drawing phase)
+//https://www.youtube.com/watch?v=kyFICZcm6Vo
+//https://www.youtube.com/watch?v=EVXimiZPo28
