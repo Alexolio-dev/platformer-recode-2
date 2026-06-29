@@ -8,8 +8,8 @@
   "name":"oWall",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformObjects",
-    "path":"folders/objects/platformObjects.yy",
+    "name":"normal",
+    "path":"folders/objects/platformObjects/normal.yy",
   },
   "parentObjectId":null,
   "persistent":false,

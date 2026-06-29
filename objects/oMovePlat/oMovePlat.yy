@@ -9,8 +9,8 @@
   "name":"oMovePlat",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformObjects",
-    "path":"folders/objects/platformObjects.yy",
+    "name":"normal",
+    "path":"folders/objects/platformObjects/normal.yy",
   },
   "parentObjectId":{
     "name":"oWall",

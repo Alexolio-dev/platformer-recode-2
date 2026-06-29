@@ -4,6 +4,7 @@ camTrailSpd = .25;
 
 //camera go down
 CamOffSetY = 0;
-camOffSetMax = 100;
+camOffSetMaxDown = 100;
+camOffSetMaxUp = -100;
 //crouch timer type shi
 CrouchTimer = 0;

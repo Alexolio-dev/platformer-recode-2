@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"oSemiSolidMovePlat",
+  "%Name":"oFallingBlock",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oSemiSolidMovePlat",
+  "name":"oFallingBlock",
   "overriddenProperties":[],
   "parent":{
-    "name":"normal",
-    "path":"folders/objects/platformObjects/normal.yy",
+    "name":"weird",
+    "path":"folders/objects/platformObjects/weird.yy",
   },
   "parentObjectId":{
-    "name":"oSemiSolidWall",
-    "path":"objects/oSemiSolidWall/oSemiSolidWall.yy",
+    "name":"oWall",
+    "path":"objects/oWall/oWall.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,12 +34,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sSemiSolidMovePlat",
-    "path":"sprites/sSemiSolidMovePlat/sSemiSolidMovePlat.yy",
+    "name":"sTeleportStart",
+    "path":"sprites/sTeleportStart/sTeleportStart.yy",
   },
   "spriteMaskId":null,
-  "tags":[
-    "pausable",
-  ],
   "visible":true,
 }

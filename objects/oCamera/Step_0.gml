@@ -7,24 +7,49 @@ if keyboard_check_pressed( vk_f11 )
 
 
 
-//camera go down slowly
-var TargetOffset = 0;
 
-if keyboard_check(ord("S")) || keyboard_check( vk_down )
+//code for next time (late and i kinda wanna game bro)
+// reset target by default
+TargetOffset = 0;
+
+// hold down
+if (keyboard_check(ord("S")) || keyboard_check(vk_down))
 {
-	CrouchTimer++;
-} else{
-	CrouchTimer = 0;
-}
-	
-//crouch timer
-if (CrouchTimer > game_get_speed(gamespeed_fps * 2))
-{
-	TargetOffset = camOffSetMax
+    CrouchTimer++;
+
+    if (CrouchTimer > game_get_speed(gamespeed_fps) * 2)
+    {
+        TargetOffset = camOffSetMaxDown;
+    }
 }
 
-//haha larping
-CamOffSetY = lerp(CamOffSetY, TargetOffset, 0.03)
+// hold up
+else if (keyboard_check(ord("W")) || keyboard_check(vk_up))
+{
+    CrouchTimer++;
+
+    if (CrouchTimer > game_get_speed(gamespeed_fps) * 2)
+    {
+        TargetOffset = camOffSetMaxUp;
+    }
+}
+
+// neither
+else
+{
+    CrouchTimer = 0;
+}
+
+// move camera once
+CamOffSetY = lerp(CamOffSetY, TargetOffset, 0.03);
+
+
+
+
+
+
+
+
 
 
 
@@ -57,3 +82,5 @@ finalCamY += (_camY - finalCamY) * camTrailSpd;
 camera_set_view_pos(view_camera[0], _camX, _camY);
 
 //if not want cam to race across room when placing character vid 3 15-15:30 min
+
+

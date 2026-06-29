@@ -117,7 +117,7 @@ DesertWind = 0;
 if (room == Desert)
 {
 	//trigger the alarm
-    alarm[1] = game_get_speed(gamespeed_fps) * 2;
+    alarm[1] = game_get_speed(gamespeed_fps) * 10;
 }
 
 
@@ -137,7 +137,7 @@ if (global.checkpointR == room)
 //alarm 2 = wind mechanic (desert);
 
 //signs
-//???
+//https://www.youtube.com/watch?v=2f4TiyclXCs 
 
 //platform refinment
 
