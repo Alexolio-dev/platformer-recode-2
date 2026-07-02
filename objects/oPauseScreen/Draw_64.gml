@@ -8,3 +8,5 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_color(c_white);
 draw_text(display_get_gui_width() / 2, display_get_gui_height() / 2, "paused");
+draw_text(display_get_gui_width()/ 2, display_get_gui_height() / 1.5, "press r outside of the pause menu for a quick restart")
+draw_text(display_get_gui_width()/ 2, display_get_gui_height() / 1.75, "press k to quit")

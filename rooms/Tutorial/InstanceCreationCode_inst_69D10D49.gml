@@ -1,0 +1,1 @@
+Text = "Crouch by pressing S or the right arrow-key!"

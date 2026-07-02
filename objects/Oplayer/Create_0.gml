@@ -136,13 +136,13 @@ if (global.checkpointR == room)
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);
 
-//signs
-//https://www.youtube.com/watch?v=2f4TiyclXCs 
 
-//platform refinment
 
 //particle system
+//
 
+//pause buttons
+//https://www.youtube.com/watch?v=-MWgmEZzF14
 
 //deze voor wanneer de particle system werkt
 //https://www.youtube.com/watch?v=8AcyZaNWjJk

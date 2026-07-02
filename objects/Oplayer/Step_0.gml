@@ -709,13 +709,19 @@ else
 	
 	
 
-	
+	if keyboard_check_pressed(ord("K"))
+	{
+		room = WorldMap;
+	}
 	
 	
 
 	
 	
-	
+if keyboard_check_pressed(ord("R"))
+{
+	death();
+}
 	
 	
 	
