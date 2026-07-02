@@ -1,5 +1,5 @@
 global.checkpoint = noone;
-global.checkpointR = 0;
+global.checkpointR = noone;
 global.checkpointx = 0;
 global.checkpointy = 0;
 
