@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fontForSign",
+  "%Name":"fontForPauseScreen",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":23,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":28,
   "maintainGms1Font":false,
-  "name":"fontForSign",
+  "name":"fontForPauseScreen",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

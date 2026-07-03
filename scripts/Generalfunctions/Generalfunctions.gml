@@ -47,7 +47,7 @@ function getControls()
 //death
 function death()
 {
-	if (global.checkpointR != 0)
+	if (global.checkpointR != noone)
 	{
 		room_goto(global.checkpointR);
 	}

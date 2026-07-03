@@ -709,13 +709,6 @@ else
 	
 	
 
-	if keyboard_check_pressed(ord("K"))
-	{
-		room = WorldMap;
-	}
-	
-	
-
 	
 	
 if keyboard_check_pressed(ord("R"))
@@ -725,7 +718,7 @@ if keyboard_check_pressed(ord("R"))
 	
 	
 	
-	
+	//??? idk wat this is
 var _exit = instance_place( x, y, oLevelEnd)
 
 if _exit != noone
