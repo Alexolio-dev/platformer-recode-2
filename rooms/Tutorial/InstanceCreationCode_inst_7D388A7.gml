@@ -1,1 +1,1 @@
-global.level_unlocked[1] = true;
+level_unlocked = 1;

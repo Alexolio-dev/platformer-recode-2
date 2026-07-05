@@ -1,7 +1,3 @@
-show_debug_message("Room: " + string(room));
-show_debug_message("Checkpoint room: " + string(global.checkpointR));
-show_debug_message("Checkpoint X: " + string(global.checkpointx));
-show_debug_message("Checkpoint Y: " + string(global.checkpointy));
 //custom functions for player
 function setOnGround(_val = true)
 {
@@ -140,16 +136,12 @@ if (global.checkpointR == room)
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);
 
-//pause buttons
-//https://www.youtube.com/watch?v=-MWgmEZzF14
-
-//map system
-//
 
 //particle system
-//
+// 
 
-//deze voor wanneer de particle system werkt
+
+//deze episode van pause tutorial voor wanneer de particle system werkt
 //https://www.youtube.com/watch?v=8AcyZaNWjJk
 
 

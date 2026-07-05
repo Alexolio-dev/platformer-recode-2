@@ -1,3 +1,3 @@
 moveType = "vertical";
-rotSpd = 1.5;
+rotSpd = 1;
 radisu = 40;

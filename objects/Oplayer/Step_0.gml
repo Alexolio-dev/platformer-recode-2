@@ -678,11 +678,12 @@ if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oD
 	alarm[0] = game_get_speed(gamespeed_fps) * 2.5;
 } 
 
+/*/
 if place_meeting( x, y, oLevelEnd)
 {
 	room_goto(WorldMap);
 }
-
+/*/
 
 
 
@@ -718,7 +719,7 @@ if keyboard_check_pressed(ord("R"))
 	
 	
 	
-	//??? idk wat this is
+	/*/??? idk wat this is
 var _exit = instance_place( x, y, oLevelEnd)
 
 if _exit != noone
@@ -726,7 +727,7 @@ if _exit != noone
 	room_goto(_exit.NextMap)
 	
 }
-
+/*/
 
 
 

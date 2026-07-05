@@ -1,0 +1,1 @@
+Text = "Those who believe will jump";

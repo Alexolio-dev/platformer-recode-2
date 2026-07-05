@@ -312,7 +312,7 @@ switch (path) {
  
  
  
-			 if (!path_started && path_position >= 0.99 && (space)  && global.level_unlocked[5] && !global.player_did_the_secret_thing == true)
+			 if (!path_started && path_position >= 0.99 && (space)  && global.level_unlocked[5])
 					{ 
 						global.returnPath = path;
 						global.returnPathPos = path_position;
@@ -347,6 +347,24 @@ switch (path) {
 			    path = PathWorldMap3;
                 path_start(path, -spd, 0, true);
                 path_started = true;}}
+				
+				
+				if ( path_started == false && path_position <= 0.05 && (space) && global.level_unlocked[3])
+				{ 
+					global.returnPath = path;
+					global.returnPathPos = path_position;
+			
+					path_end();
+					path_started = false;
+			
+					room_goto(Icy_middle);
+				}
+				
+				
+				
+		
+				
+				
 				
           
 		  if (path_position == 1) {

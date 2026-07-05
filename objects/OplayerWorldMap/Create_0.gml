@@ -46,15 +46,29 @@ if (!variable_global_exists("level_unlocked"))
 	//eerste level unlocked
 	global.level_unlocked[0] = true;
 	//
-	global.level_unlocked[1] = true; //The tutorial level
+	/*/global.level_unlocked[1] = true; //The tutorial level
 	global.level_unlocked[2] = true; //The forest leve
 	global.level_unlocked[3] = true; //The desert level
 	global.level_unlocked[4] = true; //The middle of the icy volcano level
 	global.level_unlocked[5] = true; //The tip of the icy volcano level
 	global.level_unlocked[6] = true; //The secret level for the secret ending
-	//
+	/*/
 }
 
+if (!variable_global_exists("secret_thing"))
+{
+	//maak array voor de 5 unlockable level  (10)
+	global.secret_thing = array_create(10, false);
+	
+	//eerste level unlocked
+	/*/
+	global.secret_thing[1] = true; //The tutorial level
+	global.secret_thing[2] = true; //The forest leve
+	global.secret_thing[3] = true; //The desert level
+	global.secret_thing[4] = true; //The middle of the icy volcano level
+	global.secret_thing[5] = true; //The tip of the icy volcano level
+	/*/
+}
 
 
 
