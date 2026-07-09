@@ -731,6 +731,13 @@ if _exit != noone
 
 
 
+
+
+//create
+if keyboard_check_pressed(vk_space){
+part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 10);}
+
+
 	
 //if player dead this don matter
 if !playerDead

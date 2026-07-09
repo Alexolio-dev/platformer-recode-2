@@ -138,7 +138,7 @@ if (global.checkpointR == room)
 
 
 //particle system
-// 
+//https://manual.gamemaker.io/monthly/en/Additional_Information/Guide_To_Using_Particles.htm
 
 
 //deze episode van pause tutorial voor wanneer de particle system werkt
