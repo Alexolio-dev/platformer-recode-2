@@ -112,6 +112,17 @@ jumpMomentumX = 0;
 
 //wind in the desert
 DesertWind = 0;
+targetWind = 0;
+windState = noone;
+
+
+//direction of the particles
+particleDirection = noone;
+
+
+//timer to wait for wind change
+windTimer = 0;
+
 //the code that makes it so desert wind gets triggeresd when you are in the desert
 //if room desert
 if (room == Desert)

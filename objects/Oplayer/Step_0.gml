@@ -678,13 +678,6 @@ if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oD
 	alarm[0] = game_get_speed(gamespeed_fps) * 2.5;
 } 
 
-/*/
-if place_meeting( x, y, oLevelEnd)
-{
-	room_goto(WorldMap);
-}
-/*/
-
 
 
 
@@ -719,25 +712,69 @@ if keyboard_check_pressed(ord("R"))
 	
 	
 	
-	/*/??? idk wat this is
-var _exit = instance_place( x, y, oLevelEnd)
 
-if _exit != noone
+
+
+//the winds stuff when changing
+if windState == "changing"
 {
-	room_goto(_exit.NextMap)
-	
+	DesertWind = 0;
+	if targetWind != 0
+	{
+		part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 1);
+		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
+	}else{
+		
+		
+		if (windTimer < 20)
+		{
+		    // First third of the second
+		    part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 2);
+		}
+		else if (windTimer < 40)
+		{
+		    // Middle third
+		    if (windTimer mod 2 == 0)
+		    {
+		        part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 2);
+		    }
+		}
+		else
+		{
+		    // Last third
+		    if (windTimer mod 4 == 0)
+		    {
+		        part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 2);
+		    }
+		}
+		
+		
+		
 }
-/*/
+	windTimer++;
+	if windTimer >= 60
+	{
+		windState = "active"
+	}
+}
+
+
+//the winds stuff when active
+if windState == "active"
+{
+	if particleDirection != 0
+	{
+		DesertWind = targetWind;
+		part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 1);
+		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
+	}
+}
 
 
 
 
-
-//create
-if keyboard_check_pressed(vk_space){
-part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 10);}
-
-
+	
+	
 	
 //if player dead this don matter
 if !playerDead

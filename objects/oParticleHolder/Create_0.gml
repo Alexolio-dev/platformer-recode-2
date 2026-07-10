@@ -16,7 +16,7 @@ part_type_shape(global.particleSandstorm, pt_shape_pixel);
 part_type_size(global.particleSandstorm, 1,1,0,2);
 
 //colour
-part_type_colour1(global.particleSandstorm, c_white);
+part_type_colour1(global.particleSandstorm, c_yellow);
 
 //alpha
 part_type_alpha1(global.particleSandstorm, 1);
