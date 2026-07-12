@@ -12,3 +12,5 @@ yspd = 0;
 
 //movement type for easy platforms
 moveType = "horizontal"; // or vertical or circle
+
+depth = 5;

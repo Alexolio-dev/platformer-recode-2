@@ -128,7 +128,7 @@ windTimer = 0;
 if (room == Desert)
 {
 	//trigger the alarm
-    alarm[1] = game_get_speed(gamespeed_fps) * 10;
+    alarm[1] = game_get_speed(gamespeed_fps) * 1;
 }
 
 
@@ -151,6 +151,8 @@ if (global.checkpointR == room)
 //particle system
 //https://manual.gamemaker.io/monthly/en/Additional_Information/Guide_To_Using_Particles.htm
 
+//yt video for wind particles, cuz its kinda hard "pause?"
+//https://www.youtube.com/watch?v=iMfb1UbIU6Q
 
 //deze episode van pause tutorial voor wanneer de particle system werkt
 //https://www.youtube.com/watch?v=8AcyZaNWjJk

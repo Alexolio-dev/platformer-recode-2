@@ -713,48 +713,32 @@ if keyboard_check_pressed(ord("R"))
 	
 	
 
-
+var _randomY = random_range(-300, 300);
 
 //the winds stuff when changing
 if windState == "changing"
 {
+	windTimer++;
 	DesertWind = 0;
-	if targetWind != 0
+	
+	if targetWind == -0.5
 	{
-		part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 1);
 		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
-	}else{
+		part_particles_create(global.particleSystem, x+600, y+_randomY, global.particleSandstorm, 20);
 		
+	} else if targetWind == 0.5{
+		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
+		part_particles_create(global.particleSystem, x-600, y+_randomY, global.particleSandstorm, 20);
+	}else if targetWind == 0{
 		
-		if (windTimer < 20)
-		{
-		    // First third of the second
-		    part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 2);
-		}
-		else if (windTimer < 40)
-		{
-		    // Middle third
-		    if (windTimer mod 2 == 0)
-		    {
-		        part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 2);
-		    }
-		}
-		else
-		{
-		    // Last third
-		    if (windTimer mod 4 == 0)
-		    {
-		        part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 2);
-		    }
-		}
-		
-		
+
 		
 }
-	windTimer++;
-	if windTimer >= 60
+
+	if windTimer >= 120
 	{
-		windState = "active"
+		//windstate becomes active
+		windState = "active";
 	}
 }
 
@@ -762,15 +746,28 @@ if windState == "changing"
 //the winds stuff when active
 if windState == "active"
 {
-	if particleDirection != 0
+	//reset the windtimer
+	windTimer = 0;
+	
+	if targetWind == -0.5
 	{
 		DesertWind = targetWind;
-		part_particles_create(global.particleSystem, x, y, global.particleSandstorm, 1);
 		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
+		part_particles_create(global.particleSystem, x+600, y+_randomY, global.particleSandstorm, 50);
+
+		
+	}
+
+
+if targetWind == 0.5
+	{
+		DesertWind = targetWind;
+		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
+		part_particles_create(global.particleSystem, x-600, y+_randomY, global.particleSandstorm, 50);
+
+		
 	}
 }
-
-
 
 
 	
