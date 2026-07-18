@@ -37,5 +37,8 @@
     "path":"sprites/sPlayer/sPlayer.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

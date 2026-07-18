@@ -72,7 +72,7 @@ getControls();
 	ds_list_destroy(_list);
 	
 	
-	
+
 	
 	
 	//get out of the walls
@@ -668,6 +668,7 @@ if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oD
 	playerDead = true;
 	
 	// do the sprite shenenagians with setting it to frame 0  and making it silde 1 sprite per second
+	//oPauseManager.pauseTag("pausable", 1);
 	
 	sprite_index = sPlayerDeath;
 	image_index = 0;
@@ -713,7 +714,7 @@ if keyboard_check_pressed(ord("R"))
 	
 	
 
-var _randomY = random_range(-300, 300);
+var _randomY = random_range(-300, 600);
 
 //the winds stuff when changing
 if windState == "changing"
@@ -723,19 +724,21 @@ if windState == "changing"
 	
 	if targetWind == -0.5
 	{
+		part_type_alpha1(global.particleSandstorm, 0.05);
 		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
-		part_particles_create(global.particleSystem, x+600, y+_randomY, global.particleSandstorm, 20);
+		part_particles_create(global.particleSystem, x+600, y+_randomY, global.particleSandstorm, 80);
 		
 	} else if targetWind == 0.5{
+		part_type_alpha1(global.particleSandstorm, 0.05);
 		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
-		part_particles_create(global.particleSystem, x-600, y+_randomY, global.particleSandstorm, 20);
+		part_particles_create(global.particleSystem, x-600, y+_randomY, global.particleSandstorm, 80);
 	}else if targetWind == 0{
 		
 
 		
 }
 
-	if windTimer >= 120
+	if windTimer >= 90
 	{
 		//windstate becomes active
 		windState = "active";
@@ -753,7 +756,7 @@ if windState == "active"
 	{
 		DesertWind = targetWind;
 		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
-		part_particles_create(global.particleSystem, x+600, y+_randomY, global.particleSandstorm, 50);
+		part_particles_create(global.particleSystem, x+600, y+_randomY, global.particleSandstorm, 200);
 
 		
 	}
@@ -763,7 +766,7 @@ if targetWind == 0.5
 	{
 		DesertWind = targetWind;
 		part_type_direction(global.particleSandstorm, particleDirection, particleDirection, 0, 0);
-		part_particles_create(global.particleSystem, x-600, y+_randomY, global.particleSandstorm, 50);
+		part_particles_create(global.particleSystem, x-600, y+_randomY, global.particleSandstorm, 200);
 
 		
 	}

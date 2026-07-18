@@ -16,9 +16,14 @@ global.particleSandstorm = part_type_create();
 
 
 //shape and size and shit
-part_type_shape(global.particleSandstorm, pt_shape_cloud);
-part_type_size(global.particleSandstorm,1,1,0,0);
+part_type_size_x( global.particleSandstorm, 2, 3, 0, 0);
+part_type_sprite(global.particleSandstorm, sWindparticle, 0, 0, 0);
 part_type_direction(global.particleSandstorm, 180,180, 0, 0);
-part_type_speed(global.particleSandstorm, 5, 6, 0, 0);
-part_type_alpha1(global.particleSandstorm, 0.5);
+part_type_speed(global.particleSandstorm, 15, 17, 0, 0);
+part_type_alpha1(global.particleSandstorm, 0.1);
 part_type_life(global.particleSandstorm, 240, 240);
+
+
+
+//part_type_colour1(global.particleSandstorm, c_yellow);
+//part_type_size(global.particleSandstorm,1,2,0,0);

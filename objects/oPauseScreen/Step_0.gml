@@ -1,4 +1,4 @@
-if (keyboard_check_pressed(vk_escape) && room != WorldMap){
+if (keyboard_check_pressed(vk_escape)){
 	isPaused = !isPaused;
 	pos = 0;
 	if(isPaused){

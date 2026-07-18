@@ -79,7 +79,7 @@ finalCamY += (_camY - finalCamY) * camTrailSpd;
 
 
 //set camera coordinates
-camera_set_view_pos(view_camera[0], _camX, _camY);
+camera_set_view_pos(view_camera[0], _camX, _camY - 50);
 
 //if not want cam to race across room when placing character vid 3 15-15:30 min
 
