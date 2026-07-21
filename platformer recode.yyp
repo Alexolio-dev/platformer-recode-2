@@ -91,6 +91,7 @@
     {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"id":{"name":"WorldMap","path":"rooms/WorldMap/WorldMap.yy",},},
     {"id":{"name":"Generalfunctions","path":"scripts/Generalfunctions/Generalfunctions.yy",},},
+    {"id":{"name":"PausedElement","path":"scripts/PausedElement/PausedElement.yy",},},
     {"id":{"name":"sBuzzSaw","path":"sprites/sBuzzSaw/sBuzzSaw.yy",},},
     {"id":{"name":"sDeathpit","path":"sprites/sDeathpit/sDeathpit.yy",},},
     {"id":{"name":"SinvisbleWallo","path":"sprites/SinvisbleWallo/SinvisbleWallo.yy",},},

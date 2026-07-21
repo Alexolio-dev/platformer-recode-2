@@ -117,7 +117,7 @@ windState = noone;
 
 
 //direction of the particles
-particleDirection = noone;
+//particleDirection = noone;
 
 
 //timer to wait for wind change
@@ -130,6 +130,18 @@ if (room == Desert)
 	//trigger the alarm
     alarm[1] = game_get_speed(gamespeed_fps) * 5;
 }
+
+
+
+on_pause = function(){
+	part_system_automatic_update(global.particleSystem, false);
+}
+
+on_unpause = function(){
+	part_system_automatic_update(global.particleSystem, true);
+}
+
+
 
 
 
@@ -147,10 +159,6 @@ if (global.checkpointR == room)
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);
 
-
-//deze episode van pause tutorial voor wanneer de particle system werkt
-//https://www.youtube.com/watch?v=8AcyZaNWjJk
-//if there are any problems with the pause mechanic the video at exactly 5:50 might pose some help
 
 //fake walls for secret areas
 //https://www.youtube.com/watch?v=cI_EWfYJvd4 

@@ -7,7 +7,7 @@ global.particleSystem = part_system_create();
 part_system_layer(global.particleSystem, "Instances");
 part_system_depth(global.particleSystem, 15)
 
-
+isPaused = true;
 
 
 
@@ -27,3 +27,12 @@ part_type_life(global.particleSandstorm, 240, 240);
 
 //part_type_colour1(global.particleSandstorm, c_yellow);
 //part_type_size(global.particleSandstorm,1,2,0,0);
+
+
+
+//deze episode van pause tutorial voor wanneer de particle niet system werkt laatste paar min ig
+//https://www.youtube.com/watch?v=8AcyZaNWjJk
+//if there are any problems with the pause mechanic the video at exactly 5:50 might pose some help
+
+
+

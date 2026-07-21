@@ -5,15 +5,15 @@ if (room == Desert)
 	windState = "changing";
 	
     //make a random number out of 360
-	var r = random(360)
+	global.r = random(360)
 	//if it is smaller tan 120 make wind blow this way
-    if r < 120
+    if global.r < 120
     {
         targetWind = -0.5; // wind left
 		particleDirection = 180;
     }
 	//if its bigger than 240 make wind blow that way
-    else if r > 240
+    else if global.r > 240
     {
         targetWind = 0.5; // wind right
 		particleDirection = 0;

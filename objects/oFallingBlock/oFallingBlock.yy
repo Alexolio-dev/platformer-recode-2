@@ -38,5 +38,8 @@
     "path":"sprites/sTeleportStart/sTeleportStart.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }
