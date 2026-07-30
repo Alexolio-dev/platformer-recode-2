@@ -1,0 +1,1 @@
+Text = "leap of faith to the left";
