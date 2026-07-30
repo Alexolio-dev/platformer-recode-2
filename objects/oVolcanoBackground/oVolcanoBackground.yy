@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oTeleportEnd",
+  "%Name":"oVolcanoBackground",
   "eventList":[],
   "managed":true,
-  "name":"oTeleportEnd",
+  "name":"oVolcanoBackground",
   "overriddenProperties":[],
   "parent":{
-    "name":"levelObjects",
-    "path":"folders/objects/levelObjects.yy",
+    "name":"weird",
+    "path":"folders/objects/platformObjects/weird.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sTeleportEnd",
-    "path":"sprites/sTeleportEnd/sTeleportEnd.yy",
+    "name":"sVolcanoBackground",
+    "path":"sprites/sVolcanoBackground/sVolcanoBackground.yy",
   },
   "spriteMaskId":null,
   "visible":true,

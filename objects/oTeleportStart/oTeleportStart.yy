@@ -34,5 +34,5 @@
     "path":"sprites/sTeleportStart/sTeleportStart.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

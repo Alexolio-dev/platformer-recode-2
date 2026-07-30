@@ -176,9 +176,43 @@ if moveDir != 0 {face = moveDir; };
 //Get xspd
 runType = runKey;
 // Get xspd
-xspd = moveDir * moveSpd[runType] + DesertWind;
+//xspd = moveDir * moveSpd[runType] + DesertWind;
 //slow xspd if crouching
-if crouching { xspd = moveDir * crouchMoveSpd + DesertWind; };
+//if crouching { xspd = moveDir * crouchMoveSpd + DesertWind; };
+// set variables for ice blocks and normal movement
+var maxSpeed = moveSpd[runType];
+var accel = groundAccel;
+var decel = groundDecel;
+
+
+
+//crouch function to go slower
+if crouching
+{
+	maxSpeed = crouchMoveSpd;
+}
+
+
+//should be after crouching so the controller acctualy knows to slow down
+var targetSpeed = moveDir * maxSpeed;
+
+
+//if there ice block, make things slippery
+if place_meeting(x,y+1, oIceBlock)
+{
+	accel =  iceAccel;
+	decel = iceDecel;
+}
+
+//move with the target speed from the movedir
+if (moveDir != 0)
+{
+	xspd = approach(xspd, targetSpeed, accel)
+} 
+else
+{
+	xspd = approach(xspd, 0, decel)
+}
 
 
 
@@ -243,7 +277,7 @@ if place_meeting( x + xspd, y, oWall )
 
 
 //calculate final horizontal speed
-var _finalXspd = xspd;
+var _finalXspd = xspd + DesertWind;
 
 if !onGround
 {
@@ -771,10 +805,6 @@ if targetWind == 0.5
 		
 	}
 }
-
-
-	
-	
 	
 //if player dead this don matter
 if !playerDead

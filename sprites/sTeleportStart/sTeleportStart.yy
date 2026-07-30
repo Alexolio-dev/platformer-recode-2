@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sTeleportStart",
   "bboxMode":0,
-  "bbox_bottom":63,
+  "bbox_bottom":15,
   "bbox_left":0,
-  "bbox_right":63,
+  "bbox_right":15,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":64,
+  "height":16,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"494f9748-db5d-4b1b-aba1-16cd378c206a","blendMode":0,"displayName":"default","isLocked":false,"name":"494f9748-db5d-4b1b-aba1-16cd378c206a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"spritesForLevelObjectsw",
-    "path":"folders/sprites/spritesForLevelObjectsw.yy",
+    "name":"Movement",
+    "path":"folders/sprites/spritesForLevelObjectsw/Movement.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":16,
 }

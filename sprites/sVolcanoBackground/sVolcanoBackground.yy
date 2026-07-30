@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"SinvisbleWallo",
+  "%Name":"sVolcanoBackground",
   "bboxMode":0,
   "bbox_bottom":63,
   "bbox_left":0,
@@ -12,17 +12,36 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"b35cc86b-3fcf-4803-b84f-6136d06e00e7","name":"b35cc86b-3fcf-4803-b84f-6136d06e00e7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1c0b6225-a505-4fb9-a444-e340830c36ac","name":"1c0b6225-a505-4fb9-a444-e340830c36ac","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"80ec48fc-b95d-4c1e-9c95-a3ba01e10315","blendMode":0,"displayName":"default","isLocked":false,"name":"80ec48fc-b95d-4c1e-9c95-a3ba01e10315","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f8558d7e-6aae-4bd4-9954-2112e8c3203a","blendMode":0,"displayName":"default","isLocked":false,"name":"f8558d7e-6aae-4bd4-9954-2112e8c3203a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"SinvisbleWallo",
-  "nineSlice":null,
+  "name":"sVolcanoBackground",
+  "nineSlice":{
+    "$GMNineSliceData":"",
+    "bottom":0,
+    "enabled":true,
+    "guideColour":[4294902015,4294902015,4294902015,4294902015,],
+    "highlightColour":1728023040,
+    "highlightStyle":0,
+    "left":0,
+    "resourceType":"GMNineSliceData",
+    "resourceVersion":"2.0",
+    "right":0,
+    "tileMode":[
+      0,
+      0,
+      0,
+      1,
+      1,
+    ],
+    "top":0,
+  },
   "origin":0,
   "parent":{
     "name":"ExtraStuffLikeInvisibleWalls",
@@ -33,7 +52,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"SinvisbleWallo",
+    "%Name":"sVolcanoBackground",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +76,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"SinvisbleWallo",
+    "name":"sVolcanoBackground",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +88,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b35cc86b-3fcf-4803-b84f-6136d06e00e7","path":"sprites/SinvisbleWallo/SinvisbleWallo.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bcd63c3c-4996-4126-a8ab-fbe249a8db7a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1c0b6225-a505-4fb9-a444-e340830c36ac","path":"sprites/sVolcanoBackground/sVolcanoBackground.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1e19467c-25a0-40cc-b4d2-eaa4c1ba9f4e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

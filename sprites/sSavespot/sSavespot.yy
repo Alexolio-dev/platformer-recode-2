@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"spritesForLevelObjectsw",
-    "path":"folders/sprites/spritesForLevelObjectsw.yy",
+    "name":"ExtraStuffLikeInvisibleWalls",
+    "path":"folders/sprites/spritesForLevelObjectsw/ExtraStuffLikeInvisibleWalls.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -142,8 +142,12 @@ on_unpause = function(){
 }
 
 
+//ice physics
+groundAccel = 0.35;
+groundDecel = 0.45;
 
-
+iceAccel = 0.30;
+iceDecel = 0.02;
 
 
 //checkpoint code
@@ -155,9 +159,16 @@ if (global.checkpointR == room)
 
 
 
+
+
+
 //alarms to keep track off
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);
+
+
+//ice physics
+//cahtgpt ig
 
 
 //fake walls for secret areas

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"PausedElement",
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"Important",
+    "path":"folders/objects/other/managerial functions/Important.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
