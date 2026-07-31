@@ -217,6 +217,12 @@ else
 
 
 
+var	 oldXspd = xspd
+if !place_meeting(x ,y,owindgone)
+{
+xspd += DesertWind;
+}
+
 
 
 //X collision
@@ -270,24 +276,23 @@ if place_meeting( x + xspd, y, oWall )
 
 
 
-
-
-
-
-
-
 //calculate final horizontal speed
-var _finalXspd = xspd + DesertWind;
+var _finalXspd = xspd;
 
+
+
+//do the mavoing after the checks
 if !onGround
 {
     _finalXspd += jumpMomentumX;
 }
 
+
+
 //move
 x += _finalXspd;
 
-
+xspd = oldXspd;
 
 
 
@@ -750,7 +755,7 @@ if keyboard_check_pressed(ord("R"))
 
 var _randomY = random_range(-300, 600);
 
-//the winds stuff when changing
+//the winds stuff when changing 
 if windState == "changing"
 {
 	windTimer++;
@@ -805,6 +810,12 @@ if targetWind == 0.5
 		
 	}
 }
+
+
+
+
+
+
 	
 //if player dead this don matter
 if !playerDead

@@ -125,10 +125,10 @@ windTimer = 0;
 
 //the code that makes it so desert wind gets triggeresd when you are in the desert
 //if room desert
-if (room == Desert)
+if (room == Desert || room == TopIce)
 {
 	//trigger the alarm
-    alarm[1] = game_get_speed(gamespeed_fps) * 5;
+    alarm[1] = game_get_speed(gamespeed_fps) * 2;
 }
 
 
@@ -167,8 +167,11 @@ if (global.checkpointR == room)
 //alarm 2 = wind mechanic (desert);
 
 
-//ice physics
-//cahtgpt ig
+//gotta do an anti wind area
+
+//gotta make some more particvles for players and respawning paltforms, ice area
+
+//gotta figure out cutscenes
 
 
 //fake walls for secret areas
