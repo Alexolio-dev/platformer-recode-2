@@ -8,8 +8,8 @@
   "name":"owindgone",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"levelObjects",
+    "path":"folders/objects/levelObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

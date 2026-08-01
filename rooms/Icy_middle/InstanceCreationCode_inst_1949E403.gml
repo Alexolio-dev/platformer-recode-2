@@ -1,3 +1,3 @@
 moveType = "circle";
-radius = 40;
+radius = 60;
 rotSpd = 0.5;

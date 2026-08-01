@@ -133,6 +133,7 @@ if (room == Desert || room == TopIce)
 
 
 
+
 on_pause = function(){
 	part_system_automatic_update(global.particleSystem, false);
 }
@@ -140,6 +141,10 @@ on_pause = function(){
 on_unpause = function(){
 	part_system_automatic_update(global.particleSystem, true);
 }
+
+
+
+
 
 
 //ice physics
@@ -165,11 +170,6 @@ if (global.checkpointR == room)
 //alarms to keep track off
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);
-
-
-//gotta do an anti wind area
-
-//gotta make some more particvles for players and respawning paltforms, ice area
 
 //gotta figure out cutscenes
 

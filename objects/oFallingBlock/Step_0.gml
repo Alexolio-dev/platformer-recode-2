@@ -13,11 +13,19 @@ if (!Wiggle && place_meeting(x, y-1, Oplayer))
 	}
 }
 
-if WiggleTimer == -1000
+if WiggleTimer < -300 && WiggleTimer > -600
+{
+	part_particles_create(global.particleSystem, StartX + sprite_width/2, StartY + sprite_height/2,global.particlePlatform, 1 );
+}
+
+
+
+if WiggleTimer == -600
 {
 	x = StartX;
 	y = StartY;
 	WiggleTimer = 60;
 	Wiggle = false;
 }
+
 

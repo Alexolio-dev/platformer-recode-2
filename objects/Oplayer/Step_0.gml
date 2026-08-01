@@ -218,10 +218,12 @@ else
 
 
 var	 oldXspd = xspd
-if !place_meeting(x ,y,owindgone)
+if !place_meeting(x,y,owindgone)
 {
 xspd += DesertWind;
 }
+
+
 
 
 
@@ -361,6 +363,10 @@ xspd = oldXspd;
 		jumpHoldTimer = jumpHoldFrames[jumpCount-1];
 		//tell ourselvs whe are no longer on the ground
 		setOnGround(false)
+		//make jumping particles
+	
+		//part_particles_create(global.particleSystem , x, y + 7 ,global.particlePlayerJump, 30)
+		
 	}
 
 	
@@ -750,7 +756,11 @@ if keyboard_check_pressed(ord("R"))
 	death();
 }
 	
-	
+
+
+
+
+
 	
 
 var _randomY = random_range(-300, 600);
@@ -816,6 +826,20 @@ if targetWind == 0.5
 
 
 
+	if room == Icy_middle
+	{
+		var _randomYForSnow = random_range(-600, 600);
+		part_particles_create(global.particleSystem, x + _randomYForSnow, y-340, global.particleSnow, 1);
+
+	}
+	
+	if yspd < 0
+	{
+		part_particles_create(global.particleSystem , x + random_range(1,1), y + 1 + random_range(1,1),global.particlePlayerJump, 2)
+		
+	}
+	
+	
 	
 //if player dead this don matter
 if !playerDead
