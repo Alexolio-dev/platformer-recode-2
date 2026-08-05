@@ -172,7 +172,10 @@ if (global.checkpointR == room)
 //alarm 2 = wind mechanic (desert);
 
 //gotta figure out cutscenes
+//https://www.youtube.com/watch?v=PjN50aB9bjA
+//https://www.youtube.com/watch?v=2CLm38HCP64 15:55
 
+//also add a "are u sure" button, when pressing quit game.
 
 //fake walls for secret areas
 //https://www.youtube.com/watch?v=cI_EWfYJvd4 
