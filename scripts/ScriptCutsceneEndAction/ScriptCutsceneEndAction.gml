@@ -4,4 +4,7 @@
 	if (scene > array_length(sceneInfo) - 1)
 	{
 		instance_destroy();
+		exit;
 	}
+	
+event_perform(ev_other, ev_user0);

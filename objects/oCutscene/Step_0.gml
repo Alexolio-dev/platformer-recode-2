@@ -1,9 +1,6 @@
-var currentScene = sceneInfo[scene];
-//maybe 1d
-var len = array_length_(currentScene) - 1;
 
-
-script_execute_ext(_array[0],_array,1);
+//vid 3 has more info
+script_execute_ext(scene[0],scene,1);
 
 
 

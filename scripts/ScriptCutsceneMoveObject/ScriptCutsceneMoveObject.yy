@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ScriptCutsceneMoveObject",
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

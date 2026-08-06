@@ -16,6 +16,8 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fontForPauseScreen);
 
+//if menuState == main
+//{
 for (var i = 0; i< array_length(buttonList); i++)
 {
 	var c = c_white;
@@ -26,4 +28,24 @@ for (var i = 0; i< array_length(buttonList); i++)
 	}
 	draw_set_color(c);
 	draw_text(menuX,menuY - 64 + (i * 50), buttonList[i]);
+	}
+
+
+
+
+//}
+/*/
+if menuState == YesNo
+{
+	for (var i = 0; i< array_length(areYouSure); i++)
+{
+	var c = c_white;
+	
+	//highlight the button you are on
+	if i == pos{
+		c = c_yellow;
+	}
+	draw_set_color(c);
+	draw_text(menuX,menuY - 64 + (i * 50), areYouSure[i]);
+	}
 }
