@@ -1,5 +1,5 @@
 //@description cutscene
-//@arg seconds
+/*/@arg seconds
 
 timer++;
 

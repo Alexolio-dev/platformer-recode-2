@@ -1,5 +1,5 @@
 //move the character with x and y n shit
-//give an instance
+/*/give an instance
 
 var obj = argument0, relative = argument3, spd = argument4;
 

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ScriptChangeXscale",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"OldCutscene BS",
+    "path":"folders/Z/OldCutscene BS.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

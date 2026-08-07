@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oCutscene",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oTriggerPerm",
+  "eventList":[],
   "managed":true,
-  "name":"oCutscene",
+  "name":"oTriggerPerm",
   "overriddenProperties":[],
   "parent":{
     "name":"platformer recode",
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sTriggerperm",
+    "path":"sprites/sTriggerperm/sTriggerperm.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

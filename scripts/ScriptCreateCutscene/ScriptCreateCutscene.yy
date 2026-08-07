@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"ScriptCutsceneInstanceCreate",
+  "%Name":"ScriptCreateCutscene",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ScriptCutsceneInstanceCreate",
+  "name":"ScriptCreateCutscene",
   "parent":{
     "name":"OldCutscene BS",
     "path":"folders/Z/OldCutscene BS.yy",
