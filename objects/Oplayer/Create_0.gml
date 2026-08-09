@@ -43,6 +43,8 @@ function checkForSemisolidPlatform( _x, _y)
 	return _rtrn;
 }
 
+code = "";
+
 
 depth = -30;
 //controls setup
@@ -143,6 +145,13 @@ on_unpause = function(){
 }
 
 
+//cutscene stuff
+cutsceneMove = false;
+cutsceneTargetX = 0;
+cutsceneTargetY = 0;
+cutsceneSpeed = 0;
+
+
 
 
 
@@ -164,7 +173,8 @@ if (global.checkpointR == room)
 
 
 
-
+// ietsje duidelijkere hitbox
+// platforms die alleen moven als je er op loopt ?? maybe later
 
 
 //alarms to keep track off
@@ -172,8 +182,8 @@ if (global.checkpointR == room)
 //alarm 2 = wind mechanic (desert);
 
 //gotta figure out cutscenes
-//https://www.youtube.com/watch?v=PjN50aB9bjA
-//https://www.youtube.com/watch?v=2CLm38HCP64 15:55
+//https://www.youtube.com/watch?v=yvdelcSEXc8
+//"Fine i'll do it myself" me after spending hours to just learn not to follow an 8 year old turoial
 
 //also add a "are u sure" button, when pressing quit game.
 

@@ -14,3 +14,5 @@ yspd = 0;
 moveType = "horizontal"; // or vertical or circle
 
 depth = 5;
+
+image_alpha = 0.25;

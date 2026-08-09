@@ -8,108 +8,122 @@ if (playerDead)
 }
 
 
-
-//Get inputs
-getControls();
-
-
-
-//vid 8 18 min
+if (!instance_exists(oCutscene))
+{
+	//Get inputs
+	getControls();
 
 
-//the move plat collisions
-#region
-//get out of solid moveplats that have positioned themselves into player in the begin step
-	var _topWall = noone;
-	var _rightWall = noone;
-	var _leftWall = noone;
-	var _bottomWall = noone;
-	var _list = ds_list_create();
-	var _listSize = instance_place_list( x, y, oMovePlat, _list, false);
 
-//loop trough all colliding moveplats
-	for( var i = 0; i < _listSize; i++)
+	//vid 8 18 min
+
+
+	//the move plat collisions
+	#region
+	//get out of solid moveplats that have positioned themselves into player in the begin step
+		var _topWall = noone;
+		var _rightWall = noone;
+		var _leftWall = noone;
+		var _bottomWall = noone;
+		var _list = ds_list_create();
+		var _listSize = instance_place_list( x, y, oMovePlat, _list, false);
+
+	//loop trough all colliding moveplats
+		for( var i = 0; i < _listSize; i++)
+		{
+			var _listInst = _list[| i];
+	
+			//find closest walls in each direction
+		
+			//=right walls
+			if _listInst.bbox_left - _listInst.xspd >= bbox_right-1
+			{
+				if !instance_exists(_rightWall) || _listInst.bbox_left < _rightWall.bbox_left
+				{
+					_rightWall = _listInst;
+				}
+			}
+			//left walls
+			if _listInst.bbox_right - _listInst.xspd <= bbox_left+1
+			{
+				if !instance_exists(_leftWall) || _listInst.bbox_right > _leftWall.bbox_right
+				{
+					_leftWall = _listInst;
+				}
+			}
+			//Bottom wall
+			if _listInst.bbox_top - _listInst.yspd >= bbox_bottom-1
+			{
+				if !instance_exists(_bottomWall) || _listInst.bbox_top < _bottomWall.bbox_top
+				{
+					_bottomWall = _listInst;
+				}
+			}
+			//Top
+			if _listInst.bbox_bottom - _listInst.yspd <= bbox_top+1
+			{
+				if !instance_exists(_topWall) || _listInst.bbox_bottom > _topWall.bbox_bottom
+				{
+					_topWall = _listInst;
+				}
+			}
+		}
+
+		//destroy ds list to free memory
+		ds_list_destroy(_list);
+	
+	
+
+	
+	
+		//get out of the walls
+			//rigt wall
+			if instance_exists(_rightWall)
+			{
+				var _rightDist = bbox_right - x;
+				x = _rightWall.bbox_left - _rightDist;
+			}
+			//left wall
+			if instance_exists(_leftWall)
+			{
+				var _leftDist = x - bbox_left;
+				x = _leftWall.bbox_right + _leftDist;
+			}
+			//bottom wall
+			if instance_exists(_bottomWall)
+			{
+				var _bottomDist = bbox_bottom - y;
+				y = _bottomWall.bbox_top - _bottomDist;
+			}
+			//Topwall ( includes collision for polish and crouching features)
+			if instance_exists(_topWall)
+			{
+				var _upDist = y - bbox_top;
+				var _targetY = _topWall.bbox_bottom + _upDist;
+				//check if there isnt a wall in the way
+				if !place_meeting( x, _targetY, oWall)
+				{
+					y = _targetY;
+				}
+			}
+		
+		#endregion	
+}
+
+
+/*/
+if object_exists(oCutscene) 
+{
+	if cutsceneMove == true
 	{
-		var _listInst = _list[| i];
-	
-		//find closest walls in each direction
-		
-		//=right walls
-		if _listInst.bbox_left - _listInst.xspd >= bbox_right-1
-		{
-			if !instance_exists(_rightWall) || _listInst.bbox_left < _rightWall.bbox_left
-			{
-				_rightWall = _listInst;
-			}
-		}
-		//left walls
-		if _listInst.bbox_right - _listInst.xspd <= bbox_left+1
-		{
-			if !instance_exists(_leftWall) || _listInst.bbox_right > _leftWall.bbox_right
-			{
-				_leftWall = _listInst;
-			}
-		}
-		//Bottom wall
-		if _listInst.bbox_top - _listInst.yspd >= bbox_bottom-1
-		{
-			if !instance_exists(_bottomWall) || _listInst.bbox_top < _bottomWall.bbox_top
-			{
-				_bottomWall = _listInst;
-			}
-		}
-		//Top
-		if _listInst.bbox_bottom - _listInst.yspd <= bbox_top+1
-		{
-			if !instance_exists(_topWall) || _listInst.bbox_bottom > _topWall.bbox_bottom
-			{
-				_topWall = _listInst;
-			}
-		}
+	move_towards_point(cutsceneTargetX, cutsceneTargetY, cutsceneSpeed);
 	}
-
-	//destroy ds list to free memory
-	ds_list_destroy(_list);
 	
-	
-
-	
-	
-	//get out of the walls
-		//rigt wall
-		if instance_exists(_rightWall)
-		{
-			var _rightDist = bbox_right - x;
-			x = _rightWall.bbox_left - _rightDist;
-		}
-		//left wall
-		if instance_exists(_leftWall)
-		{
-			var _leftDist = x - bbox_left;
-			x = _leftWall.bbox_right + _leftDist;
-		}
-		//bottom wall
-		if instance_exists(_bottomWall)
-		{
-			var _bottomDist = bbox_bottom - y;
-			y = _bottomWall.bbox_top - _bottomDist;
-		}
-		//Topwall ( includes collision for polish and crouching features)
-		if instance_exists(_topWall)
-		{
-			var _upDist = y - bbox_top;
-			var _targetY = _topWall.bbox_bottom + _upDist;
-			//check if there isnt a wall in the way
-			if !place_meeting( x, _targetY, oWall)
-			{
-				y = _targetY;
-			}
-		}
-		
-	#endregion	
-		
-		
-		
+	if Oplayer.x == cutsceneTargetX && Oplayer.y == cutsceneTargetY
+	{
+		cutsceneMove = false;
+	}
+}/*/
 		
 	
 //dont get left behind by my move plat
@@ -838,6 +852,31 @@ if targetWind == 0.5
 		part_particles_create(global.particleSystem , x + random_range(1,1), y + 1 + random_range(1,1),global.particlePlayerJump, 2)
 		
 	}
+	
+	
+	
+
+if (keyboard_check_pressed(ord("T"))) {
+    code += "T";
+}
+
+if (keyboard_check_pressed(ord("I"))) {
+    code += "I";
+}
+
+if (keyboard_check_pressed(ord("K"))) {
+    code += "K";
+}
+
+if (string_ends_with(code, "TIKI")) {
+    death();
+	
+    code = "";
+}
+	
+	
+	
+	
 	
 	
 	
