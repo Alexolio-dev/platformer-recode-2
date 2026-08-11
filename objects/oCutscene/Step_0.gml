@@ -35,35 +35,40 @@ switch (currentAction[0])
 {
 	//in case of needing to mvoe do this:
     case "move":
+	
+	
+	
         var target = currentAction[1];
 		var targetX = currentAction[2];
-		var targetY = currentAction[3]; 
+		var targetY = currentAction[3];
 		var spd = currentAction[4];
-		var oDirection = sign(targetX - target.x);
+
+		
+		//tell the player that cutscene controlls the movement
+		target.cutsceneControlled = true;
+		target.cutsceneTargetX = targetX;
+		target.cutsceneTargetY = targetY;
+		target.cutsceneMoveSpd = spd;
+		target.cutsceneMoveMode = "horizontal";
 		
 		
 		
-		Oplayer.cutsceneMove = true;
-		Oplayer.cutsceneTargetX = targetX;
-		Oplayer.cutsceneTargetY = targetY;
-		Oplayer.cutsceneSpeed = spd;
 		
+		//check fi we have reached target X
+		  if abs(target.x - targetX) <= spd
+		    {
+		        target.x = targetX;
+		        target.xspd = 0;
+				
+		        target.cutsceneControlled = false;
+		        target.cutsceneMoveMode = "none";
+
+		        finished = true;
+		    }
 		
-		if Oplayer.cutsceneMove == true
-	{
-	move_towards_point(Oplayer.cutsceneTargetX, Oplayer.cutsceneTargetY, Oplayer.cutsceneSpeed);
-	}
 	
-	if Oplayer.x == Oplayer.cutsceneTargetX && Oplayer.y == Oplayer.cutsceneTargetY
-	{
-	Oplayer.cutsceneMove = false;
-	}
-		
-       if target.x == targetX && target.y == targetY
-	   {
-		   finished = true;
-	   }
         break
+		
 		
 		
 		
@@ -79,7 +84,7 @@ switch (currentAction[0])
 		
 		waitTimer--;
 		
-		if waitTimer <= 0{finished = true; };
+		if waitTimer <= 0{finished = true;};
 
 		break
 		

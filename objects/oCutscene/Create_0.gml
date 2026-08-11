@@ -15,8 +15,8 @@ waitTimer = 0;
 
 //the first test scene
 scene[0] = [
-	["move", Oplayer, x+100, y, 2],
-	["wait", 1.5],
-	["move", Oplayer, x+200, y+200, 3],
-	["end"]
+    ["move", Oplayer, Oplayer.x + 100, Oplayer.y, 2],
+    ["wait", 1.5],
+    ["move", Oplayer, Oplayer.x + 200, Oplayer.y, 3],
+    ["end"]
 ]

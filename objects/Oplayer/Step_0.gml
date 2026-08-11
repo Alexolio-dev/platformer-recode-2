@@ -8,7 +8,7 @@ if (playerDead)
 }
 
 
-if (!instance_exists(oCutscene))
+if (!cutsceneControlled)
 {
 	//Get inputs
 	getControls();
@@ -111,19 +111,8 @@ if (!instance_exists(oCutscene))
 }
 
 
-/*/
-if object_exists(oCutscene) 
-{
-	if cutsceneMove == true
-	{
-	move_towards_point(cutsceneTargetX, cutsceneTargetY, cutsceneSpeed);
-	}
-	
-	if Oplayer.x == cutsceneTargetX && Oplayer.y == cutsceneTargetY
-	{
-		cutsceneMove = false;
-	}
-}/*/
+		
+		
 		
 	
 //dont get left behind by my move plat
@@ -180,62 +169,119 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspd != 0 && !place_meeting( x, y
 
 
 
+if (!cutsceneControlled)
+	{
+	//x movement
+	//Direction
+	moveDir = rightKey - leftKey
+	//get my face
+	if moveDir != 0 {face = moveDir; };
 
-//x movement
-//Direction
-moveDir = rightKey - leftKey
-//get my face
-if moveDir != 0 {face = moveDir; };
-
-//Get xspd
-runType = runKey;
-// Get xspd
-//xspd = moveDir * moveSpd[runType] + DesertWind;
-//slow xspd if crouching
-//if crouching { xspd = moveDir * crouchMoveSpd + DesertWind; };
-// set variables for ice blocks and normal movement
-var maxSpeed = moveSpd[runType];
-var accel = groundAccel;
-var decel = groundDecel;
+	//Get xspd
+	runType = runKey;
+	// Get xspd
+	//xspd = moveDir * moveSpd[runType] + DesertWind;
+	//slow xspd if crouching
+	//if crouching { xspd = moveDir * crouchMoveSpd + DesertWind; };
+	// set variables for ice blocks and normal movement
+	var maxSpeed = moveSpd[runType];
+	var accel = groundAccel;
+	var decel = groundDecel;
 
 
 
-//crouch function to go slower
-if crouching
-{
-	maxSpeed = crouchMoveSpd;
+	//crouch function to go slower
+	if crouching
+	{
+		maxSpeed = crouchMoveSpd;
+	}
+
+
+	//should be after crouching so the controller acctualy knows to slow down
+	var targetSpeed = moveDir * maxSpeed;
+
+
+	//if there ice block, make things slippery
+	if place_meeting(x,y+1, oIceBlock)
+	{
+		accel =  iceAccel;
+		decel = iceDecel;
+	}
+
+	//move with the target speed from the movedir
+	if (moveDir != 0)
+	{
+		xspd = approach(xspd, targetSpeed, accel)
+	} 
+	else
+	{
+		xspd = approach(xspd, 0, decel)
+	}
+
+
+
 }
 
 
-//should be after crouching so the controller acctualy knows to slow down
-var targetSpeed = moveDir * maxSpeed;
 
 
-//if there ice block, make things slippery
-if place_meeting(x,y+1, oIceBlock)
-{
-	accel =  iceAccel;
-	decel = iceDecel;
-}
 
-//move with the target speed from the movedir
-if (moveDir != 0)
-{
-	xspd = approach(xspd, targetSpeed, accel)
-} 
+
+//====================================================
+// CUTSCENE MOVEMENT
+//====================================================
+
+
 else
 {
-	xspd = approach(xspd, 0, decel)
+	//The cutscene controls our horizontal movement.
+    if cutsceneMoveMode == "horizontal"
+    {
+        var _distX = cutsceneTargetX - x;
+        
+		
+		show_debug_message(
+            "CUTSCENE | x: "
+            + string(x)
+            + " target: "
+            + string(cutsceneTargetX)
+            + " xspd: "
+            + string(xspd)
+            + " controlled: "
+            + string(cutsceneControlled)
+        );
+
+
+
+
+        //Move toward the target.
+        xspd = sign(_distX) * cutsceneMoveSpd;
+
+        //Face the direction we're moving.
+        if xspd != 0
+        {
+            face = sign(xspd);
+        }
+    }
+    else
+    {
+        xspd = 0;
+    }
 }
 
 
 
 
-var	 oldXspd = xspd
-if !place_meeting(x,y,owindgone)
-{
-xspd += DesertWind;
-}
+
+	var	 oldXspd = xspd
+	
+	if !place_meeting(x,y,owindgone)
+	{
+	xspd += DesertWind;
+	}
+
+
+
 
 
 
@@ -292,6 +338,7 @@ if place_meeting( x + xspd, y, oWall )
 
 
 
+
 //calculate final horizontal speed
 var _finalXspd = xspd;
 
@@ -309,6 +356,8 @@ if !onGround
 x += _finalXspd;
 
 xspd = oldXspd;
+
+
 
 
 

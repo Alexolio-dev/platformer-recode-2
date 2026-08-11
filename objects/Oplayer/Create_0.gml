@@ -146,11 +146,11 @@ on_unpause = function(){
 
 
 //cutscene stuff
-cutsceneMove = false;
+cutsceneMoveMode = "none";
 cutsceneTargetX = 0;
 cutsceneTargetY = 0;
 cutsceneSpeed = 0;
-
+cutsceneControlled = false;
 
 
 
