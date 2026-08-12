@@ -19,13 +19,13 @@ if WiggleTimer < -300 && WiggleTimer > -600
 }
 
 
-
-if WiggleTimer == -600
+if respawn == true
 {
-	x = StartX;
-	y = StartY;
-	WiggleTimer = 60;
-	Wiggle = false;
+	if WiggleTimer == -330
+	{
+		x = StartX;
+		y = StartY;
+		WiggleTimer = 60;
+		Wiggle = false;
+	}
 }
-
-

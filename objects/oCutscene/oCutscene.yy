@@ -9,8 +9,8 @@
   "name":"oCutscene",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"managerial functions",
+    "path":"folders/objects/other/managerial functions.yy",
   },
   "parentObjectId":null,
   "persistent":false,

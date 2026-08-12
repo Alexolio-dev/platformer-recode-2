@@ -1,5 +1,5 @@
 //if room is desert
-if (room == Desert)
+if (room == Desert || TopIce) 
 {
 	//change the windsate for particles
 	windState = "changing";

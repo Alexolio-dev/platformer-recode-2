@@ -3,6 +3,7 @@ event_inherited();
 
 Wiggle = false;
 WiggleTimer = 60;
+respawn = true;
 
 
 StartX = x;

@@ -166,8 +166,9 @@ if instance_exists(myFloorPlat) && myFloorPlat.xspd != 0 && !place_meeting( x, y
 
 
 
-
-
+//====================================================
+// NORMAL MOVEMENT
+//====================================================
 
 if (!cutsceneControlled)
 	{

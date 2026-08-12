@@ -6,8 +6,8 @@
   "name":"oTriggerPerm",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"sprites",
+    "path":"folders/sprites.yy",
   },
   "parentObjectId":null,
   "persistent":false,

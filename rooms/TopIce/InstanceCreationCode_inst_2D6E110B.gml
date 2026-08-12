@@ -1,0 +1,1 @@
+WiggleTimer = 20;

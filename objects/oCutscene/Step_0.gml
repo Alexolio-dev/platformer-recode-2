@@ -36,8 +36,7 @@ switch (currentAction[0])
 	//in case of needing to mvoe do this:
     case "move":
 	
-	
-	
+		//setting up all the commands for the array
         var target = currentAction[1];
 		var targetX = currentAction[2];
 		var targetY = currentAction[3];
@@ -54,7 +53,7 @@ switch (currentAction[0])
 		
 		
 		
-		//check fi we have reached target X
+		//check if we have reached target X
 		  if abs(target.x - targetX) <= spd
 		    {
 		        target.x = targetX;
@@ -80,11 +79,16 @@ switch (currentAction[0])
 		if !actionStarted{
 		waitTimer = currentAction[1] * game_get_speed(gamespeed_fps);
 		actionStarted = true;
+		Oplayer.cutsceneControlled = true;
 		}
 		
 		waitTimer--;
 		
-		if waitTimer <= 0{finished = true;};
+		if waitTimer <= 0
+			{
+			finished = true;
+			Oplayer.cutsceneControlled = true;
+			};
 
 		break
 		
