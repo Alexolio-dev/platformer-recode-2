@@ -3,7 +3,7 @@
   "%Name":"sPlayer",
   "bboxMode":2,
   "bbox_bottom":63,
-  "bbox_left":18,
+  "bbox_left":17,
   "bbox_right":46,
   "bbox_top":12,
   "collisionKind":1,

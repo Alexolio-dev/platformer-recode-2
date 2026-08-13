@@ -1,17 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"owindgone",
+  "%Name":"oLava",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Oplayer","path":"objects/Oplayer/Oplayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"owindgone",
+  "name":"oLava",
   "overriddenProperties":[],
   "parent":{
-    "name":"levelObjects",
-    "path":"folders/objects/levelObjects.yy",
+    "name":"deathMechanics",
+    "path":"folders/objects/deathMechanics.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oDeathpit",
+    "path":"objects/oDeathpit/oDeathpit.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,9 +35,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"swindgone",
-    "path":"sprites/swindgone/swindgone.yy",
+    "name":"sLava",
+    "path":"sprites/sLava/sLava.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

@@ -1,1 +1,0 @@
-triggerScene = 0;

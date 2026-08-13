@@ -17,6 +17,34 @@ waitTimer = 0;
 scene[0] = [
     ["move", Oplayer, Oplayer.x + 200, Oplayer.y, 2],
     ["wait", 1.5],
-    ["move", Oplayer, Oplayer.x + 500, Oplayer.y, 3],
+    ["move", Oplayer, Oplayer.x + 400, Oplayer.y, 3],
+    ["end"]
+]
+
+
+scene[1] = [
+    ["move", Oplayer, Oplayer.x + 300, Oplayer.y, 2],
+    ["wait", 1.5],
+    ["move", Oplayer, Oplayer.x + 295, Oplayer.y, 1],
+	["wait", 0.5],
+	["move", Oplayer, Oplayer.x + 305, Oplayer.y, 1],
+	["wait", 0.5],
+	["move", Oplayer, Oplayer.x + 295, Oplayer.y, 1],
+	["wait", 0.5],
+	["move", Oplayer, Oplayer.x + 305, Oplayer.y, 1],
+	["move", Oplayer, Oplayer.x + 400, Oplayer.y, 0.5],
+	["wait", 1],
+	["move", Oplayer, Oplayer.x + 395, Oplayer.y, 1],
+	["wait", 0.5],
+	["move", Oplayer, Oplayer.x + 405, Oplayer.y, 1],
+	["wait", 1.5],
+	["move", Oplayer, Oplayer.x - 50, Oplayer.y, 3],
+    ["end"]
+]
+
+
+scene[2] = [
+    ["wait", 2],
+    ["move", Oplayer, Oplayer.x + 800, Oplayer.y, 1],
     ["end"]
 ]

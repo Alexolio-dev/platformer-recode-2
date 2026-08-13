@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oTrigger",
+  "%Name":"oTriggerCutscene",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Oplayer","path":"objects/Oplayer/Oplayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oTrigger",
+  "name":"oTriggerCutscene",
   "overriddenProperties":[],
   "parent":{
-    "name":"sprites",
-    "path":"folders/sprites.yy",
+    "name":"levelObjects",
+    "path":"folders/objects/levelObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -35,5 +35,5 @@
     "path":"sprites/sTrigger/sTrigger.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

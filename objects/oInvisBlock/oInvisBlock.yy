@@ -6,10 +6,13 @@
   "name":"oInvisBlock",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"weird",
+    "path":"folders/objects/platformObjects/weird.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oWall",
+    "path":"objects/oWall/oWall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,5 +35,5 @@
     "path":"sprites/sInvisBlock/sInvisBlock.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

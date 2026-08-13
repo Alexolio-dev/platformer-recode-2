@@ -6,8 +6,8 @@
   "name":"oTriggerPerm",
   "overriddenProperties":[],
   "parent":{
-    "name":"sprites",
-    "path":"folders/sprites.yy",
+    "name":"levelObjects",
+    "path":"folders/objects/levelObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

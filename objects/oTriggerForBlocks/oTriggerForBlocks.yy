@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"owindgone",
+  "%Name":"oTriggerForBlocks",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Oplayer","path":"objects/Oplayer/Oplayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"owindgone",
+  "name":"oTriggerForBlocks",
   "overriddenProperties":[],
   "parent":{
-    "name":"levelObjects",
-    "path":"folders/objects/levelObjects.yy",
+    "name":"help for levels",
+    "path":"folders/objects/other/managerial functions/help for levels.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"swindgone",
-    "path":"sprites/swindgone/swindgone.yy",
+    "name":"sTriggerForBlocks",
+    "path":"sprites/sTriggerForBlocks/sTriggerForBlocks.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

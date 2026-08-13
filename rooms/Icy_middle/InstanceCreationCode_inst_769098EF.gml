@@ -1,1 +1,1 @@
-Text = "leap of faith to the left";
+zText = "leap of faith to the left";
