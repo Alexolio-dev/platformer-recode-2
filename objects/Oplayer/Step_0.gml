@@ -263,11 +263,11 @@ else
         {
             face = sign(xspd);
         }
-    }
-    else
-    {
-        xspd = 0;
-    }
+	    }
+	    else
+	    {
+	        xspd = 0;
+	    }
 }
 
 
@@ -279,7 +279,7 @@ else
 	if !place_meeting(x,y,owindgone)
 	{
 	xspd += DesertWind;
-	}
+}
 
 
 

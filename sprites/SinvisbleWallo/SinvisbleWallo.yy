@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"ExtraStuffLikeInvisibleWalls",
-    "path":"folders/sprites/spritesForLevelObjectsw/ExtraStuffLikeInvisibleWalls.yy",
+    "name":"OldCutscene BS",
+    "path":"folders/Z/OldCutscene BS.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

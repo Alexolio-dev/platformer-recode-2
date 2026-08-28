@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"ExtraStuffLikeInvisibleWalls",
-    "path":"folders/sprites/spritesForLevelObjectsw/ExtraStuffLikeInvisibleWalls.yy",
+    "name":"Movement",
+    "path":"folders/sprites/spritesForLevelObjectsw/Movement.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

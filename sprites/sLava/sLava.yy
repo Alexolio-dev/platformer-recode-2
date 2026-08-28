@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"ExtraStuffLikeInvisibleWalls",
-    "path":"folders/sprites/spritesForLevelObjectsw/ExtraStuffLikeInvisibleWalls.yy",
+    "name":"Hazards",
+    "path":"folders/sprites/spritesForLevelObjectsw/Hazards.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

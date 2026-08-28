@@ -10,8 +10,8 @@
   "name":"Ospike",
   "overriddenProperties":[],
   "parent":{
-    "name":"levelObjects",
-    "path":"folders/objects/levelObjects.yy",
+    "name":"dangerous",
+    "path":"folders/objects/levelObjects/dangerous.yy",
   },
   "parentObjectId":{
     "name":"oDeathpit",

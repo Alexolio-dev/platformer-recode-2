@@ -1,19 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oParticleHolder",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Oboss",
+  "eventList":[],
   "managed":true,
-  "name":"oParticleHolder",
+  "name":"Oboss",
   "overriddenProperties":[],
   "parent":{
-    "name":"less important",
-    "path":"folders/objects/other/managerial functions/less important.yy",
+    "name":"Entities",
+    "path":"folders/objects/Entities.yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sLevelEnd",
+    "path":"sprites/sLevelEnd/sLevelEnd.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

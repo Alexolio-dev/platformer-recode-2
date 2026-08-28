@@ -9,8 +9,8 @@
   "name":"oCutscene",
   "overriddenProperties":[],
   "parent":{
-    "name":"Important",
-    "path":"folders/objects/other/managerial functions/Important.yy",
+    "name":"less important",
+    "path":"folders/objects/other/managerial functions/less important.yy",
   },
   "parentObjectId":null,
   "persistent":false,

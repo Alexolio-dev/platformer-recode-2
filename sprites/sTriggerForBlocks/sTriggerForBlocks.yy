@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"otherSprites",
-    "path":"folders/sprites/otherSprites.yy",
+    "name":"stuff that effects the player but i lowkey cant describe",
+    "path":"folders/sprites/spritesForLevelObjectsw/stuff that effects the player but i lowkey cant describe.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

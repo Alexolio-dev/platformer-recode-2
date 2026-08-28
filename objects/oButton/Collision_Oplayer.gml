@@ -1,3 +1,16 @@
+if (place_meeting(x,y,Oplayer) && !triggered)
+{
+	blocksThatWillAppear = blocksForTriggers;
+	triggered = true;
+	
+	
+	if blocksThatWillAppear == 3
+	{
+		timerGo = true;
+	} 
+}
+
+
 if blocksThatWillAppear == 1
 {
 	instance_create_layer(4624, 1840, "Instances" , oWall);
@@ -29,10 +42,22 @@ if blocksThatWillAppear == 2
 	image_index = 1;
 } 
 
-if blocksThatWillAppear == 3
+
+
+if timerGo == true 
 {
-	oLava.rising = true;
-} 
-
-
+	timer += 1;
 	
+	if timer >= 20 && !(automaticSideScroller == true)
+	{
+		oLava.rising = true;
+		automaticSideScroller = true;
+	}
+}
+
+
+	if automaticSideScroller == true
+{
+    cameraScroll += 0.5;
+    oCamera.cameraScrollSpeed = cameraScroll;
+}

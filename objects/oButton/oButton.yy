@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oTriggerForBlocks",
+  "%Name":"oButton",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Oplayer","path":"objects/Oplayer/Oplayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oTriggerForBlocks",
+  "name":"oButton",
   "overriddenProperties":[],
   "parent":{
     "name":"help for levels",
-    "path":"folders/objects/other/managerial functions/help for levels.yy",
+    "path":"folders/objects/other/help for levels.yy",
   },
   "parentObjectId":null,
   "persistent":false,

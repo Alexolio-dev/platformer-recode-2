@@ -8,3 +8,7 @@ camOffSetMaxDown = 100;
 camOffSetMaxUp = -100;
 //crouch timer type shi
 CrouchTimer = 0;
+
+//automatic side scroller
+cameraScrollSpeed = 0;
+sequenceStarted = false;

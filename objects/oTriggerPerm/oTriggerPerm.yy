@@ -6,8 +6,8 @@
   "name":"oTriggerPerm",
   "overriddenProperties":[],
   "parent":{
-    "name":"levelObjects",
-    "path":"folders/objects/levelObjects.yy",
+    "name":"background effects",
+    "path":"folders/objects/levelObjects/background effects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"help for levels",
-    "path":"folders/objects/other/managerial functions/help for levels.yy",
+    "path":"folders/objects/other/help for levels.yy",
   },
   "parentObjectId":null,
   "persistent":false,
