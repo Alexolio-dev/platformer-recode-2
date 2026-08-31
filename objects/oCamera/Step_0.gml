@@ -44,17 +44,6 @@ CamOffSetY = lerp(CamOffSetY, TargetOffset, 0.03);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 //exit if there is no player
 if !instance_exists(Oplayer) exit;
 
@@ -77,48 +66,4 @@ finalCamY += (_camY - finalCamY) * camTrailSpd;
 
 
 //set camera coordinates
-camera_set_view_pos(view_camera[0], _camX, _camY - 20 - cameraScrollSpeed);
-
-
-
-
-/*/exit if there is no player
-if!instance_exists(Oplayer) exit;
-
-	cameraScrollSpeed += 0.5;
-	
-	//get camera size
-	var _camWidth = camera_get_view_width(view_camera[0]);
-	var _camHeight = camera_get_view_height(view_camera[0]);
-	
-	var _camX = Oplayer.x - _camWidth/2;
-	var _camY = Oplayer.y - _camHeight/2;
-
-	//Constrain cam to room borders
-	_camX = clamp(_camX, 0, room_width - _camWidth);
-	_camY = clamp(_camY, 0, room_height - _camHeight) + CamOffSetY;
-	
-	//set cam coordinate variables
-	finalCamX += (_camX - finalCamX) * camTrailSpd;
-	finalCamY += (_camY - finalCamY) * camTrailSpd;
-	
-	
-	//set camera coordinates
-	camera_set_view_pos(view_camera[0],finalCamX, finalCamY - 20 - cameraScrollSpeed);
-
-
-
-//if not want cam to race across room when placing character vid 3 15-15:30 min
-
-
-
-
-
-
-if !instance_exists(Oplayer) || keyboard_check_pressed(ord("R"))
-{
-	cameraScrollSpeed = 0;
-	oButton.automaticSideScroller = false;
-	
-}
-
+camera_set_view_pos(view_camera[0], _camX, _camY - 20);

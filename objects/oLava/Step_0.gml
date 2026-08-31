@@ -1,6 +1,6 @@
 if rising == true
 {
-	y -= 0.5;	
+	y -= 1;	
 if y <= maxLava
 	{
 	 rising = false;

@@ -1,17 +1,11 @@
-if (place_meeting(x,y,Oplayer) && !triggered)
+if place_meeting(x,y,Oplayer)
 {
 	blocksThatWillAppear = blocksForTriggers;
-	triggered = true;
 	
-	
-	if blocksThatWillAppear == 3
-	{
-		timerGo = true;
-	} 
 }
 
 
-if blocksThatWillAppear == 1
+if blocksThatWillAppear == 1 && !blocksSpawned
 {
 	instance_create_layer(4624, 1840, "Instances" , oWall);
 	instance_create_layer(4624, 1856, "Instances" , oWall);
@@ -27,12 +21,12 @@ if blocksThatWillAppear == 1
 	instance_create_layer(4624, 2016, "Instances" , oWall);
 	instance_create_layer(4624, 2032, "Instances" , oWall);
 	instance_create_layer(4624, 2048, "Instances" , oWall);
-	
 	image_index = 1;
+	blocksSpawned = true;
 } 
 	
 	
-if blocksThatWillAppear == 2
+if blocksThatWillAppear == 2 && !blocksSpawned
 {
 	instance_create_layer(5472, 1152, "Instances" , oIceBlock);
 	instance_create_layer(5392, 1216, "Instances" , oWall);
@@ -40,24 +34,16 @@ if blocksThatWillAppear == 2
 	instance_create_layer(5424, 1216, "Instances" , oWall);
 	instance_create_layer(5456, 1072, "Instances" , oFallingBlock);
 	image_index = 1;
+	blocksSpawned = true;
 } 
 
 
-
-if timerGo == true 
-{
-	timer += 1;
 	
-	if timer >= 20 && !(automaticSideScroller == true)
-	{
-		oLava.rising = true;
-		automaticSideScroller = true;
-	}
-}
-
-
-	if automaticSideScroller == true
+	
+if blocksThatWillAppear == 3 && !blocksSpawned
 {
-    cameraScroll += 0.5;
-    oCamera.cameraScrollSpeed = cameraScroll;
+	alarm[0] = game_get_speed(gamespeed_fps) * 0.60;
+	blocksSpawned = true;
 }
+
+

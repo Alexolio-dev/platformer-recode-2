@@ -48,3 +48,8 @@ scene[2] = [
     ["move", Oplayer, Oplayer.x + 800, Oplayer.y, 1],
     ["end"]
 ]
+
+scene[3] = [
+	["ascend", Oboss, 720 , 4000 ,  3400, -5],
+	["end"]
+]

@@ -10,8 +10,8 @@
   "name":"oLava",
   "overriddenProperties":[],
   "parent":{
-    "name":"deathMechanics",
-    "path":"folders/objects/deathMechanics.yy",
+    "name":"dangerous",
+    "path":"folders/objects/levelObjects/dangerous.yy",
   },
   "parentObjectId":{
     "name":"oDeathpit",
@@ -39,5 +39,8 @@
     "path":"sprites/sLava/sLava.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

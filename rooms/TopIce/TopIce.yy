@@ -370,7 +370,6 @@
     {"name":"inst_443C2E1","path":"rooms/TopIce/TopIce.yy",},
     {"name":"inst_46E400A6","path":"rooms/TopIce/TopIce.yy",},
     {"name":"inst_59A9EC1A","path":"rooms/TopIce/TopIce.yy",},
-    {"name":"inst_1CF0F0A1","path":"rooms/TopIce/TopIce.yy",},
     {"name":"inst_6DA339C3","path":"rooms/TopIce/TopIce.yy",},
     {"name":"inst_6E0A1076","path":"rooms/TopIce/TopIce.yy",},
     {"name":"inst_11AA0D8C","path":"rooms/TopIce/TopIce.yy",},
@@ -549,6 +548,7 @@
     {"name":"inst_64988881","path":"rooms/TopIce/TopIce.yy",},
     {"name":"inst_1D3FA40F","path":"rooms/TopIce/TopIce.yy",},
     {"name":"inst_5738F969","path":"rooms/TopIce/TopIce.yy",},
+    {"name":"inst_1CF0F0A1","path":"rooms/TopIce/TopIce.yy",},
   ],
   "isDnd":false,
   "layers":[

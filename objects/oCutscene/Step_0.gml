@@ -92,7 +92,33 @@ switch (currentAction[0])
 
 		break
 		
+	
+	case "ascend":
+	
+		var target = currentAction[1];
+		var targetX = currentAction[2];
+		var targetY = currentAction[3];
+		var targetYEndPosition = currentAction[4];
+		var spdY = currentAction[5];
 		
+		
+		
+		var _distX = targetY - targetYEndPosition;
+	 	Oplayer.cutsceneControlled = true;
+		
+	
+	
+	
+	
+		 if abs(target.y - targetYEndPosition) <= spdY
+		    {
+		        target.y = targetYEndPosition;
+		        target.yspd = 0;
+				
+		        target.cutsceneControlled = false;
+
+		        finished = true;
+		    }
 		
 		
 		

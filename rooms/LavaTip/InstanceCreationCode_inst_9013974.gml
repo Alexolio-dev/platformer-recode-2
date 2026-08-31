@@ -1,4 +1,4 @@
-Text = "check creation code"
+Text = "The last summit"
 
 
 //ok so the idea is that we make a cutscene which introduces the burger boss and then the volcano explode meaning we follow it up the mountain in a lava go up section with falling paltforms.

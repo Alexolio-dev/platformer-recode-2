@@ -58,7 +58,6 @@
   "resources":[
     {"id":{"name":"fontForPauseScreen","path":"fonts/fontForPauseScreen/fontForPauseScreen.yy",},},
     {"id":{"name":"fontForSign","path":"fonts/fontForSign/fontForSign.yy",},},
-    {"id":{"name":"oAutomaticSideScroller","path":"objects/oAutomaticSideScroller/oAutomaticSideScroller.yy",},},
     {"id":{"name":"Oboss","path":"objects/Oboss/Oboss.yy",},},
     {"id":{"name":"oButton","path":"objects/oButton/oButton.yy",},},
     {"id":{"name":"oBuzzSaw","path":"objects/oBuzzSaw/oBuzzSaw.yy",},},
