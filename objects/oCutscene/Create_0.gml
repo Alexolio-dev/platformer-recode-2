@@ -13,6 +13,9 @@ actionStarted = false;
 //wait timer
 waitTimer = 0;
 
+//create the boss for the cutscene
+//cutsceneBoss = instance_create_layer(540, 400, "Instances", Oboss);
+
 //the first test scene
 scene[0] = [
     ["move", Oplayer, Oplayer.x + 200, Oplayer.y, 2],
@@ -50,6 +53,6 @@ scene[2] = [
 ]
 
 scene[3] = [
-	["ascend", Oboss, 720 , 4000 ,  3400, -5],
+	["ascend",Oboss, 540 , 4000 ,  3400, 20],
 	["end"]
 ]

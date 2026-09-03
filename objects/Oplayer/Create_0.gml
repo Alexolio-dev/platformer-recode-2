@@ -181,11 +181,9 @@ if (global.checkpointR == room)
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);
 
-//gotta figure out cutscenes
-//https://www.youtube.com/watch?v=yvdelcSEXc8
-//"Fine i'll do it myself" me after spending hours to just learn not to follow an 8 year old turoial
 
 //also add a "are u sure" button, when pressing quit game.
+
 
 //fake walls for secret areas
 //https://www.youtube.com/watch?v=cI_EWfYJvd4 

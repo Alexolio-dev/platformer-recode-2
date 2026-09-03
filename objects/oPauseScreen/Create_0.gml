@@ -8,6 +8,14 @@ menuY = display_get_gui_height() / 2;
 buttonList = ["Resume","Main Menu","Quit Game"];
 selectedIndex = 0;
 
-//areYouSure = ["no", "yes"];
+areYouSure = ["no", "yes"];
+showNormalOptios = true;
 
-//menuState = main;
+enum pause
+{
+	main,
+	confirm,
+	
+}
+menuState = pause.main;
+

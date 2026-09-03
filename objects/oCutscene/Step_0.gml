@@ -92,6 +92,9 @@ switch (currentAction[0])
 
 		break
 		
+		
+		
+		
 	
 	case "ascend":
 	
@@ -102,23 +105,33 @@ switch (currentAction[0])
 		var spdY = currentAction[5];
 		
 		
+		if actionStarted == false
+		{
+			target.x = targetX;
+			target.y = targetY;
+			
+			Oplayer.cutsceneControlled = true;
+			
+			actionStarted = true;
+		}
 		
-		var _distX = targetY - targetYEndPosition;
-	 	Oplayer.cutsceneControlled = true;
 		
-	
-	
-	
-	
-		 if abs(target.y - targetYEndPosition) <= spdY
+		target.y -= spdY;
+		
+		
+		if (target.y <= targetYEndPosition)
 		    {
 		        target.y = targetYEndPosition;
-		        target.yspd = 0;
+		      
 				
-		        target.cutsceneControlled = false;
+		        Oplayer.cutsceneControlled = false;
 
 		        finished = true;
 		    }
+		break
+		
+		
+		
 		
 		
 		
@@ -130,4 +143,4 @@ switch (currentAction[0])
 }
 
 
-
+//instance_create_layer(targetX, targetY, "Instances",target);
