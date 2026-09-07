@@ -174,15 +174,15 @@ if (global.checkpointR == room)
 
 
 // ietsje duidelijkere hitbox
-// platforms die alleen moven als je er op loopt ?? maybe later
+// platforms die alleen moven als je er op loopt ?? maybe later  !!
+
+
+//cutscene beetje meer !!
 
 
 //alarms to keep track off
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);
-
-
-//also add a "are u sure" button, when pressing quit game.
 
 
 //fake walls for secret areas

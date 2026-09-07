@@ -1,3 +1,3 @@
 rising = false;
 
-maxLava = 0;
+maxLava = 1488;

@@ -16,7 +16,7 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fontForPauseScreen);
 
-//if showNormalOptios == true 
+if menuState == pause.main
 {
 
 for (var i = 0; i< array_length(buttonList); i++)
@@ -37,7 +37,7 @@ for (var i = 0; i< array_length(buttonList); i++)
 
 
 
-if showNormalOptios == false 
+if menuState == pause.confirm
 {
 
 

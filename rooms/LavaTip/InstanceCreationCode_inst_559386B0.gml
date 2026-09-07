@@ -1,0 +1,1 @@
+blocksForTriggers = 4;

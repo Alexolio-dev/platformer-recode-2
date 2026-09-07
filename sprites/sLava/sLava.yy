@@ -45,7 +45,7 @@
   "origin":0,
   "parent":{
     "name":"Hazards",
-    "path":"folders/sprites/spritesForLevelObjectsw/Hazards.yy",
+    "path":"folders/Z/sprites/spritesForLevelObjectsw/Hazards.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

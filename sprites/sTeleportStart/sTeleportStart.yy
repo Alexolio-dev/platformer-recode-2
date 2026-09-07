@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Movement",
-    "path":"folders/sprites/spritesForLevelObjectsw/Movement.yy",
+    "path":"folders/Z/sprites/spritesForLevelObjectsw/Movement.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

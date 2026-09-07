@@ -127,6 +127,7 @@ switch (currentAction[0])
 		        Oplayer.cutsceneControlled = false;
 
 		        finished = true;
+				instance_destroy(target);
 		    }
 		break
 		

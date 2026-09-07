@@ -1,7 +1,6 @@
 if place_meeting(x,y,Oplayer)
 {
 	blocksThatWillAppear = blocksForTriggers;
-	
 }
 
 
@@ -46,4 +45,15 @@ if blocksThatWillAppear == 3 && !blocksSpawned
 	blocksSpawned = true;
 }
 
+if blocksThatWillAppear == 4 && !blocksSpawned
+{
+	instance_create_layer(1184, 2304, "Instances" , oFallingBlock);
+	instance_create_layer(1040, 2246, "Instances" , oFallingBlock);
+	instance_create_layer(976, 2158, "Instances" , oIceBlock);
+	//instance_create_layer(1140, 2736, "Instances" , oFallingBlock);
+	instance_create_layer(880, 2096, "Instances" , oFallingBlock);
+	instance_create_layer(816, 2096, "Instances" , oFallingBlock);
 
+	image_index = 1;
+	blocksSpawned = true;
+}

@@ -1,5 +1,14 @@
 //setting up everything so that the cutscene can get ready to start and run nicely
 
+//to add!!!!
+//rubble cutscene!
+//boss screech cutscene
+//lava bubbling cutscene
+//question/exclamation mark above player
+
+
+
+
 //general stuff
 scene = [];
 
@@ -56,3 +65,4 @@ scene[3] = [
 	["ascend",Oboss, 540 , 4000 ,  3400, 20],
 	["end"]
 ]
+
