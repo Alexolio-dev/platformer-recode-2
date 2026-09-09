@@ -66,3 +66,15 @@ scene[3] = [
 	["end"]
 ]
 
+scene[4] = [
+	["questionmark", Oplayer, 1.5],
+	//["move", Oplayer, Oplayer.x - 50, Oplayer.y, 3],
+	["end"]
+]
+
+scene[5] = [
+	["falling rubble", 5],
+	["end"]
+]
+
+

@@ -119,7 +119,7 @@ windState = noone;
 
 
 //direction of the particles
-//particleDirection = noone;
+particleDirection = noone;
 
 
 //timer to wait for wind change

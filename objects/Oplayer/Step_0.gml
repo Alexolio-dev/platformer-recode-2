@@ -756,6 +756,9 @@ xspd = oldXspd;
 	
 	
 	
+	
+	
+	
 //crushed death code
 if place_meeting( x, y, oWall)
 {
@@ -927,7 +930,12 @@ if (string_ends_with(code, "TIKI")) {
 	
 	
 	
-	
+	if oParticleHolder.fallingRubble == true
+	{
+	part_type_alpha1(global.particleRubble, 1);
+	part_type_direction(global.particleSnow, 270, 270, 0, 0);
+	part_particles_create(global.particleSystem, x, y, global.particleRubble, 80);
+	}
 	
 	
 //if player dead this don matter

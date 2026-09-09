@@ -2,10 +2,11 @@
 //alarm[0] = time;
 
 
+
 //system for the particles
 global.particleSystem = part_system_create();
 part_system_layer(global.particleSystem, "Instances");
-part_system_depth(global.particleSystem, 15)
+part_system_depth(global.particleSystem, -1000)
 
 
 
@@ -60,5 +61,27 @@ part_type_colour1(global.particlePlatform, c_white);
 //https://www.youtube.com/watch?v=8AcyZaNWjJk
 //if there are any problems with the pause mechanic the video at exactly 5:50 might pose some help
 
+//rubble particle
+global.particleRubble = part_type_create();
+
+part_type_size( global.particleRubble,1,1, 0, 0);
+part_type_direction(global.particleRubble, 270, 270, 0, 0);
+part_type_speed(global.particleRubble, 4, 7, 0, 0);
+part_type_alpha1(global.particleRubble, 0.7);
+part_type_life(global.particleRubble, 120, 220);
+part_type_sprite(global.particleRubble, sRubble, true, false, false);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+fallingRubble = false;

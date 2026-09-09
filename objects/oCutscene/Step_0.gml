@@ -82,12 +82,13 @@ switch (currentAction[0])
 		Oplayer.cutsceneControlled = true;
 		}
 		
+		
 		waitTimer--;
 		
 		if waitTimer <= 0
 			{
 			finished = true;
-			Oplayer.cutsceneControlled = true;
+			Oplayer.cutsceneControlled = false;
 			};
 
 		break
@@ -131,6 +132,70 @@ switch (currentAction[0])
 		    }
 		break
 		
+		
+		
+		
+		
+		
+	case "questionmark":
+		
+		
+		
+			
+			
+		var target = currentAction[1];
+			
+		
+		if !actionStarted{
+		instance_create_layer(target.x -50 ,target.y - 100, "Instances",oQuestionMark);
+		waitTimer = currentAction[2] * game_get_speed(gamespeed_fps);
+		actionStarted = true;
+		Oplayer.cutsceneControlled = true;
+		}
+			
+		waitTimer--;
+		
+		if waitTimer <= 0
+			{
+			finished = true;
+			Oplayer.cutsceneControlled = false;
+			instance_destroy(oQuestionMark);
+			};
+		
+		break
+		
+		
+		
+		
+		
+		
+		
+	case "falling rubble":
+		
+		
+		
+		if !actionStarted{
+		waitTimer = currentAction[1] * game_get_speed(gamespeed_fps);
+		oParticleHolder.fallingRubble = true;
+		actionStarted = true;
+		Oplayer.cutsceneControlled = true;
+		}
+		
+		waitTimer--;
+		
+		if waitTimer <= 0
+		{
+		finished = true;
+		oParticleHolder.fallingRubble  = false;
+		Oplayer.cutsceneControlled = false;
+		};
+		
+		
+		
+		
+		
+		
+		break
 		
 		
 		

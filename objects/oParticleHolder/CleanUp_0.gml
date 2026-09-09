@@ -6,3 +6,4 @@ part_type_destroy(global.particleSandstorm);
 part_type_destroy(global.particlePlayerJump);
 part_type_destroy(global.particleSnow);
 part_type_destroy(global.particlePlatform);
+part_type_destroy(global.particleRubble);
