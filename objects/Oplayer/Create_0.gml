@@ -177,9 +177,6 @@ if (global.checkpointR == room)
 // platforms die alleen moven als je er op loopt ?? maybe later  !!
 
 
-//cutscene beetje meer !!
-
-
 //alarms to keep track off
 //alarm 1 = death;
 //alarm 2 = wind mechanic (desert);

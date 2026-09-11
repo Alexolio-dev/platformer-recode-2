@@ -933,8 +933,16 @@ if (string_ends_with(code, "TIKI")) {
 	if oParticleHolder.fallingRubble == true
 	{
 	part_type_alpha1(global.particleRubble, 1);
-	part_type_direction(global.particleSnow, 270, 270, 0, 0);
+	part_type_direction(global.particleRubble, 270, 270, 0, 0);
 	part_particles_create(global.particleSystem, x, y, global.particleRubble, 80);
+	}
+	
+	
+	if oParticleHolder.lavaBubbling == true
+	{
+	part_type_alpha1(global.particleLavaBubbling, 1);
+	part_type_direction(global.particleLavaBubbling, 270, 270, 0, 0);
+	part_particles_create(global.particleSystem, oLava.x, oLava.y, global.particleLavaBubbling, 80);
 	}
 	
 	

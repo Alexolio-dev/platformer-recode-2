@@ -57,3 +57,9 @@ if blocksThatWillAppear == 4 && !blocksSpawned
 	image_index = 1;
 	blocksSpawned = true;
 }
+
+
+if blocksThatWillAppear == 5 && !blocksSpawned
+{
+	Oboss.bossFightStarted = true;
+}

@@ -1,10 +1,10 @@
 //setting up everything so that the cutscene can get ready to start and run nicely
 
 //to add!!!!
-//rubble cutscene!
-//boss screech cutscene
-//lava bubbling cutscene
-//question/exclamation mark above player
+//rubble cutscene! (gotta find out)
+//boss screech cutscene will come with audio
+//lava bubbling cutscene will do
+//question/exclamation mark above player done
 
 
 
@@ -77,4 +77,9 @@ scene[5] = [
 	["end"]
 ]
 
+scene[6] = [
+	["bubbling lava", 5],
+	["end"]
+
+]
 

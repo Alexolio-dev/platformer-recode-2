@@ -45,7 +45,7 @@
   "origin":0,
   "parent":{
     "name":"platformsprites",
-    "path":"folders/Z/sprites/platformsprites.yy",
+    "path":"folders/sprites/platformsprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

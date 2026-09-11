@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"otherSprites",
+    "path":"folders/sprites/otherSprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

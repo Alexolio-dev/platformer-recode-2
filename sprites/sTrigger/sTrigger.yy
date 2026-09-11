@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"ExtraStuffLikeInvisibleWalls",
-    "path":"folders/Z/sprites/spritesForLevelObjectsw/ExtraStuffLikeInvisibleWalls.yy",
+    "path":"folders/sprites/spritesForLevelObjectsw/ExtraStuffLikeInvisibleWalls.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

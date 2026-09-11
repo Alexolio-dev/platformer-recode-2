@@ -6,8 +6,8 @@
   "name":"oQuestionMark",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"background effects",
+    "path":"folders/objects/levelObjects/background effects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

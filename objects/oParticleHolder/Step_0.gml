@@ -3,13 +3,8 @@
 
 if fallingRubble == true
 {
-	part_type_alpha1(global.particleSandstorm, 1);
-	part_type_direction(global.particleSnow, 270, 270, 0, 0);
-	part_particles_create(global.particleSystem, x, y, global.particleSnow, 80);
+	part_type_alpha1(global.particleRubble, 1);
+	part_type_direction(global.particleRubble, 270, 270, 0, 0);
+	part_particles_create(global.particleSystem, x, y, global.particleRubble, 80);
 }
 
-if (fallingRubble)
-{
-    part_particles_create(global.particleSystem, x, y, global.particlePlayerJump, 80);
-    show_debug_message(part_system_exists(global.particleSystem));
-}

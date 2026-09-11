@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"stuff that effects the player but i lowkey cant describe",
-    "path":"folders/Z/sprites/spritesForLevelObjectsw/stuff that effects the player but i lowkey cant describe.yy",
+    "path":"folders/sprites/spritesForLevelObjectsw/stuff that effects the player but i lowkey cant describe.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

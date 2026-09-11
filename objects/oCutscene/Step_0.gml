@@ -73,6 +73,8 @@ switch (currentAction[0])
 		
 		
 		
+		
+		
 		//in case of needing to wait do this:
 	case "wait":
 		
@@ -96,6 +98,7 @@ switch (currentAction[0])
 		
 		
 		
+		
 	
 	case "ascend":
 	
@@ -110,7 +113,7 @@ switch (currentAction[0])
 		{
 			target.x = targetX;
 			target.y = targetY;
-			
+			Oboss.cutsceneStarted = true;
 			Oplayer.cutsceneControlled = true;
 			
 			actionStarted = true;
@@ -126,7 +129,7 @@ switch (currentAction[0])
 		      
 				
 		        Oplayer.cutsceneControlled = false;
-
+				Oboss.cutsceneStarted = false;
 		        finished = true;
 				instance_destroy(target);
 		    }
@@ -137,11 +140,9 @@ switch (currentAction[0])
 		
 		
 		
+		
+		
 	case "questionmark":
-		
-		
-		
-			
 			
 		var target = currentAction[1];
 			
@@ -191,11 +192,36 @@ switch (currentAction[0])
 		};
 		
 		
+		break
 		
 		
+		
+		
+		
+		
+		
+	case "bubbling lava":
+		
+		if !actionStarted{
+		waitTimer = currentAction[1] * game_get_speed(gamespeed_fps);
+		oParticleHolder.lavaBubbling = true;
+		actionStarted = true;
+		Oplayer.cutsceneControlled = true;
+		}
+		
+		waitTimer--;
+		
+		if waitTimer <= 0
+		{
+		finished = true;
+		oParticleHolder.lavaBubbling = false;
+		Oplayer.cutsceneControlled = false;
+		};
 		
 		
 		break
+		
+		
 		
 		
 		
