@@ -182,6 +182,9 @@ if (global.checkpointR == room)
 //alarm 2 = wind mechanic (desert);
 
 
+//https://www.youtube.com/watch?v=-umkPHw-BZk
+
+
 //fake walls for secret areas
 //https://www.youtube.com/watch?v=cI_EWfYJvd4 
 
