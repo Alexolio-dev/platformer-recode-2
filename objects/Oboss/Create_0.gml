@@ -9,6 +9,7 @@ AttackGoUpTimer = 0;
 chosen = false;
 locationX = 0;
 locationY = 0;
+activateFighting = true;
 
 
 bossFightStarted = false;
@@ -19,13 +20,21 @@ theWay = 1;
 face = sign(theWay);
 timer = 0;
 
+rngChosen = false;
+randomNumber = 0;
+
+rightXPlace = false;
+rightYPlace = false;
+
+
+
 
 enum state
 {
 	main,
 	attack,
 	returning,
-	
+	specialAttack,
 }
 
 
@@ -36,3 +45,11 @@ homeY = y
 //dashTargetY
 dashSpeed = 4;
 timer = 0;
+otherTimer = 0;
+
+
+
+downSlam = false;
+dashActive = false;
+attackAgain = 0;
+attackAgainVariable = false;

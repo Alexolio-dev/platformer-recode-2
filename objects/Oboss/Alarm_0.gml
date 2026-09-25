@@ -1,0 +1,6 @@
+activateFighting = true;
+
+
+
+
+
