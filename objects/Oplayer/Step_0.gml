@@ -817,12 +817,13 @@ else
 	
 
 	
-	
-if keyboard_check_pressed(ord("R"))
+if	cutsceneRunning == false
 {
-	death();
+	if keyboard_check_pressed(ord("R"))
+	{
+		death();
+	}
 }
-	
 
 
 

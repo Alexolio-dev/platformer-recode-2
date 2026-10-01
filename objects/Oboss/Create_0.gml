@@ -5,6 +5,8 @@ cutsceneStarted = false;
 attacks = 0;
 maxAttacks = 0;
 AttackGoUpTimer = 0;
+HP = 3;
+
 
 chosen = false;
 locationX = 0;
@@ -35,6 +37,7 @@ enum state
 	attack,
 	returning,
 	specialAttack,
+	dead,
 }
 
 
@@ -53,3 +56,16 @@ downSlam = false;
 dashActive = false;
 attackAgain = 0;
 attackAgainVariable = false;
+
+
+enum phase
+{
+	goToMiddle,
+	slam,
+	recover,
+}
+
+specialPhase = 0;   // 0 = go to middle, 1 = slam, 2 = recover
+specialTimer = 0;
+
+

@@ -1,4 +1,4 @@
-triggerScene = 6;
+triggerScene = 7;
 
 //je komt aan:
 

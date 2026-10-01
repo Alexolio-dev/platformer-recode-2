@@ -1,13 +1,19 @@
 // if we are doen witht he cutscene destroy the cutscene object and move tot he next scene
 if (doneWithCutscene == true)
 {
+	cutsceneActive = false;
 	doneWithCutscene = false;
 	instance_destroy();
     exit;
 }
 
 
-
+if cutsceneActive == true
+{
+	Oplayer.cutsceneRunning = true;
+} else {
+	Oplayer.cutsceneRunning = false;
+}
 
 
 // if the action has finished move to the next action
@@ -35,7 +41,7 @@ switch (currentAction[0])
 {
 	//in case of needing to mvoe do this:
     case "move":
-	
+		cutsceneActive = true;
 		//setting up all the commands for the array
         var target = currentAction[1];
 		var targetX = currentAction[2];
@@ -66,7 +72,7 @@ switch (currentAction[0])
 		    }
 		
 	
-        break
+        break;
 		
 		
 		
@@ -77,7 +83,7 @@ switch (currentAction[0])
 		
 		//in case of needing to wait do this:
 	case "wait":
-		
+		cutsceneActive = true;
 		if !actionStarted{
 		waitTimer = currentAction[1] * game_get_speed(gamespeed_fps);
 		actionStarted = true;
@@ -93,7 +99,7 @@ switch (currentAction[0])
 			Oplayer.cutsceneControlled = false;
 			};
 
-		break
+		break;
 		
 		
 		
@@ -101,7 +107,7 @@ switch (currentAction[0])
 		
 	
 	case "ascend":
-	
+		cutsceneActive = true;
 		var target = currentAction[1];
 		var targetX = currentAction[2];
 		var targetY = currentAction[3];
@@ -133,7 +139,7 @@ switch (currentAction[0])
 		        finished = true;
 				instance_destroy(target);
 		    }
-		break
+		break;
 		
 		
 		
@@ -143,7 +149,7 @@ switch (currentAction[0])
 		
 		
 	case "questionmark":
-			
+		cutsceneActive = true;
 		var target = currentAction[1];
 			
 		
@@ -163,7 +169,7 @@ switch (currentAction[0])
 			instance_destroy(oQuestionMark);
 			};
 		
-		break
+		break;
 		
 		
 		
@@ -172,7 +178,7 @@ switch (currentAction[0])
 		
 		
 	case "falling rubble":
-		
+		cutsceneActive = true;
 		
 		
 		if !actionStarted{
@@ -192,7 +198,7 @@ switch (currentAction[0])
 		};
 		
 		
-		break
+		break;
 		
 		
 		
@@ -201,7 +207,7 @@ switch (currentAction[0])
 		
 		
 	case "bubbling lava":
-		
+		cutsceneActive = true;
 		if !actionStarted{
 		waitTimer = currentAction[1] * game_get_speed(gamespeed_fps);
 		oParticleHolder.lavaBubbling = true;
@@ -219,16 +225,38 @@ switch (currentAction[0])
 		};
 		
 		
-		break
+		break;
 		
 		
+	case "screen shake":
+	{
+		cutsceneActive = true;
+		if !actionStarted{
+		waitTimer = currentAction[1] * game_get_speed(gamespeed_fps);
+		actionStarted = true;
+		Oplayer.cutsceneControlled = true;
+		oCamera.shake = true;
+		}
+		
+		
+		waitTimer--;
+		
+		if waitTimer <= 0
+		{
+		oCamera.shake = false;
+		finished = true;
+		Oplayer.cutsceneControlled = false;
+		};
+	}
+		
+		break;
 		
 		
 		
 		
 		
 		case "end":
-		
+		cutsceneActive = false;
 		doneWithCutscene = true;
 		
 		break;

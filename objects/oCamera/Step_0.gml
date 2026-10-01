@@ -42,6 +42,11 @@ else
 CamOffSetY = lerp(CamOffSetY, TargetOffset, 0.03);
 
 
+if shake == true
+{
+	value = random_range(-1,1);
+}
+
 
 
 //exit if there is no player
@@ -66,4 +71,5 @@ finalCamY += (_camY - finalCamY) * camTrailSpd;
 
 
 //set camera coordinates
-camera_set_view_pos(view_camera[0], _camX, _camY - 20);
+camera_set_view_pos(view_camera[0], _camX, _camY - 20 + value);
+

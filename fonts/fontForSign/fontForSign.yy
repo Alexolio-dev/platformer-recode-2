@@ -120,7 +120,7 @@
   "name":"fontForSign",
   "parent":{
     "name":"Fonts",
-    "path":"folders/Fonts.yy",
+    "path":"folders/objects/Entities/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

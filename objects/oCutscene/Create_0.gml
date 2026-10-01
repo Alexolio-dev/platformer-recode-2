@@ -14,6 +14,7 @@ scene = [];
 
 finished = false;
 doneWithCutscene = false;
+cutsceneActive = false;
 
 actionIndex = 0;
 sceneIndex = 0;
@@ -79,6 +80,12 @@ scene[5] = [
 
 scene[6] = [
 	["bubbling lava", 5],
+	["end"]
+
+]
+
+scene[7] = [
+	["screen shake", 3],
 	["end"]
 
 ]

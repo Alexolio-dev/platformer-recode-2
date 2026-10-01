@@ -8,3 +8,6 @@ camOffSetMaxDown = 100;
 camOffSetMaxUp = -100;
 //crouch timer type shi
 CrouchTimer = 0;
+
+shake = false;
+value = 0;

@@ -76,7 +76,7 @@ jumpHoldFrames[0] = 18;
 jumpHoldFrames[1] = 10;
 jspd[0] = -3.5;
 jspd[1] = -2.85;
-	
+
 	
 //coyote time
 //hang time
@@ -108,6 +108,7 @@ crushDeathTime = 7;
 
 //death
 playerDead = false;
+cutsceneRunning = false;
 
 //jumping mvong
 jumpMomentumX = 0;
