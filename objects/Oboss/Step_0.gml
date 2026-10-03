@@ -387,7 +387,7 @@ if maxAttacks >= 1 && activateFighting == true
 		  {
 		  //go to the middle of the arena slowly
 		  var midX = 886;
-		  var midY = 1457;
+		  var midY = 1328;
 		  
 		  
 		  //go to middle of stage, make an energy ball//and some particles and then slam down creating a wave attack, after which youc an attack the boss
@@ -403,7 +403,7 @@ if maxAttacks >= 1 && activateFighting == true
 		  
 		  if (abs(dY) > 1) 
 		  {
-		  x += sign(dY) * 1; 
+		  y += sign(dY) * 1; 
 		  }else{
 		  y = midY;
 		  }
@@ -423,12 +423,12 @@ if maxAttacks >= 1 && activateFighting == true
 			 specialTimer++;
 			 if specialTimer >= 60
 			 {
-			 if !place_meeting(x,y + 7, oWall)
+			 if !place_meeting(x,y + 1, oWall)
 			 {
 				 y += 7;
 			 } else
 			 {
-				 y = 0;
+				// y = 0;
 				 specialTimer = 0;
 				 specialPhase = phase.recover;
 			 }
@@ -436,11 +436,12 @@ if maxAttacks >= 1 && activateFighting == true
 	}
 		  
 		  
-		  if specialTimer == phase.recover
+		  if specialPhase == phase.recover
 		  {
 			  
-			  if place_meeting(x,y,Oplayer)
+			  if place_meeting(x, y,Oplayer.bbox_bottom)
 			  {
+				  
 				  HP -= 1;
 				  //sprite_index = oHurtBurger;
 			  }
