@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oWave",
+  "%Name":"oWin",
   "eventList":[],
   "managed":true,
-  "name":"oWave",
+  "name":"oWin",
   "overriddenProperties":[],
   "parent":{
     "name":"platformer recode",
     "path":"platformer recode.yyp",
   },
-  "parentObjectId":{
-    "name":"oDeathpit",
-    "path":"objects/oDeathpit/oDeathpit.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite38",
-    "path":"sprites/Sprite38/Sprite38.yy",
+    "name":"sWin",
+    "path":"sprites/sWin/sWin.yy",
   },
   "spriteMaskId":null,
   "visible":true,

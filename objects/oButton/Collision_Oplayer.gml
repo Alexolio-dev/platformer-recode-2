@@ -59,7 +59,15 @@ if blocksThatWillAppear == 4 && !blocksSpawned
 }
 
 
+//
 if blocksThatWillAppear == 5 && !blocksSpawned
 {
 	Oboss.bossFightStarted = true;
+	instance_destroy();
+}
+
+/*/if Oboss.HP == 0
+{
+	Bossfight = false;
+	//Oboss.bossFightStarted = false;
 }

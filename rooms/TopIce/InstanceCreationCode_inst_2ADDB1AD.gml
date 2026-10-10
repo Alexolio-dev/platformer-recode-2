@@ -1,3 +1,3 @@
 moveType = "horizontal";
 radius = 600;
-rotSpd = 0.55;
+rotSpd = 0.45;

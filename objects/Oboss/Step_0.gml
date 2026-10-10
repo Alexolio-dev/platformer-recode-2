@@ -6,17 +6,35 @@ image_index = 0;
 	image_index = 1;
  }
  
- //debu messages for extra info
+ /*/debu messages for extra info
 show_debug_message(bossState);
 show_debug_message(activateFighting);
 show_debug_message(maxAttacks);
 show_debug_message(chosen);
 show_debug_message(randomNumber);
+ /*/
+ //dwas
+ 
+
+ if HP == 0
+{
+	specialTimer ++;
+	
+	if specialTimer == 240
+	{
+		Oplayer.cutsceneRunning = false;
+	}
+	
+}
  
  
 if HP == 0
 	{
-		bossState = state.dead;
+		//bossState = state.dead;
+		bossFightStarted = false;
+		specialTimer = 0;
+		//instance_destroy();
+		//Oplayer.cutsceneRunning = false;
 	}
  
  
@@ -30,8 +48,8 @@ if bossFightStarted == true
 	var targetX = Oplayer.x;
 	var targetY = Oplayer.y;
 	var doer = Oboss;
-	var spdY = 5;
-	var spdX = 5;
+	var spdY = 7;
+	var spdX = 7;
 	
 	
 //if there are not 3 attacks and the timer is not going up, add an attack	
@@ -65,7 +83,8 @@ if attacks == 5
 	
 	attacks = 0;
 	bossState = state.specialAttack;
-}
+}//penis
+
 
 
 
@@ -177,7 +196,7 @@ if maxAttacks >= 1 && activateFighting == true
 		
 		// 
 		//dash attack
-		if randomNumber < 2.5
+		if randomNumber < 1.7
 		{
 			// give a little bit of time bofre the dash
 			timer++;
@@ -191,7 +210,7 @@ if maxAttacks >= 1 && activateFighting == true
 		//if we arent meeting the players target cords we change ( wanne change this to a single line of cord at one moment that saves, but will do that layer)
 		if (abs(gotopointX) > spdX)
 			{
-				x += sign(gotopointX) * spdX
+				x += sign(gotopointX) * spdX;
 
 			}
 			else
@@ -205,7 +224,7 @@ if maxAttacks >= 1 && activateFighting == true
 			//exactly the same as the last one but for y
 			if (abs(gotopointY) > spdY)
 			{
-				y += sign(gotopointY) * spdY
+				y += sign(gotopointY) * spdY;
 
 			}
 			else
@@ -226,7 +245,7 @@ if maxAttacks >= 1 && activateFighting == true
 	
 	//
 			//do multiple slams
-			if randomNumber > 2.5
+			if randomNumber > 3.4
 			{
 				//set location like last example
 				var gotopointX = locationX - x;
@@ -235,7 +254,7 @@ if maxAttacks >= 1 && activateFighting == true
 				//do exactly the same
 				if (abs(gotopointX) > spdX)
 			{
-				x += sign(gotopointX) * spdX
+				x += sign(gotopointX) * spdX;
 
 			}
 			else
@@ -250,7 +269,7 @@ if maxAttacks >= 1 && activateFighting == true
 			{
 			if (abs(gotopointY) > spdY)
 			{
-				y += sign(gotopointY) * spdY
+				y += sign(gotopointY) * spdY;
 
 			}
 			else
@@ -268,7 +287,7 @@ if maxAttacks >= 1 && activateFighting == true
 			
 			
 			//do multiple dashes
-			//if randomNumber > 2.5
+			if randomNumber > 1.7 && randomNumber < 3.4
 			//do i ahve to say it again?
 			{
 				var gotopointX = locationX - x;
@@ -428,7 +447,10 @@ if maxAttacks >= 1 && activateFighting == true
 				 y += 7;
 			 } else
 			 {
-				// y = 0;
+				 //y = oWall;
+				 //instead of this create them when touching the groun in the objects self
+				instance_create_layer(Oboss.x + 15, Oboss.y - 31,"Instances",oWaveLeft);
+				 instance_create_layer(Oboss.x - 15, Oboss.y - 31,"Instances",oWaveRight);
 				 specialTimer = 0;
 				 specialPhase = phase.recover;
 			 }
@@ -438,20 +460,24 @@ if maxAttacks >= 1 && activateFighting == true
 		  
 		  if specialPhase == phase.recover
 		  {
+			  Oplayer.cutsceneRunning = true;
+			  specialTimer++;  
 			  
-			  if place_meeting(x, y,Oplayer.bbox_bottom)
+			  if place_meeting(x, y + 10 ,Oplayer) && triggerd == false
 			  {
-				  
-				  HP -= 1;
-				  //sprite_index = oHurtBurger;
+				  triggerd = true;
+				  Oplayer.y -= 15;
+				  HP -= 3;
 			  }
 			  
 			  
-			specialTimer++;  
+			
 			  if specialTimer == 180
 			  {
+				 triggerd = false;
 				  specialTimer = 0;
 				  specialPhase = phase.goToMiddle;
+				  Oplayer.cutsceneRunning = false;
 				  bossState = state.returning;
 			  }
 		  }  
@@ -477,6 +503,24 @@ if maxAttacks >= 1 && activateFighting == true
 
 
 
+
+
+
+
+
+
+if triggerd == false
+{
+	sprite_index = sLevelEnd;
+	
+} else
+{
+	sprite_index = sBurgerHurt;
+} 
+if HP == 0
+{
+	sprite_index = sBossDead;
+}
 
 
 

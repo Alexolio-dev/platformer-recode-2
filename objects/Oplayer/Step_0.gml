@@ -768,29 +768,40 @@ if place_meeting( x, y, oWall)
 	crushDeathTimer = 0;
 }
 
-
-
+ 
+if (place_meeting(x, y, oDeathpit))
+{
+    show_debug_message(
+        "Deathpit overlap | cutsceneRunning: "
+        + string(Oplayer.cutsceneRunning)
+        + " | playerDead: "
+        + string(Oplayer.playerDead)
+    );
+}
+ 
 
 
 
 //send the player back to the savespot
-if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oDeathpit)))
+if cutsceneRunning == false
 {
-	//player is dead
-	playerDead = true;
+	if  (!playerDead && (crushDeathTimer > crushDeathTime || place_meeting( x, y, oDeathpit)))
+	{
+		//player is dead
+		playerDead = true;
 	
-	// do the sprite shenenagians with setting it to frame 0  and making it silde 1 sprite per second
-	//oPauseManager.pauseTag("pausable", 1);
+		// do the sprite shenenagians with setting it to frame 0  and making it silde 1 sprite per second
+		//oPauseManager.pauseTag("pausable", 1);
 	
-	sprite_index = sPlayerDeath;
-	image_index = 0;
-	image_speed = 1;
-	yspd = -10;
+		sprite_index = sPlayerDeath;
+		image_index = 0;
+		image_speed = 1;
+		yspd = -10;
 	
-	//trigger the alarm to go off
-	alarm[0] = game_get_speed(gamespeed_fps) * 2.5;
-} 
-
+		//trigger the alarm to go off
+		alarm[0] = game_get_speed(gamespeed_fps) * 2.5;
+	} 
+}
 
 
 
@@ -814,7 +825,7 @@ else
 }
 	
 	
-	
+
 
 	
 if	cutsceneRunning == false
@@ -823,7 +834,7 @@ if	cutsceneRunning == false
 	{
 		death();
 	}
-}
+} 
 
 
 

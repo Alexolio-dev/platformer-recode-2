@@ -176,6 +176,7 @@ if (global.checkpointR == room)
 
 // ietsje duidelijkere hitbox
 // platforms die alleen moven als je er op loopt ?? maybe later  !!
+// i feel like i forgot something..., oh wel :)
 
 
 //alarms to keep track off

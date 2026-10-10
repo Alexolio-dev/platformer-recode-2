@@ -1,11 +1,14 @@
 // if we are doen witht he cutscene destroy the cutscene object and move tot he next scene
 if (doneWithCutscene == true)
 {
+	Oplayer.cutsceneRunning = false;
 	cutsceneActive = false;
 	doneWithCutscene = false;
 	instance_destroy();
     exit;
 }
+
+show_debug_message("cutsceneRunning");
 
 
 if cutsceneActive == true
@@ -257,6 +260,7 @@ switch (currentAction[0])
 		
 		case "end":
 		cutsceneActive = false;
+		//Oplayer.cutsceneRunning = false;
 		doneWithCutscene = true;
 		
 		break;
