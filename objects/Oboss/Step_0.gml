@@ -16,27 +16,7 @@ show_debug_message(randomNumber);
  //dwas
  
 
- if HP == 0
-{
-	specialTimer ++;
-	
-	if specialTimer == 240
-	{
-		Oplayer.cutsceneRunning = false;
-	}
-	
-}
- 
- 
-if HP == 0
-	{
-		//bossState = state.dead;
-		bossFightStarted = false;
-		specialTimer = 0;
-		//instance_destroy();
-		//Oplayer.cutsceneRunning = false;
-	}
- 
+
  
  
   //if fight started
@@ -48,8 +28,21 @@ if bossFightStarted == true
 	var targetX = Oplayer.x;
 	var targetY = Oplayer.y;
 	var doer = Oboss;
-	var spdY = 7;
-	var spdX = 7;
+	if HP == 3
+	{
+	var spdY = 4;
+	var spdX = 4;
+	}
+	else if HP == 2
+	{
+	var spdY = 6;
+	var spdX = 6;	
+	}
+	else if HP == 1
+	{
+	var spdY = 8;
+	var spdX = 8;
+	}
 	
 	
 //if there are not 3 attacks and the timer is not going up, add an attack	
@@ -76,7 +69,7 @@ if bossState == state.main
 
 
 //if we have 5 attacks, ignore al previous instructions and do a special attack.
-if attacks == 5
+if attacks == 3
 {
 	//do punishable burger stomp
 	//move_towards_point()
@@ -97,7 +90,7 @@ if attacks == 5
 if maxAttacks >= 1 && activateFighting == true
 {
 	activateFighting = false;
-	bossState = state.specialAttack;
+	bossState = state.attack;
 }
 
 
@@ -172,6 +165,7 @@ if maxAttacks >= 1 && activateFighting == true
 		
 		rngChosen = true;
 	}
+		
 		
 		//set a little timer for when we can look at these variuables??
 		timer++;
@@ -449,7 +443,7 @@ if maxAttacks >= 1 && activateFighting == true
 			 {
 				 //y = oWall;
 				 //instead of this create them when touching the groun in the objects self
-				instance_create_layer(Oboss.x + 15, Oboss.y - 31,"Instances",oWaveLeft);
+				 instance_create_layer(Oboss.x + 15, Oboss.y - 31,"Instances",oWaveLeft);
 				 instance_create_layer(Oboss.x - 15, Oboss.y - 31,"Instances",oWaveRight);
 				 specialTimer = 0;
 				 specialPhase = phase.recover;
@@ -460,14 +454,16 @@ if maxAttacks >= 1 && activateFighting == true
 		  
 		  if specialPhase == phase.recover
 		  {
-			  Oplayer.cutsceneRunning = true;
+			  
 			  specialTimer++;  
 			  
-			  if place_meeting(x, y + 10 ,Oplayer) && triggerd == false
+			  if place_meeting(x, y - 10 ,Oplayer) && triggerd == false
 			  {
+				  Oplayer.cutsceneRunning = true;
 				  triggerd = true;
 				  Oplayer.y -= 15;
-				  HP -= 3;
+				  HP -= 1;
+				  specialTimer = 0;
 			  }
 			  
 			  
@@ -523,7 +519,23 @@ if HP == 0
 }
 
 
-
+ 
+if HP == 0
+	{
+		//bossState = state.dead;
+		bossFightStarted = false;
+		//specialTimer = 0;
+		//instance_destroy();
+		//Oplayer.cutsceneRunning = false;
+		specialTimer ++;
+	
+		if specialTimer == 120
+		{
+			
+			Oplayer.cutsceneRunning = false;
+		}
+	}
+ 
 
 
 

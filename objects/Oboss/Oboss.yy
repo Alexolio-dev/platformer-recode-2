@@ -39,5 +39,8 @@
     "path":"sprites/sLevelEnd/sLevelEnd.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

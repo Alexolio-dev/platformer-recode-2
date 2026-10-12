@@ -958,6 +958,19 @@ if (string_ends_with(code, "TIKI")) {
 	}
 	
 	
+	
+	
+	
+/*/	if global.level_unlocked == 6
+{
+	room_goto(EndRoom);
+}
+	/*/
+	
+	
+	
+	
+	
 //if player dead this don matter
 if !playerDead
 {

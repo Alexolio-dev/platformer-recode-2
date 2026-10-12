@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"Hazards",
+    "path":"folders/sprites/spritesForLevelObjectsw/Hazards.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

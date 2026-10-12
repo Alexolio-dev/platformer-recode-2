@@ -9,8 +9,8 @@
   "name":"oWaveLeft",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"dangerous",
+    "path":"folders/objects/levelObjects/dangerous.yy",
   },
   "parentObjectId":{
     "name":"oDeathpit",

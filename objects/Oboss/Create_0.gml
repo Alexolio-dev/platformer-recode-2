@@ -69,3 +69,5 @@ specialPhase = 0;   // 0 = go to middle, 1 = slam, 2 = recover
 specialTimer = 0;
 
 triggerd = false;
+
+amount = 0;

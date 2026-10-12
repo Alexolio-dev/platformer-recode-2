@@ -107,6 +107,7 @@
     {"id":{"name":"PathWorldMap5","path":"paths/PathWorldMap5/PathWorldMap5.yy",},},
     {"id":{"name":"SecretPath","path":"paths/SecretPath/SecretPath.yy",},},
     {"id":{"name":"Desert","path":"rooms/Desert/Desert.yy",},},
+    {"id":{"name":"EndRoom","path":"rooms/EndRoom/EndRoom.yy",},},
     {"id":{"name":"Icy_middle","path":"rooms/Icy_middle/Icy_middle.yy",},},
     {"id":{"name":"innit","path":"rooms/innit/innit.yy",},},
     {"id":{"name":"LavaTip","path":"rooms/LavaTip/LavaTip.yy",},},
@@ -181,6 +182,7 @@
     {"roomId":{"name":"Desert","path":"rooms/Desert/Desert.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Secret_Level","path":"rooms/Secret_Level/Secret_Level.yy",},},
+    {"roomId":{"name":"EndRoom","path":"rooms/EndRoom/EndRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
