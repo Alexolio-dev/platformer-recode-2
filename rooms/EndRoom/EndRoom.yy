@@ -17,8 +17,8 @@
   ],
   "name":"EndRoom",
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"extras_for_levels",
+    "path":"folders/Rooms/extras_for_levels.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

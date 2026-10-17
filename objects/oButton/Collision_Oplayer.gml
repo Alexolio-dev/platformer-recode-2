@@ -29,7 +29,7 @@ if blocksThatWillAppear == 2 && !blocksSpawned
 {
 	instance_create_layer(5472, 1152, "Instances" , oIceBlock);
 	instance_create_layer(5392, 1216, "Instances" , oWall);
-	instance_create_layer(5408, 1216, "Instances" , oWall);
+	instance_create_layer(5552, 2080, "Instances" , oWall);
 	instance_create_layer(5424, 1216, "Instances" , oWall);
 	instance_create_layer(5456, 1072, "Instances" , oFallingBlock);
 	image_index = 1;

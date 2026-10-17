@@ -5,6 +5,15 @@ var left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 var right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 var space = keyboard_check_pressed( vk_space)
 
+if global.level_unlocked[6] == true
+{
+	room_goto(EndRoom);
+}// keyboard_check_pressed(ord("Q"))
+//{
+//	room_goto(WorldMap);
+//}
+
+
 
 //the path switch statement needs a case for each path
 //each case needs to be the name of the path itself
@@ -321,14 +330,21 @@ switch (path) {
 						path_started = false;
 			
 						room_goto(LavaTip);
-					} else {
-						//do the secret boss ending thing idk
 					}
- 
- 
- 
- 
+					
+					
+					
+					if global.level_unlocked[6] && triggerd == false
+					{
+						triggerd = true;
+						room_goto(EndRoom);
+					} 
+				
+
         break;
+		
+		
+		
 
 		case SecretPath:
 		

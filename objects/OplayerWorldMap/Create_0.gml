@@ -71,6 +71,10 @@ if (!variable_global_exists("secret_thing"))
 }
 
 
+//triggered object so you dont repeatedly get send to the end room
+triggerd = false;
+
+
 
 /*/
 Het is een lang verteld verhaal dat er een boze hamburger deity leeft in een vulkaan.

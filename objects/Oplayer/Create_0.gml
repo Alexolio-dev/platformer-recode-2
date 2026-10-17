@@ -174,8 +174,13 @@ if (global.checkpointR == room)
 
 
 
+//blibber, minion dih, bloo, freaky friends story and the literal bums.
+
+
+
 // ietsje duidelijkere hitbox
 // platforms die alleen moven als je er op loopt ?? maybe later  !!
+//desseryt stuk en verder alle single paltforms doen, pretty easy en verder dat latere stuk
 // i feel like i forgot something..., oh wel :)
 
 
