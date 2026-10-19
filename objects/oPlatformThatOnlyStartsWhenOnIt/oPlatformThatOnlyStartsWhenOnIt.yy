@@ -10,8 +10,8 @@
   "name":"oPlatformThatOnlyStartsWhenOnIt",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"weird",
+    "path":"folders/objects/platformObjects/weird.yy",
   },
   "parentObjectId":{
     "name":"oMovePlat",

@@ -41,9 +41,9 @@ enum state
 }
 
 
-bossState = state.main
-homeX = x
-homeY = y
+bossState = state.main;
+homeX = x;
+homeY = 1248;
 //dashTargetX = 
 //dashTargetY
 dashSpeed = 4;

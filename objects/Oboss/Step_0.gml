@@ -399,8 +399,8 @@ if maxAttacks >= 1 && activateFighting == true
 		  if specialPhase == phase.goToMiddle
 		  {
 		  //go to the middle of the arena slowly
-		  var midX = 886;
-		  var midY = 1328;
+		  var midX = Oplayer.x;
+		  var midY = 1228;
 		  
 		  
 		  //go to middle of stage, make an energy ball//and some particles and then slam down creating a wave attack, after which youc an attack the boss
@@ -486,6 +486,7 @@ if maxAttacks >= 1 && activateFighting == true
 	  case state.dead:
 	  {
 		 bossFightStarted = false;
+		 oButton.bossDefeated = true;
 		 // sprite_index = deadBurger;
 	  }
 	  

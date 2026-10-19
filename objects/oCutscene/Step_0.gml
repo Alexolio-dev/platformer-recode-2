@@ -8,7 +8,7 @@ if (doneWithCutscene == true)
     exit;
 }
 
-show_debug_message("cutsceneRunning");
+//show_debug_message("cutsceneRunning");
 
 
 if cutsceneActive == true
@@ -17,6 +17,7 @@ if cutsceneActive == true
 } else {
 	Oplayer.cutsceneRunning = false;
 }
+
 
 
 // if the action has finished move to the next action

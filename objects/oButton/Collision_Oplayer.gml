@@ -58,16 +58,19 @@ if blocksThatWillAppear == 4 && !blocksSpawned
 	blocksSpawned = true;
 }
 
-
-//
 if blocksThatWillAppear == 5 && !blocksSpawned
 {
 	Oboss.bossFightStarted = true;
+	instance_destroy(inst_2B15D5A4);
 	instance_destroy();
 }
 
-/*/if Oboss.HP == 0
+if bossDefeated == true
 {
-	Bossfight = false;
-	//Oboss.bossFightStarted = false;
+	bossDefeated = false;
+	instance_create_layer(3056,1440, "Instances", oWall);
+	instance_create_layer(3072,1440, "Instances", oWall);
+	instance_create_layer(3088,1440, "Instances", oWall);
+	instance_create_layer(3104,1440, "Instances", oWall);
+	instance_create_layer(3120,1440, "Instances", oWall);
 }

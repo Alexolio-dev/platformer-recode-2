@@ -946,7 +946,7 @@ if (string_ends_with(code, "TIKI")) {
 	{
 	part_type_alpha1(global.particleRubble, 1);
 	part_type_direction(global.particleRubble, 270, 270, 0, 0);
-	part_particles_create(global.particleSystem, x, y, global.particleRubble, 80);
+	part_particles_create(global.particleSystem, x + _randomY, y - 250, global.particleRubble, 1);
 	}
 	
 	

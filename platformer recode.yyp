@@ -64,6 +64,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCutscene","path":"objects/oCutscene/oCutscene.yy",},},
     {"id":{"name":"oDeathpit","path":"objects/oDeathpit/oDeathpit.yy",},},
+    {"id":{"name":"oFakeWall","path":"objects/oFakeWall/oFakeWall.yy",},},
     {"id":{"name":"oFallingBlock","path":"objects/oFallingBlock/oFallingBlock.yy",},},
     {"id":{"name":"oIceBlock","path":"objects/oIceBlock/oIceBlock.yy",},},
     {"id":{"name":"oInvisBlock","path":"objects/oInvisBlock/oInvisBlock.yy",},},
@@ -174,9 +175,9 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"innit","path":"rooms/innit/innit.yy",},},
+    {"roomId":{"name":"LavaTip","path":"rooms/LavaTip/LavaTip.yy",},},
     {"roomId":{"name":"WorldMap","path":"rooms/WorldMap/WorldMap.yy",},},
     {"roomId":{"name":"Desert","path":"rooms/Desert/Desert.yy",},},
-    {"roomId":{"name":"LavaTip","path":"rooms/LavaTip/LavaTip.yy",},},
     {"roomId":{"name":"TopIce","path":"rooms/TopIce/TopIce.yy",},},
     {"roomId":{"name":"The_Forest","path":"rooms/The_Forest/The_Forest.yy",},},
     {"roomId":{"name":"Icy_middle","path":"rooms/Icy_middle/Icy_middle.yy",},},

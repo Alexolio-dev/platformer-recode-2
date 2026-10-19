@@ -1,0 +1,1 @@
+bossDefeated = true;

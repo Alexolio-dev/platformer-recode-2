@@ -174,6 +174,13 @@ if (global.checkpointR == room)
 
 
 
+//alarms to keep track off
+//alarm 1 = death;
+//alarm 2 = wind mechanic (desert);
+
+
+
+
 //blibber, minion dih, bloo, freaky friends story and the literal bums.
 
 
@@ -184,9 +191,6 @@ if (global.checkpointR == room)
 // i feel like i forgot something..., oh wel :)
 
 
-//alarms to keep track off
-//alarm 1 = death;
-//alarm 2 = wind mechanic (desert);
 
 
 //https://www.youtube.com/watch?v=-umkPHw-BZk

@@ -8,7 +8,6 @@
 
 
 
-
 //general stuff
 scene = [];
 
@@ -63,6 +62,19 @@ scene[2] = [
 ]
 
 scene[3] = [
+	["move", Oplayer, Oplayer.x + 200, Oplayer.y, 1],
+	["screen shake", 3],
+	["falling rubble", 3],
+	["wait", 1],
+	["ascend",Oboss, 540 , 4000 ,  3400, 20],
+	["move", Oplayer, Oplayer.x + 195, Oplayer.y, 1],
+	["questionmark", Oplayer, 1.5],
+	["end"]
+]
+
+
+
+scene[111] = [
 	["ascend",Oboss, 540 , 4000 ,  3400, 20],
 	["end"]
 ]

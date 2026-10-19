@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"ExtraStuffLikeInvisibleWalls",
+    "path":"folders/sprites/spritesForLevelObjectsw/ExtraStuffLikeInvisibleWalls.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
