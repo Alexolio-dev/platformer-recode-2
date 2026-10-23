@@ -70,6 +70,10 @@ if (!variable_global_exists("secret_thing"))
 	/*/
 }
 
+if global.secret_thing[1] == true && global.secret_thing[2] == true && global.secret_thing[3] == true && global.secret_thing[4] == true && global.secret_thing[5] == true
+{
+	instance_destroy(inst_2C93AD23);
+}
 
 //triggered object so you dont repeatedly get send to the end room
 triggerd = false;

@@ -45,7 +45,7 @@ function checkForSemisolidPlatform( _x, _y)
 
 code = "";
 
-
+timer = 0;
 depth = -30;
 //controls setup
 ControlsSetup();

@@ -2,4 +2,4 @@
 
 maxXspd += xspd;
 
-x += maxXspd;
+x += approach(0 ,10 ,5)

@@ -77,10 +77,10 @@ fallingRubble = false;
 global.particleLavaBubbling = part_type_create();
 
 part_type_size( global.particleLavaBubbling,1,1, 0, 0);
-part_type_direction(global.particleLavaBubbling, 270, 270, 0, 0);
-part_type_speed(global.particleLavaBubbling, 4, 7, 0, 0);
+part_type_direction(global.particleLavaBubbling, 0, 0, 0, 0);
+part_type_speed(global.particleLavaBubbling, 0, 0, 0, 0);
 part_type_alpha1(global.particleLavaBubbling, 0.7);
-part_type_life(global.particleLavaBubbling, 120, 220);
+part_type_life(global.particleLavaBubbling, 12, 15);
 part_type_sprite(global.particleLavaBubbling, sLavaBubble, true, false, false);
 lavaBubbling = false;
 

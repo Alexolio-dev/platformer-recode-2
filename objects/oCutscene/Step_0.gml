@@ -141,7 +141,8 @@ switch (currentAction[0])
 		        Oplayer.cutsceneControlled = false;
 				Oboss.cutsceneStarted = false;
 		        finished = true;
-				instance_destroy(target);
+				oCutsceneBoss.x = 0;
+				oCutsceneBoss.y = 0;
 		    }
 		break;
 		

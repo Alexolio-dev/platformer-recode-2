@@ -1,10 +1,10 @@
 //make sure we at default look fly
 image_index = 0;
 // doesnt matter cutscene for another time
- if cutsceneStarted == true
- {
-	image_index = 1;
- }
+// if cutsceneStarted == true
+// {
+//	image_index = 1;
+// }
  
  /*/debu messages for extra info
 show_debug_message(bossState);
@@ -525,6 +525,7 @@ if HP == 0
 	{
 		//bossState = state.dead;
 		bossFightStarted = false;
+		oButton.bossDefeated = true;
 		//specialTimer = 0;
 		//instance_destroy();
 		//Oplayer.cutsceneRunning = false;

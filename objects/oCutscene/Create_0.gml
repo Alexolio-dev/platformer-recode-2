@@ -66,11 +66,26 @@ scene[3] = [
 	["screen shake", 3],
 	["falling rubble", 3],
 	["wait", 1],
-	["ascend",Oboss, 540 , 4000 ,  3400, 20],
+	["ascend",oCutsceneBoss, 540 , 4000 ,  3400, 20],
 	["move", Oplayer, Oplayer.x + 195, Oplayer.y, 1],
 	["questionmark", Oplayer, 1.5],
 	["end"]
 ]
+
+//wat wil ik????
+//player komt, daarna geschud en bubbels, daarna komt burger langzaam uit grond en schreew
+scene[4] = [
+	["questionmark", Oplayer, 1.5],
+	["screen shake", 1],
+	["bubbling lava", 3],
+	["ascend",Oboss,  2736 , 1488 ,  1104, 1],
+	//["move", Oplayer, Oplayer.x + 30, Oplayer.y, 1],
+	["wait", 1.5],
+	["end"]
+]
+
+
+
 
 
 
@@ -79,7 +94,7 @@ scene[111] = [
 	["end"]
 ]
 
-scene[4] = [
+scene[112] = [
 	["questionmark", Oplayer, 1.5],
 	//["move", Oplayer, Oplayer.x - 50, Oplayer.y, 3],
 	["end"]
