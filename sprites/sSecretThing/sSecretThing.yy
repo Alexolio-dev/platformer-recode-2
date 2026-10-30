@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"Secret areas",
+    "path":"folders/Secret areas.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

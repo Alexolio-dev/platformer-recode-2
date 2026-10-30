@@ -1,4 +1,4 @@
-show_debug_message(global.secret_thing);
+//show_debug_message(global.secret_thing);
 
 
 //pretty simple and standard. if player touches the diamond, you get the secret thing. (simple but works ig)

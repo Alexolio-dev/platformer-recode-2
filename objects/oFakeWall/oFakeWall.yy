@@ -35,5 +35,8 @@
     "path":"sprites/sWall/sWall.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "pausable",
+  ],
   "visible":true,
 }

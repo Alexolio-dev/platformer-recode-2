@@ -181,7 +181,7 @@ if (global.checkpointR == room)
 
 
 
-//blibber, minion dih, bloo, freaky friends story and the literal bums.
+
 
 
 

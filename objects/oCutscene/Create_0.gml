@@ -79,8 +79,7 @@ scene[4] = [
 	["screen shake", 1],
 	["bubbling lava", 3],
 	["ascend",Oboss,  2736 , 1488 ,  1104, 1],
-	//["move", Oplayer, Oplayer.x + 30, Oplayer.y, 1],
-	["wait", 1.5],
+	["move", Oplayer, Oplayer.x + 60, Oplayer.y, 1],
 	["end"]
 ]
 

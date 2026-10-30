@@ -8,8 +8,8 @@
   "name":"oSecretThing",
   "overriddenProperties":[],
   "parent":{
-    "name":"platformer recode",
-    "path":"platformer recode.yyp",
+    "name":"Secret areas",
+    "path":"folders/Secret areas.yy",
   },
   "parentObjectId":null,
   "persistent":false,

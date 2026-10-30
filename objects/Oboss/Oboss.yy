@@ -38,7 +38,10 @@
     "name":"sLevelEnd",
     "path":"sprites/sLevelEnd/sLevelEnd.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sBossDead",
+    "path":"sprites/sBossDead/sBossDead.yy",
+  },
   "tags":[
     "pausable",
   ],

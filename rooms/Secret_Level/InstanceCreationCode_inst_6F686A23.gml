@@ -1,0 +1,1 @@
+Text = "the idea is that we break into the secret level so that we go into the volcano and retrieve a long lost sword";
