@@ -374,9 +374,20 @@ xspd = oldXspd;
 	}else{
 		//apply gravity to player
 		yspd += grav;
+		//double grav when holding down
+		/*/
+		if keyboard_check(vk_down) || keyboard_check(ord("S"))
+		{
+			grav = 0.4;
+		} else 
+		{
+			grav = 0.2;
+		}
+		/*/
 		//we are not on ground anymore
 		setOnGround(false)
 	}
+	
 	
 
 	
