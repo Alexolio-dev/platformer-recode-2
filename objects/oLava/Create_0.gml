@@ -2,8 +2,8 @@ rising = false;
 
 startY = y;
 
-timer = 60;
-otherTimer = 30;
+timer = 240;
+otherTimer = 480;
 
 if room == LavaTip
 {

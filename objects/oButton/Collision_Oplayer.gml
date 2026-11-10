@@ -1,4 +1,4 @@
-if place_meeting(x,y,Oplayer)
+if place_meeting(x,y,Oplayer) && Oplayer.playerDead == false
 {
 	blocksThatWillAppear = blocksForTriggers;
 }
@@ -6,20 +6,20 @@ if place_meeting(x,y,Oplayer)
 
 if blocksThatWillAppear == 1 && !blocksSpawned
 {
-	instance_create_layer(4624, 1840, "Instances" , oWall);
-	instance_create_layer(4624, 1856, "Instances" , oWall);
-	instance_create_layer(4624, 1872, "Instances" , oWall);
-	instance_create_layer(4624, 1888, "Instances" , oWall);
-	instance_create_layer(4624, 1904, "Instances" , oWall);
-	instance_create_layer(4624, 1920, "Instances" , oWall);
-	instance_create_layer(4624, 1936, "Instances" , oWall);
-	instance_create_layer(4624, 1952, "Instances" , oWall);
-	instance_create_layer(4624, 1968, "Instances" , oWall);
-	instance_create_layer(4624, 1984, "Instances" , oWall);
-	instance_create_layer(4624, 2000, "Instances" , oWall);
-	instance_create_layer(4624, 2016, "Instances" , oWall);
-	instance_create_layer(4624, 2032, "Instances" , oWall);
-	instance_create_layer(4624, 2048, "Instances" , oWall);
+	instance_create_layer(4624, 2992, "Instances" , oWall);
+	instance_create_layer(4624, 2976, "Instances" , oWall);
+	instance_create_layer(4624, 2960, "Instances" , oWall);
+	instance_create_layer(4624, 2944, "Instances" , oWall);
+	instance_create_layer(4624, 2928, "Instances" , oWall);
+	instance_create_layer(4624, 2912, "Instances" , oWall);
+	instance_create_layer(4624, 2896, "Instances" , oWall);
+	instance_create_layer(4624, 2880, "Instances" , oWall);
+	instance_create_layer(4624, 2864, "Instances" , oWall);
+	instance_create_layer(4624, 2848, "Instances" , oWall);
+	instance_create_layer(4624, 2830, "Instances" , oWall);
+	instance_create_layer(4624, 2814, "Instances" , oWall);
+	instance_create_layer(4624, 2798, "Instances" , oWall);
+	instance_create_layer(4624, 2782, "Instances" , oWall);
 	image_index = 1;
 	blocksSpawned = true;
 } 
@@ -63,7 +63,39 @@ if blocksThatWillAppear == 5 && !blocksSpawned
 	Oboss.bossFightStarted = true;
 	instance_destroy(inst_2B15D5A4);
 	instance_destroy();
+	image_index = 1;
 }
+
+if blocksThatWillAppear == 6 && !blocksSpawned
+{
+	instance_create_layer(1120, 2592, "Instances" , oWall);
+	image_index = 1;
+}
+
+if blocksThatWillAppear == 7 && !blocksSpawned
+{
+	instance_create_layer(912, 2592, "Instances" , oWall);
+	image_index = 1;
+}
+
+if blocksThatWillAppear == 8 && !blocksSpawned
+{
+	instance_create_layer(704, 2592, "Instances" , oWall);
+	image_index = 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if bossDefeated == true
 {
@@ -74,3 +106,4 @@ if bossDefeated == true
 	instance_create_layer(3104,1440, "Instances", oWall);
 	instance_create_layer(3120,1440, "Instances", oWall);
 }
+

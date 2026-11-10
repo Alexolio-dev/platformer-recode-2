@@ -1,1 +1,1 @@
-blocksThatWillAppear = 1;
+blocksForTriggers = 1; 

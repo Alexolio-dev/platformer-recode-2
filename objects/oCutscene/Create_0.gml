@@ -83,8 +83,13 @@ scene[4] = [
 	["end"]
 ]
 
-
-
+scene[5] = [
+	["screen shake", 2.5],
+	["falling rubble", 3],
+	["questionmark", Oplayer, 1],
+	["move", Oplayer, Oplayer.x - 60, Oplayer.y, 1],
+	["end"]
+]
 
 
 
@@ -99,18 +104,18 @@ scene[112] = [
 	["end"]
 ]
 
-scene[5] = [
+scene[2134123] = [
 	["falling rubble", 5],
 	["end"]
 ]
 
-scene[6] = [
+scene[112234] = [
 	["bubbling lava", 5],
 	["end"]
 
 ]
 
-scene[7] = [
+scene[111] = [
 	["screen shake", 3],
 	["end"]
 

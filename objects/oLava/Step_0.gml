@@ -20,18 +20,18 @@ if room == Secret_Level
 	
 		if timer >= 0
 		{
-				y -= 0.5;	
+				y += 1;	
 			} 
 			else if timer <= 0
 			{
-				y += 1;
+				y -= 0.5;
 				otherTimer--;
 		}
 	
 		if otherTimer == 0
 		{
-			timer = 60;
-			otherTimer = 30;
+			timer = 240;
+			otherTimer =480;
 		}
 	}
 }

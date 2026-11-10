@@ -5,5 +5,5 @@ if place_meeting(x, y -10, Oplayer)
 
 if go = true
 {
-	y += 3.5;
+	y += 1;
 }

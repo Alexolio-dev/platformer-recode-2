@@ -4,5 +4,8 @@ if (!instance_exists(oCutscene))
 	cutscene.sceneIndex = triggerScene;
 	Oplayer.xspd = 0;
 	Oplayer.yspd = 0;
+	cutsceneDone = true;
     instance_destroy();
 }
+
+
