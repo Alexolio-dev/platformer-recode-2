@@ -1,9 +1,103 @@
 destroy = false;
+mustDelete = noone;
+global.destroyedInstances = [];
 
-destroyableInstances = ds_list_create();
 
 //bigger problem with smaller solutions:
-//problem: i want to create a object thta permantly keeps objects destroyed or build
+//problem: i want to create a object that permantly keeps objects destroyed or build
 //i want to do this through a struct or ds_list
 //i want this to be changable for every single id in my game if possible, also for the ones that i create myself
 //i want to learn more about lists and structs throught this system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//https://www.youtube.com/watch?v=l0Ukq-_t95Q
+//en
+//https://www.youtube.com/watch?v=N0iNRfxrjdQ 
+//-no_prewarm_map -nojoy -nosteamcontroller -nohltv -particles -softparticlesdefaultoff -particle_disable_diffuse
+/*/
+"video.cfg"
+{
+	"Version"		"20"
+	"VendorID"		"32902"
+	"DeviceID"		"16032"
+	"setting.defaultres"		"1024"
+	"setting.defaultresheight"		"768"
+	"setting.recommendedheight"		"768"
+	"setting.refreshrate_numerator"		"60"
+	"setting.fullscreen"		"1"
+	"setting.nowindowborder"		"1"
+	"setting.fullscreen_min_on_focus_loss"		"1"
+	"setting.monitor_index"		"0"
+	"setting.high_dpi"		"0"
+	"setting.aspectratiomode"		"0"
+	"setting.cpu_level"		"2"
+	"setting.mem_level"		"0"
+	"setting.gpu_mem_level"		"0"
+	"setting.gpu_level"		"3"
+	"setting.mat_vsync"		"0"
+	"setting.r_low_latency"		"1"
+	"setting.fps_max"		"0"
+	"setting.mat_viewportscale"		"0.4"
+	"setting.r_citadel_antialiasing"		"0"
+	"setting.r_citadel_upscaling"		"0"
+	"setting.r_citadel_dlss_settings_mode"		"0"
+	"setting.r_dlss_preset"		"0"
+	"setting.r_citadel_fsr_rcas_sharpness"		"0"
+	"setting.r_citadel_fsr2_sharpness"		"0"
+	"setting.r_effects_bloom"		"false"
+	"setting.r_post_bloom"		"false"
+	"setting.r_depth_of_field"		"false"
+	"setting.r_citadel_motion_blur"		"0"
+	"setting.r_reduce_flash"		"1"
+	"setting.r_shadows"		"0"
+	"setting.r_citadel_shadow_quality"		"0"
+	"setting.csm_max_shadow_dist_override"		"0"
+	"setting.csm_max_num_cascades_override"		"0"
+	"setting.csm_viewmodel_shadows"		"0"
+	"setting.lb_enable_shadow_casting"		"false"
+	"setting.lb_dynamic_shadow_resolution"		"false"
+	"setting.r_area_lights"		"0"
+	"setting.r_arealights"		"false"
+	"setting.r_citadel_ssao"		"0"
+	"setting.r_citadel_ssao_quality"		"0"
+	"setting.r_citadel_distancefield_ao_quality"		"0"
+	"setting.r_citadel_fog_quality"		"0"
+	"setting.volume_fog_width"		"32"
+	"setting.volume_fog_height"		"32"
+	"setting.volume_fog_depth"		"16"
+	"setting.shaderquality"		"1"
+	"setting.r_displacement_mapping"		"0"
+	"setting.r_dashboard_render_quality"		"1"
+	"setting.r_texture_stream_mip_bias"		"2"
+	"setting.r_particle_max_detail_level"		"0"
+	"setting.r_particle_shadows"		"0"
+	"setting.r_particle_cables_cast_shadows"		"0"
+	"setting.r_particle_depth_feathering"		"false"
+	"setting.r_citadel_half_res_noisy_effects"		"true"
+	"setting.cl_particle_fallback_base"		"6"
+	"setting.cl_particle_fallback_multiplier"		"4"
+	"setting.r_distancefield_enable"		"true"
+	"setting.r_citadel_outlines"		"1"
+	"setting.r_fullscreen_gamma"		"1.6"
+	"setting.useadvanced"		"1"
+	"setting.coop_fullscreen"		"0"
+	"setting.r_light_sensitivity_mode"		"false"
+	"setting.refreshrate_denominator"		"1"
+}

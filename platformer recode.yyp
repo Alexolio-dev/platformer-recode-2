@@ -191,9 +191,9 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"innit","path":"rooms/innit/innit.yy",},},
+    {"roomId":{"name":"WorldMap","path":"rooms/WorldMap/WorldMap.yy",},},
     {"roomId":{"name":"TopIce","path":"rooms/TopIce/TopIce.yy",},},
     {"roomId":{"name":"Secret_Level","path":"rooms/Secret_Level/Secret_Level.yy",},},
-    {"roomId":{"name":"WorldMap","path":"rooms/WorldMap/WorldMap.yy",},},
     {"roomId":{"name":"LavaTip","path":"rooms/LavaTip/LavaTip.yy",},},
     {"roomId":{"name":"startScreen","path":"rooms/startScreen/startScreen.yy",},},
     {"roomId":{"name":"Desert","path":"rooms/Desert/Desert.yy",},},

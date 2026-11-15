@@ -34,7 +34,7 @@ if finished == true{
 // a variable for the current action and other things ahppening in the scene
 var currentAction = scene[sceneIndex][actionIndex];
 
-show_debug_message(currentAction[0]);
+//show_debug_message(currentAction[0]);
 
 
 

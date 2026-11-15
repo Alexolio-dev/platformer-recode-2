@@ -241,7 +241,7 @@ else
         var _distX = cutsceneTargetX - x;
         
 		
-		show_debug_message(
+	/*/	show_debug_message(
             "CUTSCENE | x: "
             + string(x)
             + " target: "
@@ -250,7 +250,7 @@ else
             + string(xspd)
             + " controlled: "
             + string(cutsceneControlled)
-        );
+        );/*/
 
 
 
@@ -974,8 +974,6 @@ if (string_ends_with(code, "TIKI")) {
 	}
 	
 	
-	
-	show_debug_message("maskSpr")
 	
 	
 	
