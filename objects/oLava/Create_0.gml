@@ -1,4 +1,5 @@
 rising = false;
+risingLetsGo = false;
 
 startY = y;
 

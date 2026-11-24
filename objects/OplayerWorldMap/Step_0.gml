@@ -5,15 +5,8 @@ var left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 var right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 var space = keyboard_check_pressed( vk_space)
 
-if global.level_unlocked[6] == true
-{
-	room_goto(EndRoom);
-}// keyboard_check_pressed(ord("Q"))
-//{
-//	room_goto(WorldMap);
-//}
 
-
+//show_debug_message(path);
 
 //the path switch statement needs a case for each path
 //each case needs to be the name of the path itself
@@ -334,11 +327,7 @@ switch (path) {
 					
 					
 					
-					if global.level_unlocked[6] && triggerd == false
-					{
-						triggerd = true;
-						room_goto(EndRoom);
-					} 
+					
 				
 
         break;
@@ -347,7 +336,7 @@ switch (path) {
 		
 
 		case SecretPath:
-		
+				
 			 if (path_position == 0) {
 			 if (left) {
                 path_start(path, spd, 0, true);
@@ -362,10 +351,10 @@ switch (path) {
             if (down) {
 			    path = PathWorldMap3;
                 path_start(path, -spd, 0, true);
-                path_started = true;}}
+                path_started = true;}
 				
 				
-				if ( path_started == false && path_position <= 0.05 && (space) && global.level_unlocked[3])
+				if (path_started == false && path_position <= 0.05 && (space) && global.level_unlocked[3])
 				{ 
 					global.returnPath = path;
 					global.returnPathPos = path_position;
@@ -375,7 +364,7 @@ switch (path) {
 			
 					room_goto(Icy_middle);
 				}
-				
+			 }
 				
 				
 		
@@ -386,7 +375,7 @@ switch (path) {
 		  if (path_position == 1) {
             if (left) {
                 path_start(path, -spd, 0, true);
-                path_started = true;}}
+                path_started = true;}
 				
 			 if (!path_started && path_position >= 0.99 && (space)  && global.level_unlocked[6] == true)
 				{ 
@@ -398,7 +387,7 @@ switch (path) {
 		
 					room_goto(Secret_Level);
 				}
- 
+		  }
  
 		
 		
@@ -431,7 +420,7 @@ if (path_started == true) { //if you're moving
 	
 	
 	
-
+	
 	
 
 	

@@ -4,3 +4,4 @@ if place_meeting(x,y, Oplayer)
     room_goto(NextMap);
 }
 
+image_index = 0;

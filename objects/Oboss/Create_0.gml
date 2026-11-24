@@ -43,7 +43,7 @@ enum state
 
 bossState = state.main;
 homeX = x;
-homeY = 1248;
+homeY = 1216;
 //dashTargetX = 
 //dashTargetY
 dashSpeed = 4;

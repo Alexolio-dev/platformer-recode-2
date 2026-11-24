@@ -90,7 +90,7 @@ if attacks == 3
 if maxAttacks >= 1 && activateFighting == true
 {
 	activateFighting = false;
-	bossState = state.attack;
+	bossState = state.specialAttack;
 }
 
 
@@ -369,7 +369,6 @@ if maxAttacks >= 1 && activateFighting == true
 			if (abs(GoBackToStartBossY) > 2)
 			{
 				y += sign(GoBackToStartBossY) * 2
-
 			}
 			else
 			{
@@ -457,12 +456,12 @@ if maxAttacks >= 1 && activateFighting == true
 			  
 			  specialTimer++;  
 			  
-			  if place_meeting(x, y - 10 ,Oplayer) && triggerd == false
+			  if place_meeting(x, y - 10,Oplayer) && triggerd == false
 			  {
 				  Oplayer.cutsceneRunning = true;
 				  triggerd = true;
-				  Oplayer.y -= 15;
-				  HP -= 1;
+				  Oplayer.yspd -= 10;
+				  HP -= 3;
 				  specialTimer = 0;
 			  }
 			  
@@ -470,7 +469,7 @@ if maxAttacks >= 1 && activateFighting == true
 			
 			  if specialTimer == 180
 			  {
-				 triggerd = false;
+				 triggerd = true;
 				  specialTimer = 0;
 				  specialPhase = phase.goToMiddle;
 				  Oplayer.cutsceneRunning = false;
@@ -518,11 +517,17 @@ if HP == 0
 {
 	sprite_index = sBossDead;
 }
+if HP == 0 && global.player_did_the_secret_thing[0] == true
+{
+	sprite_index = sRubble;
+}
+
 
 
  
 if HP == 0
 	{
+		timer++;
 		//bossState = state.dead;
 		bossFightStarted = false;
 		oButton.bossDefeated = true;
@@ -530,15 +535,25 @@ if HP == 0
 		//instance_destroy();
 		//Oplayer.cutsceneRunning = false;
 		specialTimer ++;
-	
-		if specialTimer == 120
+		
+		
+		Oplayer.cutsceneRunning = true;
+		
+		
+		if timer >= 1000
 		{
-			
 			Oplayer.cutsceneRunning = false;
+			instance_destroy();
+		}
+		
+		if place_meeting( x, y, Oplayer) && global.player_did_the_secret_thing[0] == true
+		{
+			room_goto(Secret_Level);
 		}
 	}
- 
 
+	
+	
 
 
 

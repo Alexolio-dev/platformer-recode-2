@@ -1,84 +1,87 @@
-if (keyboard_check_pressed(vk_escape)){
-	isPaused = !isPaused;
-	pos = 0;
-	if(isPaused){
-		oPauseManager.pauseTag("pausable");
-	}else{
-		oPauseManager.unPauseTag("pausable");
-	}
-}
-
-if (isPaused) 
+if noExitWhenCutscene = false
 {
 
-//
-	//movekeys
-	var moveUp = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
-	var moveDown = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
-	var selected = keyboard_check_pressed(vk_space);
-	
-	//naviagte the list
-	var listLength = (menuState == pause.main) ? array_length(buttonList) : array_length(areYouSure);
-	pos += moveDown -moveUp
-	if pos >= (listLength) {pos = 0};
-	if (pos <0) pos = listLength - 1;
-	
-	
-	if menuState == pause.main
-	{
-//using every option
-if keyboard_check_pressed(vk_space){
-
-
-	//if menustate is main, go to the usuals
-switch(pos){
-				case 0:
-				isPaused = false;
-				oPauseManager.unPauseTag("pausable");
-				break;
-	
-	
-	
-				case 1:
-				isPaused = false;
-				oPauseManager.unPauseTag("pausable");
-				alarm[0] = 1;
-				break;
-	
-	
-	
-				case 2:
-				//game_end();
-				menuState = pause.confirm;
-				showNormalOptios = false;
-				pos = 0;
-				break;
-			}
+	if (keyboard_check_pressed(vk_escape)){
+		isPaused = !isPaused;
+		pos = 0;
+		if(isPaused){
+			oPauseManager.pauseTag("pausable");
+		}else{
+			oPauseManager.unPauseTag("pausable");
 		}
 	}
 
-		//
-	else if menuState == pause.confirm
+	if (isPaused) 
 	{
-		if keyboard_check_pressed(vk_space){
-		//move thorugh are you sure
-		switch(pos){
-			case 0:
-			menuState = pause.main;
-			pos = 2;
-			showNormalOptios = true;
-			break;
+
+	//
+		//movekeys
+		var moveUp = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
+		var moveDown = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
+		var selected = keyboard_check_pressed(vk_space);
+	
+		//naviagte the list
+		var listLength = (menuState == pause.main) ? array_length(buttonList) : array_length(areYouSure);
+		pos += moveDown -moveUp
+		if pos >= (listLength) {pos = 0};
+		if (pos <0) pos = listLength - 1;
+	
+	
+		if menuState == pause.main
+		{
+	//using every option
+	if keyboard_check_pressed(vk_space){
+
+
+		//if menustate is main, go to the usuals
+	switch(pos){
+					case 0:
+					isPaused = false;
+					oPauseManager.unPauseTag("pausable");
+					break;
+	
+	
+	
+					case 1:
+					isPaused = false;
+					oPauseManager.unPauseTag("pausable");
+					alarm[0] = 1;
+					break;
+	
+	
+	
+					case 2:
+					//game_end();
+					menuState = pause.confirm;
+					showNormalOptios = false;
+					pos = 0;
+					break;
+				}
+			}
+		}
+
+			//
+		else if menuState == pause.confirm
+		{
+			if keyboard_check_pressed(vk_space){
+			//move thorugh are you sure
+			switch(pos){
+				case 0:
+				menuState = pause.main;
+				pos = 2;
+				showNormalOptios = true;
+				break;
 			
-			case 1:
-			game_end();
-			break;
-		//	
+				case 1:
+				game_end();
+				break;
+			//	
 			
+				}
 			}
 		}
 	}
 }
-
 
 
 

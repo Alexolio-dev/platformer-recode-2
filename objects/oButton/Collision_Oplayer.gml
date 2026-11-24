@@ -85,8 +85,26 @@ if blocksThatWillAppear == 8 && !blocksSpawned
 }
 
 
+if blocksThatWillAppear == 9 && !blocksSpawned
+{
+	oLava.risingLetsGo = true;
+}
 
-
+if blocksThatWillAppear == 10 && !blocksSpawned
+{
+	instance_create_layer(1008, 2464, "Instances" , oWall);
+	instance_create_layer(1008, 2480, "Instances" , oWall);
+	instance_create_layer(1008, 2496, "Instances" , oWall);
+	instance_create_layer(1008, 2512, "Instances" , oWall);
+	instance_create_layer(992, 2464, "Instances" , oWall);
+	instance_create_layer(992, 2480, "Instances" , oWall);
+	instance_create_layer(992, 2496, "Instances" , oWall);
+	instance_create_layer(992, 2512, "Instances" , oWall);
+	instance_create_layer(976, 2464, "Instances" , oWall);
+	instance_create_layer(976, 2480, "Instances" , oWall);
+	instance_create_layer(976, 2496, "Instances" , oWall);
+	instance_create_layer(976, 2512, "Instances" , oWall);
+}
 
 
 

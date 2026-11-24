@@ -19,3 +19,5 @@ enum pause
 }
 menuState = pause.main;
 
+
+noExitWhenCutscene = false;

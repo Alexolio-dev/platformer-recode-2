@@ -11,7 +11,3 @@ with (oTriggerCutscene)
 }
 
 
-if room_goto == WorldMap || Oplayer place_meeting(x,y,oLevelEnd)
-{
-	array_delete(global.destroyedInstances,0, 999);
-}

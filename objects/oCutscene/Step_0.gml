@@ -2,6 +2,7 @@
 if (doneWithCutscene == true)
 {
 	Oplayer.cutsceneRunning = false;
+	//oPauseScreen.noExitWhenCutscene = false;
 	cutsceneActive = false;
 	doneWithCutscene = false;
 	instance_destroy();
@@ -14,7 +15,9 @@ if (doneWithCutscene == true)
 if cutsceneActive == true
 {
 	Oplayer.cutsceneRunning = true;
+	//oPauseScreen.noExitWhenCutscene = true;
 } else {
+	//oPauseScreen.noExitWhenCutscene = false;
 	Oplayer.cutsceneRunning = false;
 }
 

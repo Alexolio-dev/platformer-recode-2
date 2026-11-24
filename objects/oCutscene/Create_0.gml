@@ -92,6 +92,14 @@ scene[5] = [
 ]
 
 
+scene[6] = [
+	["move", Oplayer, Oplayer.x -60, Oplayer.y, 1],
+	["screen shake", 3],
+	["falling rubble", 3],
+	["wait", 1],
+	["end"]
+]
+
 
 scene[111] = [
 	["ascend",Oboss, 540 , 4000 ,  3400, 20],

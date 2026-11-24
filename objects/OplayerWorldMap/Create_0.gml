@@ -34,6 +34,7 @@ if (!variable_global_exists("player_did_the_secret_thing"))
 {
 	
 	global.player_did_the_secret_thing = array_create(1, false)
+	//global.player_did_the_secret_thing[0] = true;
 	
 }
 
@@ -61,13 +62,13 @@ if (!variable_global_exists("secret_thing"))
 	global.secret_thing = array_create(10, false);
 	
 	//eerste level unlocked
-	/*/
+	//
 	global.secret_thing[1] = true; //The tutorial level
 	global.secret_thing[2] = true; //The forest leve
 	global.secret_thing[3] = true; //The desert level
 	global.secret_thing[4] = true; //The middle of the icy volcano level
 	global.secret_thing[5] = true; //The tip of the icy volcano level
-	/*/
+	//
 }
 
 if global.secret_thing[1] == true && global.secret_thing[2] == true && global.secret_thing[3] == true && global.secret_thing[4] == true && global.secret_thing[5] == true

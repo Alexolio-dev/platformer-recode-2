@@ -35,3 +35,9 @@ if room == Secret_Level
 		}
 	}
 }
+
+
+if risingLetsGo == true
+{
+		y -= 1.15;	
+}

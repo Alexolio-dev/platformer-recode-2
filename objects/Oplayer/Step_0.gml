@@ -780,15 +780,7 @@ if place_meeting( x, y, oWall)
 }
 
  
-if (place_meeting(x, y, oDeathpit))
-{
-    show_debug_message(
-        "Deathpit overlap | cutsceneRunning: "
-        + string(Oplayer.cutsceneRunning)
-        + " | playerDead: "
-        + string(Oplayer.playerDead)
-    );
-}
+
  
 
 
@@ -986,11 +978,11 @@ if (string_ends_with(code, "TIKI")) {
 	
 	
 	
-/*/	if global.level_unlocked == 6
+if place_meeting( x, y,oLevelEnd) && room == LavaTip
 {
 	room_goto(EndRoom);
 }
-	/*/
+	
 	
 	
 	
